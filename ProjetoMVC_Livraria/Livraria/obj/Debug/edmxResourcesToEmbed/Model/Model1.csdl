@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Autor" EntityType="Model1.Autor" />
+    <EntitySet Name="Livro" EntityType="Model1.Livro" />
+    <EntitySet Name="Genero" EntityType="Model1.Genero" />
+    <AssociationSet Name="LivroGenero" Association="Model1.LivroGenero">
+      <End Role="Livro" EntitySet="Livro" />
+      <End Role="Genero" EntitySet="Genero" />
+    </AssociationSet>
+    <AssociationSet Name="LivroAutor" Association="Model1.LivroAutor">
+      <End Role="Livro" EntitySet="Livro" />
+      <End Role="Autor" EntitySet="Autor" />
+    </AssociationSet>
+    <EntitySet Name="Editora" EntityType="Model1.Editora" />
+    <AssociationSet Name="EditoraLivro" Association="Model1.EditoraLivro">
+      <End Role="Editora" EntitySet="Editora" />
+      <End Role="Livro" EntitySet="Livro" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Autor">
+    <Key>
+      <PropertyRef Name="IdAutor" />
+    </Key>
+    <Property Name="IdAutor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Livro" Relationship="Model1.LivroAutor" FromRole="Autor" ToRole="Livro" />
+    <Property Name="NomeAutor" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Livro">
+    <Key>
+      <PropertyRef Name="IdLivro" />
+    </Key>
+    <Property Name="IdLivro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Genero" Relationship="Model1.LivroGenero" FromRole="Livro" ToRole="Genero" />
+    <Property Name="IdGenero" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Autor" Relationship="Model1.LivroAutor" FromRole="Livro" ToRole="Autor" />
+    <Property Name="IdAutor" Type="Int32" Nullable="false" />
+    <Property Name="NomeLivro" Type="String" Nullable="false" />
+    <Property Name="Ano" Type="Int32" Nullable="false" />
+    <Property Name="Descricao" Type="String" Nullable="false" />
+    <Property Name="Paginas" Type="String" Nullable="false" />
+    <NavigationProperty Name="Editora" Relationship="Model1.EditoraLivro" FromRole="Livro" ToRole="Editora" />
+    <Property Name="IdEditora" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Genero">
+    <Key>
+      <PropertyRef Name="IdGenero" />
+    </Key>
+    <Property Name="IdGenero" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Livro" Relationship="Model1.LivroGenero" FromRole="Genero" ToRole="Livro" />
+    <Property Name="NomeGenero" Type="String" Nullable="false" />
+  </EntityType>
+  <Association Name="LivroGenero">
+    <End Type="Model1.Livro" Role="Livro" Multiplicity="*" />
+    <End Type="Model1.Genero" Role="Genero" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Genero">
+        <PropertyRef Name="IdGenero" />
+      </Principal>
+      <Dependent Role="Livro">
+        <PropertyRef Name="IdGenero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LivroAutor">
+    <End Type="Model1.Livro" Role="Livro" Multiplicity="*" />
+    <End Type="Model1.Autor" Role="Autor" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Autor">
+        <PropertyRef Name="IdAutor" />
+      </Principal>
+      <Dependent Role="Livro">
+        <PropertyRef Name="IdAutor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Editora">
+    <Key>
+      <PropertyRef Name="IdEditora" />
+    </Key>
+    <Property Name="IdEditora" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Livro" Relationship="Model1.EditoraLivro" FromRole="Editora" ToRole="Livro" />
+    <Property Name="NomeEditora" Type="String" Nullable="false" />
+  </EntityType>
+  <Association Name="EditoraLivro">
+    <End Type="Model1.Editora" Role="Editora" Multiplicity="1" />
+    <End Type="Model1.Livro" Role="Livro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Editora">
+        <PropertyRef Name="IdEditora" />
+      </Principal>
+      <Dependent Role="Livro">
+        <PropertyRef Name="IdEditora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

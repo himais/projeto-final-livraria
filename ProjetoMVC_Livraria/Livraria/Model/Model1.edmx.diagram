@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fadf2281f69342a8b2d032d6d9edfa1c" Name="Diagram1" ZoomLevel="106" >
+        <EntityTypeShape EntityType="Model1.Autor" Width="1.5" PointX="1.875" PointY="2" />
+        <EntityTypeShape EntityType="Model1.Livro" Width="1.5" PointX="4.25" PointY="0.875" />
+        <EntityTypeShape EntityType="Model1.Genero" Width="1.5" PointX="7" PointY="3.25" />
+        <AssociationConnector Association="Model1.LivroGenero" />
+        <AssociationConnector Association="Model1.LivroAutor" />
+        <EntityTypeShape EntityType="Model1.Editora" Width="1.5" PointX="7" PointY="0.625" />
+        <AssociationConnector Association="Model1.EditoraLivro" />
+        <EntityTypeShape EntityType="Model1.Funcionario" Width="1.5" PointX="1.875" PointY="5" />
+        <EntityTypeShape EntityType="Model1.Venda" Width="1.5" PointX="4.25" PointY="5" />
+        <EntityTypeShape EntityType="Model1.Item_Venda" Width="1.5" PointX="6.375" PointY="5.25" />
+        <AssociationConnector Association="Model1.VendaFuncionario" />
+        <AssociationConnector Association="Model1.Item_VendaVenda" />
+        <AssociationConnector Association="Model1.Item_VendaLivro" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
