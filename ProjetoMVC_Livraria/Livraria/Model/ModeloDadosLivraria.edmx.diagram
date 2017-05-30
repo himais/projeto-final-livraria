@@ -17,7 +17,7 @@
         <AssociationConnector Association="Model1.VendaFuncionario" />
         <AssociationConnector Association="Model1.Item_VendaVenda" />
         <AssociationConnector Association="Model1.Item_VendaLivro" />
-        <AssociationConnector Association="Model1.AutorLivro" />
+        <AssociationConnector Association="Model1.Autor_do_Livro" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

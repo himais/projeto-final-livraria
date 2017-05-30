@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ModeloDadosLivraria" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Autor" EntityType="Model1.Autor" />
+    <EntitySet Name="Livro" EntityType="Model1.Livro" />
+    <EntitySet Name="Genero" EntityType="Model1.Genero" />
+    <AssociationSet Name="LivroGenero" Association="Model1.LivroGenero">
+      <End Role="Livro" EntitySet="Livro" />
+      <End Role="Genero" EntitySet="Genero" />
+    </AssociationSet>
+    <EntitySet Name="Editora" EntityType="Model1.Editora" />
+    <AssociationSet Name="EditoraLivro" Association="Model1.EditoraLivro">
+      <End Role="Editora" EntitySet="Editora" />
+      <End Role="Livro" EntitySet="Livro" />
+    </AssociationSet>
+    <EntitySet Name="Funcionario" EntityType="Model1.Funcionario" />
+    <EntitySet Name="Venda" EntityType="Model1.Venda" />
+    <EntitySet Name="Item_VendaSet" EntityType="Model1.Item_Venda" />
+    <AssociationSet Name="VendaFuncionario" Association="Model1.VendaFuncionario">
+      <End Role="Venda" EntitySet="Venda" />
+      <End Role="Funcionario" EntitySet="Funcionario" />
+    </AssociationSet>
+    <AssociationSet Name="Item_VendaVenda" Association="Model1.Item_VendaVenda">
+      <End Role="Item_Venda" EntitySet="Item_VendaSet" />
+      <End Role="Venda" EntitySet="Venda" />
+    </AssociationSet>
+    <AssociationSet Name="Item_VendaLivro" Association="Model1.Item_VendaLivro">
+      <End Role="Item_Venda" EntitySet="Item_VendaSet" />
+      <End Role="Livro" EntitySet="Livro" />
+    </AssociationSet>
+    <AssociationSet Name="Autor_do_Livro" Association="Model1.Autor_do_Livro">
+      <End Role="Autor" EntitySet="Autor" />
+      <End Role="Livro" EntitySet="Livro" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Autor">
+    <Key>
+      <PropertyRef Name="IdAutor" />
+    </Key>
+    <Property Name="IdAutor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NomeAutor" Type="String" Nullable="false" />
+    <NavigationProperty Name="Livro" Relationship="Model1.Autor_do_Livro" FromRole="Autor" ToRole="Livro" />
+  </EntityType>
+  <EntityType Name="Livro">
+    <Key>
+      <PropertyRef Name="IdLivro" />
+    </Key>
+    <Property Name="IdLivro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Genero" Relationship="Model1.LivroGenero" FromRole="Livro" ToRole="Genero" />
+    <Property Name="IdGenero" Type="Int32" Nullable="false" />
+    <Property Name="IdAutor" Type="Int32" Nullable="false" />
+    <Property Name="NomeLivro" Type="String" Nullable="false" />
+    <Property Name="Ano" Type="Int32" Nullable="false" />
+    <Property Name="Descricao" Type="String" Nullable="false" />
+    <Property Name="Paginas" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Editora" Relationship="Model1.EditoraLivro" FromRole="Livro" ToRole="Editora" />
+    <Property Name="IdEditora" Type="Int32" Nullable="false" />
+    <Property Name="Isbn" Type="String" Nullable="false" />
+    <NavigationProperty Name="Item_Venda" Relationship="Model1.Item_VendaLivro" FromRole="Livro" ToRole="Item_Venda" />
+    <Property Name="Preco" Type="Decimal" Nullable="false" />
+    <Property Name="QuantidadeEstoque" Type="String" Nullable="false" />
+    <NavigationProperty Name="Autor" Relationship="Model1.Autor_do_Livro" FromRole="Livro" ToRole="Autor" />
+  </EntityType>
+  <EntityType Name="Genero">
+    <Key>
+      <PropertyRef Name="IdGenero" />
+    </Key>
+    <Property Name="IdGenero" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Livro" Relationship="Model1.LivroGenero" FromRole="Genero" ToRole="Livro" />
+    <Property Name="NomeGenero" Type="String" Nullable="false" />
+  </EntityType>
+  <Association Name="LivroGenero">
+    <End Type="Model1.Livro" Role="Livro" Multiplicity="*" />
+    <End Type="Model1.Genero" Role="Genero" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Genero">
+        <PropertyRef Name="IdGenero" />
+      </Principal>
+      <Dependent Role="Livro">
+        <PropertyRef Name="IdGenero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Editora">
+    <Key>
+      <PropertyRef Name="IdEditora" />
+    </Key>
+    <Property Name="IdEditora" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Livro" Relationship="Model1.EditoraLivro" FromRole="Editora" ToRole="Livro" />
+    <Property Name="NomeEditora" Type="String" Nullable="false" />
+    <Property Name="RazaoSocial" Type="String" Nullable="false" />
+    <Property Name="CNPJ" Type="String" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" />
+  </EntityType>
+  <Association Name="EditoraLivro">
+    <End Type="Model1.Editora" Role="Editora" Multiplicity="1" />
+    <End Type="Model1.Livro" Role="Livro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Editora">
+        <PropertyRef Name="IdEditora" />
+      </Principal>
+      <Dependent Role="Livro">
+        <PropertyRef Name="IdEditora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Funcionario">
+    <Key>
+      <PropertyRef Name="IdFuncionario" />
+    </Key>
+    <Property Name="IdFuncionario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NomeFuncionario" Type="String" Nullable="false" />
+    <Property Name="Login" Type="String" Nullable="false" />
+    <Property Name="Senha" Type="String" Nullable="false" />
+    <Property Name="Administrador" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Venda" Relationship="Model1.VendaFuncionario" FromRole="Funcionario" ToRole="Venda" />
+  </EntityType>
+  <EntityType Name="Venda">
+    <Key>
+      <PropertyRef Name="IdVenda" />
+    </Key>
+    <Property Name="IdVenda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DataVenda" Type="DateTime" Nullable="false" />
+    <Property Name="PrecoTotal" Type="Decimal" Nullable="false" />
+    <Property Name="TotalLivros" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Funcionario" Relationship="Model1.VendaFuncionario" FromRole="Venda" ToRole="Funcionario" />
+    <Property Name="IdFuncionario" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Item_Venda" Relationship="Model1.Item_VendaVenda" FromRole="Venda" ToRole="Item_Venda" />
+  </EntityType>
+  <EntityType Name="Item_Venda">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Venda" Relationship="Model1.Item_VendaVenda" FromRole="Item_Venda" ToRole="Venda" />
+    <Property Name="IdVenda" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Livro" Relationship="Model1.Item_VendaLivro" FromRole="Item_Venda" ToRole="Livro" />
+    <Property Name="IdLivro" Type="Int32" Nullable="false" />
+    <Property Name="Quantidade" Type="String" Nullable="false" />
+  </EntityType>
+  <Association Name="VendaFuncionario">
+    <End Type="Model1.Venda" Role="Venda" Multiplicity="*" />
+    <End Type="Model1.Funcionario" Role="Funcionario" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="IdFuncionario" />
+      </Principal>
+      <Dependent Role="Venda">
+        <PropertyRef Name="IdFuncionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Item_VendaVenda">
+    <End Type="Model1.Item_Venda" Role="Item_Venda" Multiplicity="*" />
+    <End Type="Model1.Venda" Role="Venda" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Venda">
+        <PropertyRef Name="IdVenda" />
+      </Principal>
+      <Dependent Role="Item_Venda">
+        <PropertyRef Name="IdVenda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Item_VendaLivro">
+    <End Type="Model1.Item_Venda" Role="Item_Venda" Multiplicity="*" />
+    <End Type="Model1.Livro" Role="Livro" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Livro">
+        <PropertyRef Name="IdLivro" />
+      </Principal>
+      <Dependent Role="Item_Venda">
+        <PropertyRef Name="IdLivro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Autor_do_Livro">
+    <End Type="Model1.Autor" Role="Autor" Multiplicity="*" />
+    <End Type="Model1.Livro" Role="Livro" Multiplicity="*" />
+  </Association>
+</Schema>

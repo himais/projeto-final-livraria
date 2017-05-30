@@ -51,41 +51,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\FuncionarioController.cs" />
     <Compile Include="Model\Autor.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Editora.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Funcionario.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Genero.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Item_Venda.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Livro.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Model1.Context.cs">
+    <Compile Include="Model\ModeloDadosLivraria.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+      <DependentUpon>ModeloDadosLivraria.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Model1.cs">
+    <Compile Include="Model\ModeloDadosLivraria.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Model1.Designer.cs">
+    <Compile Include="Model\ModeloDadosLivraria.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>ModeloDadosLivraria.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\Venda.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
     <Compile Include="View\FrameLogin.cs">
       <SubType>Form</SubType>
@@ -116,22 +117,22 @@
     <EmbeddedResource Include="View\FramePrincipal.resx">
       <DependentUpon>FramePrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\Model1.edmx">
+    <EntityDeploy Include="Model\ModeloDadosLivraria.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModeloDadosLivraria.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\Model1.Context.tt">
+    <None Include="Model\ModeloDadosLivraria.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>ModeloDadosLivraria.Context.cs</LastGenOutput>
+      <DependentUpon>ModeloDadosLivraria.edmx</DependentUpon>
     </None>
-    <None Include="Model\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="Model\ModeloDadosLivraria.edmx.diagram">
+      <DependentUpon>ModeloDadosLivraria.edmx</DependentUpon>
     </None>
-    <None Include="Model\Model1.tt">
+    <None Include="Model\ModeloDadosLivraria.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>ModeloDadosLivraria.cs</LastGenOutput>
+      <DependentUpon>ModeloDadosLivraria.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -147,14 +148,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Model\Model1.edmx.sql" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\ModeloDadosLivraria.edmx.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
