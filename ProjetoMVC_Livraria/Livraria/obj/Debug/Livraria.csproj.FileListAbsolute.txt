@@ -6,3 +6,6 @@ C:\Faculdade\C#LP1\ProjetoMVC\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.Pr
 C:\Faculdade\C#LP1\ProjetoMVC\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.csproj.GenerateResource.Cache
 C:\Faculdade\C#LP1\ProjetoMVC\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.exe
 C:\Faculdade\C#LP1\ProjetoMVC\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.pdb
+C:\Faculdade\C#LP1\ProjetoMVC\livraria\ProjetoMVC_Livraria\Livraria\bin\Debug\Livraria.exe.config
+C:\Faculdade\C#LP1\ProjetoMVC\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.exe
+C:\Faculdade\C#LP1\ProjetoMVC\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.pdb

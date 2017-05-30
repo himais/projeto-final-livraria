@@ -13,13 +13,10 @@
     <EntitySet Name="Funcionario" EntityType="Model1.Store.Funcionario" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Venda" EntityType="Model1.Store.Venda" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Item_VendaSet" EntityType="Model1.Store.Item_VendaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AutorLivro" EntityType="Model1.Store.AutorLivro" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="LivroGenero" Association="Model1.Store.LivroGenero">
       <End Role="Livro" EntitySet="Livro" />
       <End Role="Genero" EntitySet="Genero" />
-    </AssociationSet>
-    <AssociationSet Name="LivroAutor" Association="Model1.Store.LivroAutor">
-      <End Role="Livro" EntitySet="Livro" />
-      <End Role="Autor" EntitySet="Autor" />
     </AssociationSet>
     <AssociationSet Name="EditoraLivro" Association="Model1.Store.EditoraLivro">
       <End Role="Editora" EntitySet="Editora" />
@@ -36,6 +33,14 @@
     <AssociationSet Name="Item_VendaLivro" Association="Model1.Store.Item_VendaLivro">
       <End Role="Item_Venda" EntitySet="Item_VendaSet" />
       <End Role="Livro" EntitySet="Livro" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AutorLivro_Autor" Association="Model1.Store.FK_AutorLivro_Autor">
+      <End Role="Autor" EntitySet="Autor" />
+      <End Role="AutorLivro" EntitySet="AutorLivro" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AutorLivro_Livro" Association="Model1.Store.FK_AutorLivro_Livro">
+      <End Role="Livro" EntitySet="Livro" />
+      <End Role="AutorLivro" EntitySet="AutorLivro" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Autor">
@@ -59,6 +64,7 @@
     <Property Name="IdEditora" Type="int" Nullable="false" />
     <Property Name="Isbn" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Preco" Type="decimal" Nullable="false" />
+    <Property Name="QuantidadeEstoque" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="Genero">
     <Key>
@@ -103,7 +109,16 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IdVenda" Type="int" Nullable="false" />
-    <Property Name="LivroIdLivro" Type="int" Nullable="false" />
+    <Property Name="IdLivro" Type="int" Nullable="false" />
+    <Property Name="Quantidade" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AutorLivro">
+    <Key>
+      <PropertyRef Name="Autor_IdAutor" />
+      <PropertyRef Name="Livro_IdLivro" />
+    </Key>
+    <Property Name="Autor_IdAutor" Type="int" Nullable="false" />
+    <Property Name="Livro_IdLivro" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="LivroGenero">
     <End Role="Livro" Type="Model1.Store.Livro" Multiplicity="*" />
@@ -114,18 +129,6 @@
       </Principal>
       <Dependent Role="Livro">
         <PropertyRef Name="IdGenero" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="LivroAutor">
-    <End Role="Livro" Type="Model1.Store.Livro" Multiplicity="*" />
-    <End Role="Autor" Type="Model1.Store.Autor" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="Autor">
-        <PropertyRef Name="IdAutor" />
-      </Principal>
-      <Dependent Role="Livro">
-        <PropertyRef Name="IdAutor" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -173,7 +176,31 @@
         <PropertyRef Name="IdLivro" />
       </Principal>
       <Dependent Role="Item_Venda">
-        <PropertyRef Name="LivroIdLivro" />
+        <PropertyRef Name="IdLivro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AutorLivro_Autor">
+    <End Role="Autor" Type="Model1.Store.Autor" Multiplicity="1" />
+    <End Role="AutorLivro" Type="Model1.Store.AutorLivro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Autor">
+        <PropertyRef Name="IdAutor" />
+      </Principal>
+      <Dependent Role="AutorLivro">
+        <PropertyRef Name="Autor_IdAutor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AutorLivro_Livro">
+    <End Role="AutorLivro" Type="Model1.Store.AutorLivro" Multiplicity="*" />
+    <End Role="Livro" Type="Model1.Store.Livro" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Livro">
+        <PropertyRef Name="IdLivro" />
+      </Principal>
+      <Dependent Role="AutorLivro">
+        <PropertyRef Name="Livro_IdLivro" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -188,10 +215,6 @@
           <AssociationSet Name="LivroGenero" Association="Model1.LivroGenero">
             <End Role="Livro" EntitySet="Livro" />
             <End Role="Genero" EntitySet="Genero" />
-          </AssociationSet>
-          <AssociationSet Name="LivroAutor" Association="Model1.LivroAutor">
-            <End Role="Livro" EntitySet="Livro" />
-            <End Role="Autor" EntitySet="Autor" />
           </AssociationSet>
           <EntitySet Name="Editora" EntityType="Model1.Editora" />
           <AssociationSet Name="EditoraLivro" Association="Model1.EditoraLivro">
@@ -213,14 +236,18 @@
             <End Role="Item_Venda" EntitySet="Item_VendaSet" />
             <End Role="Livro" EntitySet="Livro" />
           </AssociationSet>
+          <AssociationSet Name="AutorLivro" Association="Model1.AutorLivro">
+            <End Role="Autor" EntitySet="Autor" />
+            <End Role="Livro" EntitySet="Livro" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Autor">
           <Key>
             <PropertyRef Name="IdAutor" />
           </Key>
           <Property Name="IdAutor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Livro" Relationship="Model1.LivroAutor" FromRole="Autor" ToRole="Livro" />
           <Property Name="NomeAutor" Type="String" Nullable="false" />
+          <NavigationProperty Name="Livro" Relationship="Model1.AutorLivro" FromRole="Autor" ToRole="Livro" />
         </EntityType>
         <EntityType Name="Livro">
           <Key>
@@ -229,7 +256,6 @@
           <Property Name="IdLivro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Genero" Relationship="Model1.LivroGenero" FromRole="Livro" ToRole="Genero" />
           <Property Name="IdGenero" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Autor" Relationship="Model1.LivroAutor" FromRole="Livro" ToRole="Autor" />
           <Property Name="IdAutor" Type="Int32" Nullable="false" />
           <Property Name="NomeLivro" Type="String" Nullable="false" />
           <Property Name="Ano" Type="Int32" Nullable="false" />
@@ -240,6 +266,8 @@
           <Property Name="Isbn" Type="String" Nullable="false" />
           <NavigationProperty Name="Item_Venda" Relationship="Model1.Item_VendaLivro" FromRole="Livro" ToRole="Item_Venda" />
           <Property Name="Preco" Type="Decimal" Nullable="false" />
+          <Property Name="QuantidadeEstoque" Type="String" Nullable="false" />
+          <NavigationProperty Name="Autor" Relationship="Model1.AutorLivro" FromRole="Livro" ToRole="Autor" />
         </EntityType>
         <EntityType Name="Genero">
           <Key>
@@ -258,18 +286,6 @@
             </Principal>
             <Dependent Role="Livro">
               <PropertyRef Name="IdGenero" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="LivroAutor">
-          <End Type="Model1.Livro" Role="Livro" Multiplicity="*" />
-          <End Type="Model1.Autor" Role="Autor" Multiplicity="1" />
-          <ReferentialConstraint>
-            <Principal Role="Autor">
-              <PropertyRef Name="IdAutor" />
-            </Principal>
-            <Dependent Role="Livro">
-              <PropertyRef Name="IdAutor" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -327,7 +343,8 @@
           <NavigationProperty Name="Venda" Relationship="Model1.Item_VendaVenda" FromRole="Item_Venda" ToRole="Venda" />
           <Property Name="IdVenda" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Livro" Relationship="Model1.Item_VendaLivro" FromRole="Item_Venda" ToRole="Livro" />
-          <Property Name="LivroIdLivro" Type="Int32" Nullable="false" />
+          <Property Name="IdLivro" Type="Int32" Nullable="false" />
+          <Property Name="Quantidade" Type="String" Nullable="false" />
         </EntityType>
         <Association Name="VendaFuncionario">
           <End Type="Model1.Venda" Role="Venda" Multiplicity="*" />
@@ -361,9 +378,13 @@
               <PropertyRef Name="IdLivro" />
             </Principal>
             <Dependent Role="Item_Venda">
-              <PropertyRef Name="LivroIdLivro" />
+              <PropertyRef Name="IdLivro" />
             </Dependent>
           </ReferentialConstraint>
+        </Association>
+        <Association Name="AutorLivro">
+          <End Type="Model1.Autor" Role="Autor" Multiplicity="*" />
+          <End Type="Model1.Livro" Role="Livro" Multiplicity="*" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -392,6 +413,7 @@
           <ScalarProperty Name="IdEditora" ColumnName="IdEditora" />
           <ScalarProperty Name="Isbn" ColumnName="Isbn" />
           <ScalarProperty Name="Preco" ColumnName="Preco" />
+          <ScalarProperty Name="QuantidadeEstoque" ColumnName="QuantidadeEstoque" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -441,10 +463,19 @@
         <MappingFragment StoreEntitySet="Item_VendaSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdVenda" ColumnName="IdVenda" />
-          <ScalarProperty Name="LivroIdLivro" ColumnName="LivroIdLivro" />
+          <ScalarProperty Name="IdLivro" ColumnName="IdLivro" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <AssociationSetMapping Name="AutorLivro" TypeName="Model1.AutorLivro" StoreEntitySet="AutorLivro">
+      <EndProperty Name="Autor">
+        <ScalarProperty Name="IdAutor" ColumnName="Autor_IdAutor" />
+      </EndProperty>
+      <EndProperty Name="Livro">
+        <ScalarProperty Name="IdLivro" ColumnName="Livro_IdLivro" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>

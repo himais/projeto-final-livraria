@@ -95,6 +95,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\FramePrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FramePrincipal.Designer.cs">
+      <DependentUpon>FramePrincipal.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\FrameLogin.resx">
       <DependentUpon>FrameLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +113,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FramePrincipal.resx">
+      <DependentUpon>FramePrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>

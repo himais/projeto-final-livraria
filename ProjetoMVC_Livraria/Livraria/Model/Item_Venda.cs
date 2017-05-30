@@ -16,7 +16,8 @@ namespace Livraria.Model
     {
         public int Id { get; set; }
         public int IdVenda { get; set; }
-        public int LivroIdLivro { get; set; }
+        public int IdLivro { get; set; }
+        public string Quantidade { get; set; }
     
         public virtual Venda Venda { get; set; }
         public virtual Livro Livro { get; set; }

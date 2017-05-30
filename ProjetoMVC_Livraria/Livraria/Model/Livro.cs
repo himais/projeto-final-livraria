@@ -17,6 +17,7 @@ namespace Livraria.Model
         public Livro()
         {
             this.Item_Venda = new HashSet<Item_Venda>();
+            this.Autor = new HashSet<Autor>();
         }
     
         public int IdLivro { get; set; }
@@ -29,10 +30,11 @@ namespace Livraria.Model
         public int IdEditora { get; set; }
         public string Isbn { get; set; }
         public decimal Preco { get; set; }
+        public string QuantidadeEstoque { get; set; }
     
         public virtual Genero Genero { get; set; }
-        public virtual Autor Autor { get; set; }
         public virtual Editora Editora { get; set; }
         public virtual ICollection<Item_Venda> Item_Venda { get; set; }
+        public virtual ICollection<Autor> Autor { get; set; }
     }
 }
