@@ -51,7 +51,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\EditoraController.cs" />
     <Compile Include="Controller\FuncionarioController.cs" />
+    <Compile Include="FuncionarioDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FuncionarioDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Model\Autor.cs">
       <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
@@ -85,25 +91,59 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModeloDadosLivraria.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\Validacao.cs" />
     <Compile Include="Model\Venda.cs">
       <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
-    <Compile Include="View\FrameLogin.cs">
+    <Compile Include="View\Editoras\FormCadastrarEditoras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrameLogin.Designer.cs">
-      <DependentUpon>FrameLogin.cs</DependentUpon>
+    <Compile Include="View\Editoras\FormCadastrarEditoras.Designer.cs">
+      <DependentUpon>FormCadastrarEditoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\FramePrincipal.cs">
+    <Compile Include="View\FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FramePrincipal.Designer.cs">
-      <DependentUpon>FramePrincipal.cs</DependentUpon>
+    <Compile Include="View\FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\FrameLogin.resx">
-      <DependentUpon>FrameLogin.cs</DependentUpon>
+    <Compile Include="View\FormSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSobre.Designer.cs">
+      <DependentUpon>FormSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Funcionarios\FormAtualizarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Funcionarios\FormAtualizarFuncionario.Designer.cs">
+      <DependentUpon>FormAtualizarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Funcionarios\FormCadastrarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Funcionarios\FormCadastrarFuncionario.Designer.cs">
+      <DependentUpon>FormCadastrarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Funcionarios\FormConsultarFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Funcionarios\FormConsultarFuncionarios.Designer.cs">
+      <DependentUpon>FormConsultarFuncionarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Editoras\FormCadastrarEditoras.resx">
+      <DependentUpon>FormCadastrarEditoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,13 +154,36 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\FramePrincipal.resx">
-      <DependentUpon>FramePrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSobre.resx">
+      <DependentUpon>FormSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Funcionarios\FormAtualizarFuncionario.resx">
+      <DependentUpon>FormAtualizarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Funcionarios\FormCadastrarFuncionario.resx">
+      <DependentUpon>FormCadastrarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Funcionarios\FormConsultarFuncionarios.resx">
+      <DependentUpon>FormConsultarFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\ModeloDadosLivraria.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModeloDadosLivraria.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="FuncionarioDataSet.xsc">
+      <DependentUpon>FuncionarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FuncionarioDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FuncionarioDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FuncionarioDataSet.xss">
+      <DependentUpon>FuncionarioDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Model\ModeloDadosLivraria.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModeloDadosLivraria.Context.cs</LastGenOutput>

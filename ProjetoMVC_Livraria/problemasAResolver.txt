@@ -1,0 +1,13 @@
+Tela de login, apenas ficando invisível, e não fechando.
+Tratamento try catch nas conexões com o banco (deixar Exception padrão?)
+
+Posso fazer alteração no funcionario de outro jeito (ou necessariamento do jeito que o professor ensinou??)
+Questionar professor sobre meio que encontrei para alterar funcionarios
+
+O meu notebook tem a entrada certa para apresentar o projeto?
+
+FEITO - Validar email com expressao regular
+
+Programar o enter para fazer uma ação, em todos os forms
+
+Se der tempo, colocar funcão de log

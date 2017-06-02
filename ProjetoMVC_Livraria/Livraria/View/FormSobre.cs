@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Livraria.View
 {
-    public partial class FramePrincipal : Form
+    public partial class FormSobre : Form
     {
-        public FramePrincipal()
+        public FormSobre()
         {
             InitializeComponent();
         }
