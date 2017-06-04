@@ -9,21 +9,20 @@ using System.Windows.Forms;
 
 namespace Livraria.Controller
 {
-    class EditoraController
+    class AutorController
     {
         private ModeloDadosLivraria context = new ModeloDadosLivraria();
 
-        public bool CadastrarEditora(Editora editora)
+        public bool AdicionaAutor(Autor autor)
         {
+            var erros = Validacao.ValidarObjeto(autor);
+
             try
             {
-                var erros = Validacao.ValidarObjeto(editora);
-
                 if (erros.Count() == 0)
                 {
-                    context.Editora.Add(editora);
+                    context.Autor.Add(autor);
                     context.SaveChanges();
-
                     return true;
                 }
                 else
@@ -35,6 +34,7 @@ namespace Livraria.Controller
                     }
                     return false;
                 }
+
             }
             catch (Exception e)
             {
@@ -43,33 +43,30 @@ namespace Livraria.Controller
             }
         }
 
-        public bool AtualizarEditora(Editora editora)
+        public bool AtualizaAutor(Autor autor)
         {
-            var erros = Validacao.ValidarObjeto(editora);
+            var erros = Validacao.ValidarObjeto(autor);
 
             //verifica se não há erros
             if (erros.Count() == 0)
-            {               
-                    try
-                    {
-                        //recupera editora no banco de dados, e atualiza seus dados
-                        Editora original = context.Editora.Find(editora.IdEditora);
-                        
-                        original.NomeEditora = editora.NomeEditora;
-                        original.RazaoSocial = editora.RazaoSocial;
-                        original.CNPJ = editora.CNPJ;
-                        original.Email = editora.Email;
-                        //atualiza as informações da editora e salva no banco
-                        context.Entry(original).State = EntityState.Modified;
-                        context.SaveChanges();
+            {
+                try
+                {
+                    //recupera o genero no banco de dados, e atualiza seus dados
+                    Autor original = context.Autor.Find(autor.IdAutor);
 
-                        return true;
-                    }
-                    catch (Exception e)
-                    {
-                        MessageBox.Show("Houve um problema ao realizar a alteração! \n" + e.Message);
-                        return false;
-                    }
+                    original.NomeAutor = autor.NomeAutor;
+
+                    context.Entry(original).State = EntityState.Modified;
+                    context.SaveChanges();
+
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Houve um problema ao realizar a alteração! \n" + e.Message);
+                    return false;
+                }
             }
             else
             {
@@ -81,24 +78,22 @@ namespace Livraria.Controller
             }
 
             return false;
-
         }
 
-        public bool ExcluirEditora(int idEditora)
+        public bool ExcluirAutor(int idAutor)
         {
             try
             {
-                Editora editora = context.Editora.Find(idEditora);
-                context.Editora.Remove(editora);
+                Autor autor = context.Autor.Find(idAutor);
+                context.Autor.Remove(autor);
                 context.SaveChanges();
                 return true;
             }
             catch (Exception e)
             {
-                MessageBox.Show("Houve um problema ao excluir a editora! \n" + e.Message);
+                MessageBox.Show("Houve um problema ao excluir o autor! \n" + e.Message);
                 return false;
             }
         }
-
     }
 }

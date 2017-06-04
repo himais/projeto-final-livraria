@@ -96,7 +96,7 @@ namespace Livraria.Controller
                         original.Administrador = funcionario.Administrador;
                         original.NomeFuncionario = funcionario.NomeFuncionario;
                         original.Login = funcionario.Login;
-
+                        //atualiza as informações do funcionario e salva no banco
                         context.Entry(original).State = EntityState.Modified;
                         context.SaveChanges();
                         
@@ -106,6 +106,14 @@ namespace Livraria.Controller
                     {
                         MessageBox.Show("Houve um problema ao realizar a alteração! \n" + e.Message);
                     }
+                }
+            }
+            else
+            {
+                foreach (var erro in erros)
+                {
+                    MessageBox.Show(erro.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
                 }
             }
 
@@ -124,9 +132,9 @@ namespace Livraria.Controller
             catch (Exception e)
             {
                 MessageBox.Show("Houve um problema ao excluir o funcionário! \n" + e.Message);
+                return false;
             }
-
-            return false;
         }
+
     }
 }

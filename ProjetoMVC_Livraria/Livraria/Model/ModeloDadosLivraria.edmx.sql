@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/30/2017 13:37:51
--- Generated from EDMX file: C:\Faculdade\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\Model\ModeloDadosLivraria.edmx
+-- Date Created: 06/04/2017 11:31:54
+-- Generated from EDMX file: D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\Model\ModeloDadosLivraria.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -91,7 +91,7 @@ CREATE TABLE [dbo].[Livro] (
     [IdEditora] int  NOT NULL,
     [Isbn] nvarchar(max)  NOT NULL,
     [Preco] decimal(18,0)  NOT NULL,
-    [QuantidadeEstoque] nvarchar(max)  NOT NULL
+    [QuantidadeEstoque] int  NOT NULL
 );
 GO
 

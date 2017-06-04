@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Controller\EditoraController.cs" />
     <Compile Include="Controller\FuncionarioController.cs" />
+    <Compile Include="Controller\GeneroController.cs" />
     <Compile Include="FuncionarioDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

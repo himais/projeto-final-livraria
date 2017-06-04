@@ -21,15 +21,15 @@ namespace Livraria.Model
         }
     
         public int IdEditora { get; set; }
-
         [Required(ErrorMessage = "Insira o nome da editora!", AllowEmptyStrings = false)]
+
         public string NomeEditora { get; set; }
 
         [Required(ErrorMessage = "Insira a razão social da editora!", AllowEmptyStrings = false)]
         public string RazaoSocial { get; set; }
 
         [Required(ErrorMessage = "Insira o CNPJ da editora!", AllowEmptyStrings = false)]
-        [StringLength(14, MinimumLength=14, ErrorMessage = "O CNPJ deve ter 14 caracteres!")]
+        [StringLength(14, MinimumLength = 14, ErrorMessage = "O CNPJ deve ter 14 caracteres!")]
         public string CNPJ { get; set; }
 
         [Required(ErrorMessage = "Insira o e-mail da editora!", AllowEmptyStrings = false)]

@@ -30,7 +30,7 @@ namespace Livraria.Model
         public int IdEditora { get; set; }
         public string Isbn { get; set; }
         public decimal Preco { get; set; }
-        public string QuantidadeEstoque { get; set; }
+        public int QuantidadeEstoque { get; set; }
     
         public virtual Genero Genero { get; set; }
         public virtual Editora Editora { get; set; }
