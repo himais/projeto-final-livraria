@@ -1,5 +1,6 @@
 ﻿using Livraria.Controller;
 using Livraria.Model;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,11 +13,13 @@ using System.Windows.Forms;
 
 namespace Livraria.View.Funcionarios
 {
-    public partial class FormCadastrarFuncionario : Form
+    public partial class FormCadastrarFuncionario : MetroForm
     {
         public FormCadastrarFuncionario()
         {
             InitializeComponent();
+            this.ControlBox = false;
+            this.Text = String.Empty;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

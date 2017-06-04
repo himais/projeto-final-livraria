@@ -43,3 +43,22 @@ D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\
 D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Funcionarios.FormCadastrarFuncionario.resources
 D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Funcionarios.FormConsultarFuncionarios.resources
 D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.csproj.GenerateResource.Cache
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\bin\Debug\Livraria.exe.config
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.exe
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.pdb
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\bin\Debug\Livraria.exe
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\bin\Debug\Livraria.pdb
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\bin\Debug\EntityFramework.dll
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\bin\Debug\EntityFramework.xml
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Editoras.FormCadastrarEditoras.resources
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.FormLogin.resources
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.Properties.Resources.resources
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.FormPrincipal.resources
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.FormSobre.resources
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Funcionarios.FormAtualizarFuncionario.resources
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Funcionarios.FormCadastrarFuncionario.resources
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Funcionarios.FormConsultarFuncionarios.resources
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.csproj.GenerateResource.Cache
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\bin\Debug\MetroFramework.Design.dll
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\bin\Debug\MetroFramework.dll
+C:\Users\Maíra\Desktop\Projeto A5LP1\livraria\ProjetoMVC_Livraria\Livraria\bin\Debug\MetroFramework.Fonts.dll

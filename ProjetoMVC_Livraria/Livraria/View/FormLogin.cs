@@ -1,6 +1,7 @@
 ﻿using Livraria.Controller;
 using Livraria.Model;
 using Livraria.View;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +12,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Livraria
 {
-    public partial class FormLogin : Form
+    public partial class FormLogin : MetroForm
     {
         public FormLogin()
         {
@@ -40,7 +42,7 @@ namespace Livraria
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            this.realizarLogin();   
+            this.realizarLogin();
         }
 
         private void button1_Click(object sender, EventArgs e)

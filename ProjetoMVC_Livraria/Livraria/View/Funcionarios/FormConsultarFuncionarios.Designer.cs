@@ -49,7 +49,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(255, 30);
+            this.lblTitulo.Location = new System.Drawing.Point(340, 30);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(201, 18);
             this.lblTitulo.TabIndex = 0;
@@ -146,8 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(710, 316);
+            this.ClientSize = new System.Drawing.Size(710, 324);
             this.Controls.Add(this.lblDica);
             this.Controls.Add(this.dgvFuncionarios);
             this.Controls.Add(this.lblTitulo);

@@ -51,7 +51,12 @@
             this.tsmiAutoresCadastrar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAutoresConsultar = new System.Windows.Forms.ToolStripMenuItem();
             this.lblBemVindo = new System.Windows.Forms.Label();
+            this.TesteDeAbas = new MetroFramework.Controls.MetroTabControl();
+            this.abaArquivo = new MetroFramework.Controls.MetroTabPage();
+            this.AbaVendas = new MetroFramework.Controls.MetroTabPage();
+            this.AbaLivros = new MetroFramework.Controls.MetroTabPage();
             this.menuStripPrincipal.SuspendLayout();
+            this.TesteDeAbas.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripPrincipal
@@ -63,9 +68,9 @@
             this.tsmiFuncionarios,
             this.tsmiEditoras,
             this.tsmiAutores});
-            this.menuStripPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.menuStripPrincipal.Location = new System.Drawing.Point(20, 60);
             this.menuStripPrincipal.Name = "menuStripPrincipal";
-            this.menuStripPrincipal.Size = new System.Drawing.Size(590, 24);
+            this.menuStripPrincipal.Size = new System.Drawing.Size(550, 24);
             this.menuStripPrincipal.TabIndex = 0;
             this.menuStripPrincipal.Text = "menuStrip1";
             // 
@@ -81,14 +86,14 @@
             // tsmiSobre
             // 
             this.tsmiSobre.Name = "tsmiSobre";
-            this.tsmiSobre.Size = new System.Drawing.Size(104, 22);
+            this.tsmiSobre.Size = new System.Drawing.Size(152, 22);
             this.tsmiSobre.Text = "Sobre";
             this.tsmiSobre.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // tsmiSair
             // 
             this.tsmiSair.Name = "tsmiSair";
-            this.tsmiSair.Size = new System.Drawing.Size(104, 22);
+            this.tsmiSair.Size = new System.Drawing.Size(152, 22);
             this.tsmiSair.Text = "Sair";
             this.tsmiSair.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -168,14 +173,14 @@
             // tsmiFuncionariosCadastrar
             // 
             this.tsmiFuncionariosCadastrar.Name = "tsmiFuncionariosCadastrar";
-            this.tsmiFuncionariosCadastrar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiFuncionariosCadastrar.Size = new System.Drawing.Size(125, 22);
             this.tsmiFuncionariosCadastrar.Text = "Cadastrar";
             this.tsmiFuncionariosCadastrar.Click += new System.EventHandler(this.tsmiFuncionariosCadastrar_Click);
             // 
             // tsmiFuncionariosConsultar
             // 
             this.tsmiFuncionariosConsultar.Name = "tsmiFuncionariosConsultar";
-            this.tsmiFuncionariosConsultar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiFuncionariosConsultar.Size = new System.Drawing.Size(125, 22);
             this.tsmiFuncionariosConsultar.Text = "Consultar";
             this.tsmiFuncionariosConsultar.Click += new System.EventHandler(this.tsmiFuncionariosConsultar_Click);
             // 
@@ -191,14 +196,14 @@
             // tsmiEditorasCadastrar
             // 
             this.tsmiEditorasCadastrar.Name = "tsmiEditorasCadastrar";
-            this.tsmiEditorasCadastrar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEditorasCadastrar.Size = new System.Drawing.Size(125, 22);
             this.tsmiEditorasCadastrar.Text = "Cadastrar";
             this.tsmiEditorasCadastrar.Click += new System.EventHandler(this.tsmiEditorasCadastrar_Click);
             // 
             // tsmiEditorasConsultar
             // 
             this.tsmiEditorasConsultar.Name = "tsmiEditorasConsultar";
-            this.tsmiEditorasConsultar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEditorasConsultar.Size = new System.Drawing.Size(125, 22);
             this.tsmiEditorasConsultar.Text = "Consultar";
             // 
             // tsmiAutores
@@ -226,18 +231,72 @@
             // 
             this.lblBemVindo.AutoSize = true;
             this.lblBemVindo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBemVindo.Location = new System.Drawing.Point(439, 60);
+            this.lblBemVindo.Location = new System.Drawing.Point(411, 102);
             this.lblBemVindo.Name = "lblBemVindo";
             this.lblBemVindo.Size = new System.Drawing.Size(114, 18);
             this.lblBemVindo.TabIndex = 1;
             this.lblBemVindo.Text = "Seja bem-vindo,";
             // 
+            // TesteDeAbas
+            // 
+            this.TesteDeAbas.Controls.Add(this.abaArquivo);
+            this.TesteDeAbas.Controls.Add(this.AbaVendas);
+            this.TesteDeAbas.Controls.Add(this.AbaLivros);
+            this.TesteDeAbas.Location = new System.Drawing.Point(24, 200);
+            this.TesteDeAbas.Name = "TesteDeAbas";
+            this.TesteDeAbas.SelectedIndex = 0;
+            this.TesteDeAbas.Size = new System.Drawing.Size(450, 64);
+            this.TesteDeAbas.TabIndex = 2;
+            this.TesteDeAbas.UseSelectable = true;
+            // 
+            // abaArquivo
+            // 
+            this.abaArquivo.HorizontalScrollbarBarColor = true;
+            this.abaArquivo.HorizontalScrollbarHighlightOnWheel = false;
+            this.abaArquivo.HorizontalScrollbarSize = 10;
+            this.abaArquivo.Location = new System.Drawing.Point(4, 38);
+            this.abaArquivo.Name = "abaArquivo";
+            this.abaArquivo.Size = new System.Drawing.Size(442, 22);
+            this.abaArquivo.TabIndex = 0;
+            this.abaArquivo.Text = "Arquivo";
+            this.abaArquivo.VerticalScrollbarBarColor = true;
+            this.abaArquivo.VerticalScrollbarHighlightOnWheel = false;
+            this.abaArquivo.VerticalScrollbarSize = 10;
+            // 
+            // AbaVendas
+            // 
+            this.AbaVendas.HorizontalScrollbarBarColor = true;
+            this.AbaVendas.HorizontalScrollbarHighlightOnWheel = false;
+            this.AbaVendas.HorizontalScrollbarSize = 10;
+            this.AbaVendas.Location = new System.Drawing.Point(4, 38);
+            this.AbaVendas.Name = "AbaVendas";
+            this.AbaVendas.Size = new System.Drawing.Size(442, 22);
+            this.AbaVendas.TabIndex = 1;
+            this.AbaVendas.Text = "Vendas";
+            this.AbaVendas.VerticalScrollbarBarColor = true;
+            this.AbaVendas.VerticalScrollbarHighlightOnWheel = false;
+            this.AbaVendas.VerticalScrollbarSize = 10;
+            // 
+            // AbaLivros
+            // 
+            this.AbaLivros.HorizontalScrollbarBarColor = true;
+            this.AbaLivros.HorizontalScrollbarHighlightOnWheel = false;
+            this.AbaLivros.HorizontalScrollbarSize = 10;
+            this.AbaLivros.Location = new System.Drawing.Point(4, 38);
+            this.AbaLivros.Name = "AbaLivros";
+            this.AbaLivros.Size = new System.Drawing.Size(442, 22);
+            this.AbaLivros.TabIndex = 2;
+            this.AbaLivros.Text = "Livros";
+            this.AbaLivros.VerticalScrollbarBarColor = true;
+            this.AbaLivros.VerticalScrollbarHighlightOnWheel = false;
+            this.AbaLivros.VerticalScrollbarSize = 10;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(590, 342);
+            this.Controls.Add(this.TesteDeAbas);
             this.Controls.Add(this.lblBemVindo);
             this.Controls.Add(this.menuStripPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -249,6 +308,7 @@
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.menuStripPrincipal.ResumeLayout(false);
             this.menuStripPrincipal.PerformLayout();
+            this.TesteDeAbas.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,5 +339,9 @@
         private System.Windows.Forms.Label lblBemVindo;
         private System.Windows.Forms.ToolStripMenuItem tsmiAutoresCadastrar;
         private System.Windows.Forms.ToolStripMenuItem tsmiAutoresConsultar;
+        private MetroFramework.Controls.MetroTabControl TesteDeAbas;
+        private MetroFramework.Controls.MetroTabPage abaArquivo;
+        private MetroFramework.Controls.MetroTabPage AbaVendas;
+        private MetroFramework.Controls.MetroTabPage AbaLivros;
     }
 }

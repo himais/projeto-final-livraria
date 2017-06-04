@@ -1,6 +1,7 @@
 ﻿using Livraria.Model;
 using Livraria.View.Editoras;
 using Livraria.View.Funcionarios;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +12,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Livraria.View
 {
-    public partial class FormPrincipal : Form
+    public partial class FormPrincipal : MetroForm
     {
         Funcionario funcionario { get; set; }
 

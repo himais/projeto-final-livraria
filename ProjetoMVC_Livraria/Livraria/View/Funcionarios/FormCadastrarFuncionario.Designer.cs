@@ -28,52 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNome = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblSenha = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
-            this.cbxAdministrador = new System.Windows.Forms.CheckBox();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblNome = new MetroFramework.Controls.MetroLabel();
+            this.lblUsuario = new MetroFramework.Controls.MetroLabel();
+            this.lblSenha = new MetroFramework.Controls.MetroLabel();
+            this.cbxAdministrador = new MetroFramework.Controls.MetroCheckBox();
+            this.btnCadastrar = new MetroFramework.Controls.MetroButton();
+            this.btnCancelar = new MetroFramework.Controls.MetroButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblTitulo = new MetroFramework.Controls.MetroLabel();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(40, 93);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(58, 18);
-            this.lblNome.TabIndex = 0;
-            this.lblNome.Text = "Nome:";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(40, 132);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(72, 18);
-            this.lblUsuario.TabIndex = 1;
-            this.lblUsuario.Text = "Usuário:";
-            // 
-            // lblSenha
-            // 
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.Location = new System.Drawing.Point(40, 171);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(60, 18);
-            this.lblSenha.TabIndex = 2;
-            this.lblSenha.Text = "Senha:";
             // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(120, 90);
+            this.txtNome.Location = new System.Drawing.Point(125, 79);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(390, 24);
             this.txtNome.TabIndex = 3;
@@ -81,7 +53,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(120, 129);
+            this.txtUsuario.Location = new System.Drawing.Point(125, 119);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(167, 24);
             this.txtUsuario.TabIndex = 4;
@@ -89,76 +61,114 @@
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(120, 171);
+            this.txtSenha.Location = new System.Drawing.Point(125, 159);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '●';
             this.txtSenha.Size = new System.Drawing.Size(167, 24);
             this.txtSenha.TabIndex = 5;
             // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblNome.Location = new System.Drawing.Point(42, 40);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(53, 19);
+            this.lblNome.TabIndex = 9;
+            this.lblNome.Text = "Nome: ";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblUsuario.Location = new System.Drawing.Point(32, 80);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(63, 19);
+            this.lblUsuario.TabIndex = 10;
+            this.lblUsuario.Text = "Usuário: ";
+            // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblSenha.Location = new System.Drawing.Point(42, 120);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(53, 19);
+            this.lblSenha.TabIndex = 11;
+            this.lblSenha.Text = "Senha: ";
+            // 
             // cbxAdministrador
             // 
             this.cbxAdministrador.AutoSize = true;
-            this.cbxAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxAdministrador.Location = new System.Drawing.Point(344, 131);
+            this.cbxAdministrador.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
+            this.cbxAdministrador.Location = new System.Drawing.Point(324, 80);
             this.cbxAdministrador.Name = "cbxAdministrador";
-            this.cbxAdministrador.Size = new System.Drawing.Size(131, 22);
-            this.cbxAdministrador.TabIndex = 6;
+            this.cbxAdministrador.Size = new System.Drawing.Size(112, 19);
+            this.cbxAdministrador.TabIndex = 12;
             this.cbxAdministrador.Text = "Administrador";
-            this.cbxAdministrador.UseVisualStyleBackColor = true;
+            this.cbxAdministrador.UseSelectable = true;
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(418, 216);
+            this.btnCadastrar.Location = new System.Drawing.Point(430, 215);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(92, 26);
-            this.btnCadastrar.TabIndex = 7;
+            this.btnCadastrar.Size = new System.Drawing.Size(104, 31);
+            this.btnCadastrar.TabIndex = 13;
             this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.UseSelectable = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(301, 216);
+            this.btnCancelar.Location = new System.Drawing.Point(320, 215);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(92, 26);
-            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.Size = new System.Drawing.Size(104, 31);
+            this.btnCancelar.TabIndex = 14;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseSelectable = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblTitulo);
+            this.groupBox1.Controls.Add(this.lblNome);
+            this.groupBox1.Controls.Add(this.cbxAdministrador);
+            this.groupBox1.Controls.Add(this.lblUsuario);
+            this.groupBox1.Controls.Add(this.lblSenha);
+            this.groupBox1.Location = new System.Drawing.Point(24, 39);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(509, 166);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(185, 35);
+            this.lblTitulo.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblTitulo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblTitulo.Location = new System.Drawing.Point(12, -6);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(194, 18);
-            this.lblTitulo.TabIndex = 9;
-            this.lblTitulo.Text = "Cadastro de Funcionário";
+            this.lblTitulo.Size = new System.Drawing.Size(198, 25);
+            this.lblTitulo.TabIndex = 16;
+            this.lblTitulo.Text = "Cadastrar Funcionário";
             // 
             // FormCadastrarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(564, 269);
-            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.cbxAdministrador);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.lblSenha);
-            this.Controls.Add(this.lblUsuario);
-            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormCadastrarFuncionario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Funcionário";
+            this.Resizable = false;
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,15 +176,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.CheckBox cbxAdministrador;
-        private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label lblTitulo;
+        private MetroFramework.Controls.MetroLabel lblNome;
+        private MetroFramework.Controls.MetroLabel lblUsuario;
+        private MetroFramework.Controls.MetroLabel lblSenha;
+        private MetroFramework.Controls.MetroCheckBox cbxAdministrador;
+        private MetroFramework.Controls.MetroButton btnCadastrar;
+        private MetroFramework.Controls.MetroButton btnCancelar;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private MetroFramework.Controls.MetroLabel lblTitulo;
     }
 }
