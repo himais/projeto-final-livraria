@@ -9,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -22,6 +23,11 @@ namespace Livraria
             this.FormBorderStyle = FormBorderStyle.None; //desativa barra superior
             pgbLogin.Enabled = false;
             pgbLogin.Visible = false;
+        }
+
+        public void SplashScreen()
+        {
+            Application.Run(new FormSplash());
         }
 
         private void realizarLogin()
@@ -41,8 +47,15 @@ namespace Livraria
             if (funcionarioRetorno != null)
             {
                 this.Visible = false;
-                new FormSplash().ShowDialog(this);
+
+                //inicia a tela splash
+                Thread t = new Thread(new ThreadStart(SplashScreen));
+                t.Start();
+                Thread.Sleep(3000);
+                t.Abort();
+                //form principal
                 new FormPrincipal(funcionarioRetorno).ShowDialog(this);
+                
             }
             else
             {
