@@ -35,6 +35,18 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -134,6 +146,12 @@
     <Compile Include="View\FormSobre.Designer.cs">
       <DependentUpon>FormSobre.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSplash.Designer.cs">
+      <DependentUpon>FormSplash.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Funcionarios\FormAtualizarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,12 +197,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormSobre.resx">
       <DependentUpon>FormSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSplash.resx">
+      <DependentUpon>FormSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Funcionarios\FormAtualizarFuncionario.resx">
       <DependentUpon>FormAtualizarFuncionario.cs</DependentUpon>
@@ -271,6 +293,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model\ModeloDadosLivraria.edmx.sql" />
+    <None Include="Resources\livros.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

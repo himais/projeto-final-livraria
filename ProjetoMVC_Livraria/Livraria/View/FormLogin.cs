@@ -1,6 +1,7 @@
 ﻿using Livraria.Controller;
 using Livraria.Model;
 using Livraria.View;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,15 +14,21 @@ using System.Windows.Forms;
 
 namespace Livraria
 {
-    public partial class FormLogin : Form
+    public partial class FormLogin : MetroForm
     {
         public FormLogin()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None; //desativa barra superior
+            pgbLogin.Enabled = false;
+            pgbLogin.Visible = false;
         }
 
         private void realizarLogin()
         {
+            pgbLogin.Enabled = true;
+            pgbLogin.Visible = true;
+
             Funcionario funcionario = new Funcionario();
             FuncionarioController funcionarioController = new FuncionarioController();
 
@@ -34,7 +41,13 @@ namespace Livraria
             if (funcionarioRetorno != null)
             {
                 this.Visible = false;
+                new FormSplash().ShowDialog(this);
                 new FormPrincipal(funcionarioRetorno).ShowDialog(this);
+            }
+            else
+            {
+                pgbLogin.Enabled = false;
+                pgbLogin.Visible = false;
             }
         }
 
