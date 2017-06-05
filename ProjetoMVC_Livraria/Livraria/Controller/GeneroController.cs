@@ -96,5 +96,10 @@ namespace Livraria.Controller
                 return false;
             }
         }
+
+        public List<Genero> RecuperarGeneros()
+        {
+            return context.Genero.ToList<Genero>();
+        }
     }
 }

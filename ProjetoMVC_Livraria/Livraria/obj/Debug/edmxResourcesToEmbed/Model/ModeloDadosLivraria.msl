@@ -14,7 +14,6 @@
         <MappingFragment StoreEntitySet="Livro">
           <ScalarProperty Name="IdLivro" ColumnName="IdLivro" />
           <ScalarProperty Name="IdGenero" ColumnName="IdGenero" />
-          <ScalarProperty Name="IdAutor" ColumnName="IdAutor" />
           <ScalarProperty Name="NomeLivro" ColumnName="NomeLivro" />
           <ScalarProperty Name="Ano" ColumnName="Ano" />
           <ScalarProperty Name="Descricao" ColumnName="Descricao" />

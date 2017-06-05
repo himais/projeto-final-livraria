@@ -51,13 +51,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutorDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutorDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\AutorController.cs" />
     <Compile Include="Controller\EditoraController.cs" />
     <Compile Include="Controller\FuncionarioController.cs" />
     <Compile Include="Controller\GeneroController.cs" />
+    <Compile Include="Controller\LivroController.cs" />
     <Compile Include="FuncionarioDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FuncionarioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GeneroDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneroDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Model\Autor.cs">
       <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
@@ -140,6 +152,19 @@
     <Compile Include="View\Funcionarios\FormConsultarFuncionarios.Designer.cs">
       <DependentUpon>FormConsultarFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Livros\FormCadastrarLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Livros\FormCadastrarLivro.Designer.cs">
+      <DependentUpon>FormCadastrarLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Livros\FormSelecionarAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Livros\FormSelecionarAutores.Designer.cs">
+      <DependentUpon>FormSelecionarAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Livros\Genero.cs" />
     <EmbeddedResource Include="View\Editoras\FormCadastrarEditoras.resx">
       <DependentUpon>FormCadastrarEditoras.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,10 +195,27 @@
     <EmbeddedResource Include="View\Funcionarios\FormConsultarFuncionarios.resx">
       <DependentUpon>FormConsultarFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Livros\FormCadastrarLivro.resx">
+      <DependentUpon>FormCadastrarLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Livros\FormSelecionarAutores.resx">
+      <DependentUpon>FormSelecionarAutores.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model\ModeloDadosLivraria.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModeloDadosLivraria.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="AutorDataSet.xsc">
+      <DependentUpon>AutorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AutorDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AutorDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AutorDataSet.xss">
+      <DependentUpon>AutorDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FuncionarioDataSet.xsc">
       <DependentUpon>FuncionarioDataSet.xsd</DependentUpon>
     </None>
@@ -184,6 +226,17 @@
     </None>
     <None Include="FuncionarioDataSet.xss">
       <DependentUpon>FuncionarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GeneroDataSet.xsc">
+      <DependentUpon>GeneroDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GeneroDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GeneroDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GeneroDataSet.xss">
+      <DependentUpon>GeneroDataSet.xsd</DependentUpon>
     </None>
     <None Include="Model\ModeloDadosLivraria.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

@@ -22,7 +22,6 @@ namespace Livraria.Model
     
         public int IdLivro { get; set; }
         public int IdGenero { get; set; }
-        public int IdAutor { get; set; }
         public string NomeLivro { get; set; }
         public int Ano { get; set; }
         public string Descricao { get; set; }

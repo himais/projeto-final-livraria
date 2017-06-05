@@ -21,8 +21,8 @@ namespace Livraria.Model
         }
     
         public int IdEditora { get; set; }
-        [Required(ErrorMessage = "Insira o nome da editora!", AllowEmptyStrings = false)]
 
+        [Required(ErrorMessage = "Insira o nome da editora!", AllowEmptyStrings = false)]
         public string NomeEditora { get; set; }
 
         [Required(ErrorMessage = "Insira a razão social da editora!", AllowEmptyStrings = false)]

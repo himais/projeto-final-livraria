@@ -32,14 +32,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
-            this.idFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.administradorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.funcionarioDataSet = new Livraria.FuncionarioDataSet();
             this.funcionarioTableAdapter = new Livraria.FuncionarioDataSetTableAdapters.FuncionarioTableAdapter();
             this.lblDica = new System.Windows.Forms.Label();
+            this.idFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.administradorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataSet)).BeginInit();
@@ -85,38 +85,6 @@
             this.dgvFuncionarios.MouseEnter += new System.EventHandler(this.dataGridViewFuncionarios_MouseEnter);
             this.dgvFuncionarios.MouseLeave += new System.EventHandler(this.dataGridViewFuncionarios_MouseLeave);
             // 
-            // idFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.idFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "IdFuncionario";
-            this.idFuncionarioDataGridViewTextBoxColumn.HeaderText = "IdFuncionario";
-            this.idFuncionarioDataGridViewTextBoxColumn.Name = "idFuncionarioDataGridViewTextBoxColumn";
-            this.idFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idFuncionarioDataGridViewTextBoxColumn.Width = 97;
-            // 
-            // nomeFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.nomeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "NomeFuncionario";
-            this.nomeFuncionarioDataGridViewTextBoxColumn.HeaderText = "NomeFuncionario";
-            this.nomeFuncionarioDataGridViewTextBoxColumn.Name = "nomeFuncionarioDataGridViewTextBoxColumn";
-            this.nomeFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeFuncionarioDataGridViewTextBoxColumn.Width = 295;
-            // 
-            // loginDataGridViewTextBoxColumn
-            // 
-            this.loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
-            this.loginDataGridViewTextBoxColumn.HeaderText = "Login";
-            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
-            this.loginDataGridViewTextBoxColumn.ReadOnly = true;
-            this.loginDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // administradorDataGridViewCheckBoxColumn
-            // 
-            this.administradorDataGridViewCheckBoxColumn.DataPropertyName = "Administrador";
-            this.administradorDataGridViewCheckBoxColumn.HeaderText = "Administrador";
-            this.administradorDataGridViewCheckBoxColumn.Name = "administradorDataGridViewCheckBoxColumn";
-            this.administradorDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.administradorDataGridViewCheckBoxColumn.Width = 80;
-            // 
             // funcionarioBindingSource
             // 
             this.funcionarioBindingSource.DataMember = "Funcionario";
@@ -141,6 +109,38 @@
             this.lblDica.Size = new System.Drawing.Size(375, 18);
             this.lblDica.TabIndex = 2;
             this.lblDica.Text = "Dê um duplo clique na linha que deseja alterar ou excluir";
+            // 
+            // idFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.idFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "IdFuncionario";
+            this.idFuncionarioDataGridViewTextBoxColumn.HeaderText = "Identificação";
+            this.idFuncionarioDataGridViewTextBoxColumn.Name = "idFuncionarioDataGridViewTextBoxColumn";
+            this.idFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idFuncionarioDataGridViewTextBoxColumn.Width = 97;
+            // 
+            // nomeFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.nomeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "NomeFuncionario";
+            this.nomeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeFuncionarioDataGridViewTextBoxColumn.Name = "nomeFuncionarioDataGridViewTextBoxColumn";
+            this.nomeFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomeFuncionarioDataGridViewTextBoxColumn.Width = 295;
+            // 
+            // loginDataGridViewTextBoxColumn
+            // 
+            this.loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
+            this.loginDataGridViewTextBoxColumn.HeaderText = "Login";
+            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            this.loginDataGridViewTextBoxColumn.ReadOnly = true;
+            this.loginDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // administradorDataGridViewCheckBoxColumn
+            // 
+            this.administradorDataGridViewCheckBoxColumn.DataPropertyName = "Administrador";
+            this.administradorDataGridViewCheckBoxColumn.HeaderText = "Administrador";
+            this.administradorDataGridViewCheckBoxColumn.Name = "administradorDataGridViewCheckBoxColumn";
+            this.administradorDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.administradorDataGridViewCheckBoxColumn.Width = 80;
             // 
             // FormConsultarFuncionarios
             // 
@@ -172,10 +172,10 @@
         private FuncionarioDataSet funcionarioDataSet;
         private System.Windows.Forms.BindingSource funcionarioBindingSource;
         private FuncionarioDataSetTableAdapters.FuncionarioTableAdapter funcionarioTableAdapter;
+        private System.Windows.Forms.Label lblDica;
         private System.Windows.Forms.DataGridViewTextBoxColumn idFuncionarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeFuncionarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn administradorDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.Label lblDica;
     }
 }

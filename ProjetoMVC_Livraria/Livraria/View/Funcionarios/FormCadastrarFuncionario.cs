@@ -29,9 +29,9 @@ namespace Livraria.View.Funcionarios
             Funcionario funcionario = new Funcionario();
             FuncionarioController funcionarioController = new FuncionarioController();
 
-            funcionario.NomeFuncionario = txtNome.Text;
-            funcionario.Login = txtUsuario.Text;
-            funcionario.Senha = txtSenha.Text;
+            funcionario.NomeFuncionario = txtNome.Text.Trim();
+            funcionario.Login = txtUsuario.Text.Trim();
+            funcionario.Senha = txtSenha.Text.Trim();
             funcionario.Administrador = cbxAdministrador.Checked;
 
             if (funcionarioController.CadastrarFuncionario(funcionario))

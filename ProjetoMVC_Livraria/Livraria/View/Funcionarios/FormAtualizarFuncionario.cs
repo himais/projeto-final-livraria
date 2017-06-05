@@ -39,8 +39,8 @@ namespace Livraria.View.Funcionarios
                 FuncionarioController funcionarioController = new FuncionarioController();
 
                 f.IdFuncionario = int.Parse(txtId.Text);
-                f.NomeFuncionario = txtNome.Text;
-                f.Login = txtUsuario.Text;
+                f.NomeFuncionario = txtNome.Text.Trim();
+                f.Login = txtUsuario.Text.Trim();
                 f.Administrador = cbxAdministrador.Checked;
 
                 if (funcionarioController.AtualizarFuncionario(f))

@@ -21,6 +21,7 @@ namespace Livraria.Model
         }
     
         public int IdFuncionario { get; set; }
+
         [Required(ErrorMessage = "Insira o nome do funcionario!", AllowEmptyStrings = false)]
         public string NomeFuncionario { get; set; }
 

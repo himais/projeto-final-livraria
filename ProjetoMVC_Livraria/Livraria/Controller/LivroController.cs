@@ -9,21 +9,20 @@ using System.Windows.Forms;
 
 namespace Livraria.Controller
 {
-    class EditoraController
+    class LivroController
     {
         private ModeloDadosLivraria context = new ModeloDadosLivraria();
 
-        public bool CadastrarEditora(Editora editora)
+        public bool AdicionaLivro(Livro livro)
         {
+            var erros = Validacao.ValidarObjeto(livro);
+
             try
             {
-                var erros = Validacao.ValidarObjeto(editora);
-
                 if (erros.Count() == 0)
                 {
-                    context.Editora.Add(editora);
+                    context.Livro.Add(livro);
                     context.SaveChanges();
-
                     return true;
                 }
                 else
@@ -35,6 +34,7 @@ namespace Livraria.Controller
                     }
                     return false;
                 }
+
             }
             catch (Exception e)
             {
@@ -43,33 +43,38 @@ namespace Livraria.Controller
             }
         }
 
-        public bool AtualizarEditora(Editora editora)
+        public bool AtualizarLivro(Livro livro)
         {
-            var erros = Validacao.ValidarObjeto(editora);
+            var erros = Validacao.ValidarObjeto(livro);
 
             //verifica se não há erros
             if (erros.Count() == 0)
-            {               
-                    try
-                    {
-                        //recupera editora no banco de dados, e atualiza seus dados
-                        Editora original = context.Editora.Find(editora.IdEditora);
-                        
-                        original.NomeEditora = editora.NomeEditora;
-                        original.RazaoSocial = editora.RazaoSocial;
-                        original.CNPJ = editora.CNPJ;
-                        original.Email = editora.Email;
-                        //atualiza as informações da editora e salva no banco
-                        context.Entry(original).State = EntityState.Modified;
-                        context.SaveChanges();
+            {
+                try
+                {
+                    //recupera o genero no banco de dados, e atualiza seus dados
+                    Livro original = context.Livro.Find(livro.IdLivro);
+                    original.NomeLivro = livro.NomeLivro;
+                    original.IdEditora = livro.IdEditora;
+                    original.IdGenero = livro.IdGenero;
+                    original.Isbn = livro.Isbn;
+                    original.Paginas = livro.Paginas;
+                    original.Ano = livro.Ano;
+                    original.Descricao = livro.Descricao;
+                    original.Preco = livro.Preco;
+                    original.QuantidadeEstoque = livro.QuantidadeEstoque;
+                    original.Autor = livro.Autor;
 
-                        return true;
-                    }
-                    catch (Exception e)
-                    {
-                        MessageBox.Show("Houve um problema ao realizar a alteração! \n" + e.Message);
-                        return false;
-                    }
+                    context.Entry(original).State = EntityState.Modified;
+                    context.SaveChanges();
+
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Houve um problema ao realizar a alteração! \n" + e.Message);
+                    return false;
+                }
             }
             else
             {
@@ -81,28 +86,22 @@ namespace Livraria.Controller
             }
 
             return false;
-
         }
 
-        public bool ExcluirEditora(int idEditora)
+        public bool RemoverLivro(int idLivro)
         {
             try
             {
-                Editora editora = context.Editora.Find(idEditora);
-                context.Editora.Remove(editora);
+                Livro autor = context.Livro.Find(idLivro);
+                context.Livro.Remove(autor);
                 context.SaveChanges();
                 return true;
             }
             catch (Exception e)
             {
-                MessageBox.Show("Houve um problema ao excluir a editora! \n" + e.Message);
+                MessageBox.Show("Houve um problema ao excluir o livro! \n" + e.Message);
                 return false;
             }
-        }
-
-        public List<Editora> RecuperarEditoras()
-        {
-            return context.Editora.ToList<Editora>();
         }
 
     }

@@ -56,7 +56,6 @@
     </Key>
     <Property Name="IdLivro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IdGenero" Type="int" Nullable="false" />
-    <Property Name="IdAutor" Type="int" Nullable="false" />
     <Property Name="NomeLivro" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Ano" Type="int" Nullable="false" />
     <Property Name="Descricao" Type="nvarchar(max)" Nullable="false" />
@@ -256,7 +255,6 @@
           <Property Name="IdLivro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Genero" Relationship="Model1.LivroGenero" FromRole="Livro" ToRole="Genero" />
           <Property Name="IdGenero" Type="Int32" Nullable="false" />
-          <Property Name="IdAutor" Type="Int32" Nullable="false" />
           <Property Name="NomeLivro" Type="String" Nullable="false" />
           <Property Name="Ano" Type="Int32" Nullable="false" />
           <Property Name="Descricao" Type="String" Nullable="false" />
@@ -405,7 +403,6 @@
         <MappingFragment StoreEntitySet="Livro">
           <ScalarProperty Name="IdLivro" ColumnName="IdLivro" />
           <ScalarProperty Name="IdGenero" ColumnName="IdGenero" />
-          <ScalarProperty Name="IdAutor" ColumnName="IdAutor" />
           <ScalarProperty Name="NomeLivro" ColumnName="NomeLivro" />
           <ScalarProperty Name="Ano" ColumnName="Ano" />
           <ScalarProperty Name="Descricao" ColumnName="Descricao" />

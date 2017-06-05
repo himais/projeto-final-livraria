@@ -98,7 +98,7 @@
             this.tsmiVendasRealizar,
             this.tsmiVendasConsultar});
             this.tsmiVendas.Name = "tsmiVendas";
-            this.tsmiVendas.Size = new System.Drawing.Size(57, 20);
+            this.tsmiVendas.Size = new System.Drawing.Size(56, 20);
             this.tsmiVendas.Text = "Vendas";
             // 
             // tsmiVendasRealizar
@@ -126,13 +126,14 @@
             // tsmiLivroAdicionar
             // 
             this.tsmiLivroAdicionar.Name = "tsmiLivroAdicionar";
-            this.tsmiLivroAdicionar.Size = new System.Drawing.Size(125, 22);
+            this.tsmiLivroAdicionar.Size = new System.Drawing.Size(152, 22);
             this.tsmiLivroAdicionar.Text = "Adicionar";
+            this.tsmiLivroAdicionar.Click += new System.EventHandler(this.tsmiLivroAdicionar_Click);
             // 
             // tsmiLivroConsultar
             // 
             this.tsmiLivroConsultar.Name = "tsmiLivroConsultar";
-            this.tsmiLivroConsultar.Size = new System.Drawing.Size(125, 22);
+            this.tsmiLivroConsultar.Size = new System.Drawing.Size(152, 22);
             this.tsmiLivroConsultar.Text = "Consultar";
             // 
             // tsmiLivroGenero
@@ -141,7 +142,7 @@
             this.tsmiLivroGeneroCadastrar,
             this.tsmiLivroGeneroListar});
             this.tsmiLivroGenero.Name = "tsmiLivroGenero";
-            this.tsmiLivroGenero.Size = new System.Drawing.Size(125, 22);
+            this.tsmiLivroGenero.Size = new System.Drawing.Size(152, 22);
             this.tsmiLivroGenero.Text = "Gênero";
             // 
             // tsmiLivroGeneroCadastrar
@@ -168,14 +169,14 @@
             // tsmiFuncionariosCadastrar
             // 
             this.tsmiFuncionariosCadastrar.Name = "tsmiFuncionariosCadastrar";
-            this.tsmiFuncionariosCadastrar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiFuncionariosCadastrar.Size = new System.Drawing.Size(125, 22);
             this.tsmiFuncionariosCadastrar.Text = "Cadastrar";
             this.tsmiFuncionariosCadastrar.Click += new System.EventHandler(this.tsmiFuncionariosCadastrar_Click);
             // 
             // tsmiFuncionariosConsultar
             // 
             this.tsmiFuncionariosConsultar.Name = "tsmiFuncionariosConsultar";
-            this.tsmiFuncionariosConsultar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiFuncionariosConsultar.Size = new System.Drawing.Size(125, 22);
             this.tsmiFuncionariosConsultar.Text = "Consultar";
             this.tsmiFuncionariosConsultar.Click += new System.EventHandler(this.tsmiFuncionariosConsultar_Click);
             // 
@@ -191,14 +192,14 @@
             // tsmiEditorasCadastrar
             // 
             this.tsmiEditorasCadastrar.Name = "tsmiEditorasCadastrar";
-            this.tsmiEditorasCadastrar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEditorasCadastrar.Size = new System.Drawing.Size(125, 22);
             this.tsmiEditorasCadastrar.Text = "Cadastrar";
             this.tsmiEditorasCadastrar.Click += new System.EventHandler(this.tsmiEditorasCadastrar_Click);
             // 
             // tsmiEditorasConsultar
             // 
             this.tsmiEditorasConsultar.Name = "tsmiEditorasConsultar";
-            this.tsmiEditorasConsultar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEditorasConsultar.Size = new System.Drawing.Size(125, 22);
             this.tsmiEditorasConsultar.Text = "Consultar";
             // 
             // tsmiAutores

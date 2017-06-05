@@ -4,3 +4,6 @@ txt - Text Box
 cbx - CheckBox
 dvg - DataGridView
 mtx - MaskedTextBox
+nud - NumericUpDown
+cbo - ComboBox
+lst - ListBox

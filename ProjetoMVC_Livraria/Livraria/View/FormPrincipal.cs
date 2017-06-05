@@ -1,6 +1,7 @@
 ﻿using Livraria.Model;
 using Livraria.View.Editoras;
 using Livraria.View.Funcionarios;
+using Livraria.View.Livros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -86,6 +87,11 @@ namespace Livraria.View
         private void tsmiEditorasCadastrar_Click(object sender, EventArgs e)
         {
             new FormCadastrarEditoras().ShowDialog(this);
+        }
+
+        private void tsmiLivroAdicionar_Click(object sender, EventArgs e)
+        {
+            new FormCadastrarLivro().ShowDialog(this);
         }
     }
 }

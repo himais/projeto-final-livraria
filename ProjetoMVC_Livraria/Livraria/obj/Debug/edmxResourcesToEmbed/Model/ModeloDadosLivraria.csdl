@@ -48,7 +48,6 @@
     <Property Name="IdLivro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <NavigationProperty Name="Genero" Relationship="Model1.LivroGenero" FromRole="Livro" ToRole="Genero" />
     <Property Name="IdGenero" Type="Int32" Nullable="false" />
-    <Property Name="IdAutor" Type="Int32" Nullable="false" />
     <Property Name="NomeLivro" Type="String" Nullable="false" />
     <Property Name="Ano" Type="Int32" Nullable="false" />
     <Property Name="Descricao" Type="String" Nullable="false" />
@@ -58,7 +57,7 @@
     <Property Name="Isbn" Type="String" Nullable="false" />
     <NavigationProperty Name="Item_Venda" Relationship="Model1.Item_VendaLivro" FromRole="Livro" ToRole="Item_Venda" />
     <Property Name="Preco" Type="Decimal" Nullable="false" />
-    <Property Name="QuantidadeEstoque" Type="String" Nullable="false" />
+    <Property Name="QuantidadeEstoque" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Autor" Relationship="Model1.Autor_do_Livro" FromRole="Livro" ToRole="Autor" />
   </EntityType>
   <EntityType Name="Genero">

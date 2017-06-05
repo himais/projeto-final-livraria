@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/04/2017 11:31:54
+-- Date Created: 06/04/2017 13:03:20
 -- Generated from EDMX file: D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\Model\ModeloDadosLivraria.edmx
 -- --------------------------------------------------
 
@@ -83,7 +83,6 @@ GO
 CREATE TABLE [dbo].[Livro] (
     [IdLivro] int IDENTITY(1,1) NOT NULL,
     [IdGenero] int  NOT NULL,
-    [IdAutor] int  NOT NULL,
     [NomeLivro] nvarchar(max)  NOT NULL,
     [Ano] int  NOT NULL,
     [Descricao] nvarchar(max)  NOT NULL,

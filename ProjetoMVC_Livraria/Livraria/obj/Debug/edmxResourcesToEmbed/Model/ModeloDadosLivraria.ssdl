@@ -51,7 +51,6 @@
     </Key>
     <Property Name="IdLivro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IdGenero" Type="int" Nullable="false" />
-    <Property Name="IdAutor" Type="int" Nullable="false" />
     <Property Name="NomeLivro" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Ano" Type="int" Nullable="false" />
     <Property Name="Descricao" Type="nvarchar(max)" Nullable="false" />
@@ -59,7 +58,7 @@
     <Property Name="IdEditora" Type="int" Nullable="false" />
     <Property Name="Isbn" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Preco" Type="decimal" Nullable="false" />
-    <Property Name="QuantidadeEstoque" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="QuantidadeEstoque" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Genero">
     <Key>
