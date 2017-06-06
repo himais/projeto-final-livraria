@@ -8,7 +8,7 @@
     <EntitySet Name="Funcionario" EntityType="Model1.Store.Funcionario" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Venda" EntityType="Model1.Store.Venda" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Item_VendaSet" EntityType="Model1.Store.Item_VendaSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Autor_do_Livro" EntityType="Model1.Store.Autor_do_Livro" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AutorLivro" EntityType="Model1.Store.AutorLivro" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="LivroGenero" Association="Model1.Store.LivroGenero">
       <End Role="Livro" EntitySet="Livro" />
       <End Role="Genero" EntitySet="Genero" />
@@ -29,13 +29,13 @@
       <End Role="Item_Venda" EntitySet="Item_VendaSet" />
       <End Role="Livro" EntitySet="Livro" />
     </AssociationSet>
-    <AssociationSet Name="FK_Autor_do_Livro_Autor" Association="Model1.Store.FK_Autor_do_Livro_Autor">
-      <End Role="Autor" EntitySet="Autor" />
-      <End Role="Autor_do_Livro" EntitySet="Autor_do_Livro" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Autor_do_Livro_Livro" Association="Model1.Store.FK_Autor_do_Livro_Livro">
+    <AssociationSet Name="Livro_para_AutorLivro" Association="Model1.Store.LivroAutorLivro">
       <End Role="Livro" EntitySet="Livro" />
-      <End Role="Autor_do_Livro" EntitySet="Autor_do_Livro" />
+      <End Role="AutorLivro" EntitySet="AutorLivro" />
+    </AssociationSet>
+    <AssociationSet Name="AutorAutorLivro" Association="Model1.Store.AutorAutorLivro">
+      <End Role="Autor" EntitySet="Autor" />
+      <End Role="AutorLivro" EntitySet="AutorLivro" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Autor">
@@ -106,13 +106,13 @@
     <Property Name="IdLivro" Type="int" Nullable="false" />
     <Property Name="Quantidade" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
-  <EntityType Name="Autor_do_Livro">
+  <EntityType Name="AutorLivro">
     <Key>
-      <PropertyRef Name="Autor_IdAutor" />
-      <PropertyRef Name="Livro_IdLivro" />
+      <PropertyRef Name="IdAutorLivro" />
     </Key>
-    <Property Name="Autor_IdAutor" Type="int" Nullable="false" />
-    <Property Name="Livro_IdLivro" Type="int" Nullable="false" />
+    <Property Name="IdAutorLivro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdLivro" Type="int" Nullable="false" />
+    <Property Name="IdAutor" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="LivroGenero">
     <End Role="Livro" Type="Model1.Store.Livro" Multiplicity="*" />
@@ -174,27 +174,27 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Autor_do_Livro_Autor">
-    <End Role="Autor" Type="Model1.Store.Autor" Multiplicity="1" />
-    <End Role="Autor_do_Livro" Type="Model1.Store.Autor_do_Livro" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Autor">
-        <PropertyRef Name="IdAutor" />
-      </Principal>
-      <Dependent Role="Autor_do_Livro">
-        <PropertyRef Name="Autor_IdAutor" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Autor_do_Livro_Livro">
-    <End Role="Autor_do_Livro" Type="Model1.Store.Autor_do_Livro" Multiplicity="*" />
+  <Association Name="LivroAutorLivro">
     <End Role="Livro" Type="Model1.Store.Livro" Multiplicity="1" />
+    <End Role="AutorLivro" Type="Model1.Store.AutorLivro" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Livro">
         <PropertyRef Name="IdLivro" />
       </Principal>
-      <Dependent Role="Autor_do_Livro">
-        <PropertyRef Name="Livro_IdLivro" />
+      <Dependent Role="AutorLivro">
+        <PropertyRef Name="IdLivro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AutorAutorLivro">
+    <End Role="Autor" Type="Model1.Store.Autor" Multiplicity="1" />
+    <End Role="AutorLivro" Type="Model1.Store.AutorLivro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Autor">
+        <PropertyRef Name="IdAutor" />
+      </Principal>
+      <Dependent Role="AutorLivro">
+        <PropertyRef Name="IdAutor" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

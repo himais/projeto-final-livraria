@@ -13,7 +13,7 @@ namespace Livraria.Controller
     {
         private ModeloDadosLivraria context = new ModeloDadosLivraria();
 
-        public bool AdicionaLivro(Livro livro)
+        public bool AdicionaLivro(Livro livro, List<Autor> autores)
         {
             var erros = Validacao.ValidarObjeto(livro);
 
@@ -23,6 +23,16 @@ namespace Livraria.Controller
                 {
                     context.Livro.Add(livro);
                     context.SaveChanges();
+                    
+                    foreach (var autor in autores)
+                    {
+                        AutorLivro autorLivro = new AutorLivro();
+                        autorLivro.IdAutor = autor.IdAutor;
+                        autorLivro.IdLivro = livro.IdLivro;
+                        context.AutorLivro.Add(autorLivro);
+                        context.SaveChanges();
+                    }
+
                     return true;
                 }
                 else
@@ -38,7 +48,7 @@ namespace Livraria.Controller
             }
             catch (Exception e)
             {
-                MessageBox.Show("Houve um problema ao realizar o cadastro!\n" + e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Houve um problema ao realizar o cadastro!\n" + e.Message + "\n" + e.StackTrace, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -63,8 +73,7 @@ namespace Livraria.Controller
                     original.Descricao = livro.Descricao;
                     original.Preco = livro.Preco;
                     original.QuantidadeEstoque = livro.QuantidadeEstoque;
-                    original.Autor = livro.Autor;
-
+                    
                     context.Entry(original).State = EntityState.Modified;
                     context.SaveChanges();
 

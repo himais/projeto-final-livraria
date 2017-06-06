@@ -1,4 +1,6 @@
 ﻿using Livraria.Controller;
+using Livraria.Model;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Livraria.View.Livros
 {
-    public partial class FormCadastrarLivro : Form
+    public partial class FormCadastrarLivro : MetroForm
     {
 
         //coleções para guardar o id e o nome dos generos e editoras
@@ -25,6 +27,8 @@ namespace Livraria.View.Livros
             //settando o ano máximo para cadastrar o livro, igual ao ano atual do sistema
             nudAno.Maximum = new DateTime().Year;
             nudAno.Minimum = 1900;
+
+            this.FormBorderStyle = FormBorderStyle.None;
 
             //controllers para recuperar genero e editora
             GeneroController generoController = new GeneroController();
@@ -66,6 +70,40 @@ namespace Livraria.View.Livros
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            Livro livro = new Livro();
+            livro.NomeLivro = txtNome.Text.Trim();
+            livro.Ano = (int)nudAno.Value;
+            livro.Descricao = txtDescricao.Text.Trim();
+            livro.Preco = decimal.Parse(txtPreco.Text);
+            livro.Isbn = txtISBN.Text;
+            livro.QuantidadeEstoque = (int)nudQuantidade.Value;
+            livro.Paginas = (int)nudPaginas.Value;
+
+            int idEditora = (int)cboEditora.SelectedValue;
+            int idGenero  = (int)cboGenero.SelectedValue;
+
+            MessageBox.Show(idEditora.ToString());
+            MessageBox.Show(idGenero.ToString());
+
+            Editora ed = new Editora();
+            Genero g = new Genero();
+
+            livro.IdEditora = idEditora;
+            livro.IdGenero = idGenero;
+
+            List<Autor> autores = new List<Autor>();
+
+            foreach (var item in lstAutores.Items)
+            {
+                int idAutor = ((KeyValuePair<int, string>)item).Key;
+                MessageBox.Show(idAutor.ToString());
+                Autor autor = new Autor();
+                autor.IdAutor = idAutor;
+                autores.Add(autor);
+            }
+
+            LivroController livroController = new LivroController();
+            livroController.AdicionaLivro(livro, autores);
 
         }
 

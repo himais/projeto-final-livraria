@@ -2,6 +2,7 @@
 using Livraria.View.Editoras;
 using Livraria.View.Funcionarios;
 using Livraria.View.Livros;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ using System.Windows.Forms;
 
 namespace Livraria.View
 {
-    public partial class FormPrincipal : Form
+    public partial class FormPrincipal : MetroForm
     {
         Funcionario funcionario { get; set; }
 
@@ -22,6 +23,8 @@ namespace Livraria.View
         {
             InitializeComponent();
             this.funcionario = funcionario;
+
+            this.FormBorderStyle = FormBorderStyle.None;
 
             lblBemVindo.Text = lblBemVindo.Text + " " + funcionario.NomeFuncionario;
             lblBemVindo.TextAlign = ContentAlignment.MiddleRight;

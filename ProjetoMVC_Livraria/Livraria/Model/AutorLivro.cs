@@ -12,16 +12,13 @@ namespace Livraria.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Autor
+    public partial class AutorLivro
     {
-        public Autor()
-        {
-            this.AutorLivro = new HashSet<AutorLivro>();
-        }
-    
+        public int IdAutorLivro { get; set; }
+        public int IdLivro { get; set; }
         public int IdAutor { get; set; }
-        public string NomeAutor { get; set; }
     
-        public virtual ICollection<AutorLivro> AutorLivro { get; set; }
+        public virtual Livro Livro { get; set; }
+        public virtual Autor Autor { get; set; }
     }
 }

@@ -86,6 +86,9 @@
     <Compile Include="Model\Autor.cs">
       <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\AutorLivro.cs">
+      <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Editora.cs">
       <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
@@ -176,6 +179,18 @@
     <Compile Include="View\Livros\FormCadastrarLivro.Designer.cs">
       <DependentUpon>FormCadastrarLivro.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Livros\FormConsultarLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Livros\FormConsultarLivro.Designer.cs">
+      <DependentUpon>FormConsultarLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Livros\FormEditarLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Livros\FormEditarLivro.Designer.cs">
+      <DependentUpon>FormEditarLivro.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Livros\FormSelecionarAutores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +234,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Livros\FormCadastrarLivro.resx">
       <DependentUpon>FormCadastrarLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Livros\FormConsultarLivro.resx">
+      <DependentUpon>FormConsultarLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Livros\FormEditarLivro.resx">
+      <DependentUpon>FormEditarLivro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Livros\FormSelecionarAutores.resx">
       <DependentUpon>FormSelecionarAutores.cs</DependentUpon>

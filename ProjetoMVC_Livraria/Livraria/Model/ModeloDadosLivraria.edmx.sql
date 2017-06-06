@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/04/2017 13:03:20
--- Generated from EDMX file: D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\Model\ModeloDadosLivraria.edmx
+-- Date Created: 06/05/2017 20:46:44
+-- Generated from EDMX file: C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\Model\ModeloDadosLivraria.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -32,12 +32,6 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_Item_VendaLivro]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Item_VendaSet] DROP CONSTRAINT [FK_Item_VendaLivro];
 GO
-IF OBJECT_ID(N'[dbo].[FK_Autor_do_Livro_Autor]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Autor_do_Livro] DROP CONSTRAINT [FK_Autor_do_Livro_Autor];
-GO
-IF OBJECT_ID(N'[dbo].[FK_Autor_do_Livro_Livro]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Autor_do_Livro] DROP CONSTRAINT [FK_Autor_do_Livro_Livro];
-GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -63,9 +57,6 @@ IF OBJECT_ID(N'[dbo].[Venda]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[Item_VendaSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Item_VendaSet];
-GO
-IF OBJECT_ID(N'[dbo].[Autor_do_Livro]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Autor_do_Livro];
 GO
 
 -- --------------------------------------------------
@@ -140,10 +131,11 @@ CREATE TABLE [dbo].[Item_VendaSet] (
 );
 GO
 
--- Creating table 'Autor_do_Livro'
-CREATE TABLE [dbo].[Autor_do_Livro] (
-    [Autor_IdAutor] int  NOT NULL,
-    [Livro_IdLivro] int  NOT NULL
+-- Creating table 'AutorLivro'
+CREATE TABLE [dbo].[AutorLivro] (
+    [IdAutorLivro] int IDENTITY(1,1) NOT NULL,
+    [IdLivro] int  NOT NULL,
+    [IdAutor] int  NOT NULL
 );
 GO
 
@@ -193,10 +185,10 @@ ADD CONSTRAINT [PK_Item_VendaSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [Autor_IdAutor], [Livro_IdLivro] in table 'Autor_do_Livro'
-ALTER TABLE [dbo].[Autor_do_Livro]
-ADD CONSTRAINT [PK_Autor_do_Livro]
-    PRIMARY KEY CLUSTERED ([Autor_IdAutor], [Livro_IdLivro] ASC);
+-- Creating primary key on [IdAutorLivro] in table 'AutorLivro'
+ALTER TABLE [dbo].[AutorLivro]
+ADD CONSTRAINT [PK_AutorLivro]
+    PRIMARY KEY CLUSTERED ([IdAutorLivro] ASC);
 GO
 
 -- --------------------------------------------------
@@ -273,27 +265,32 @@ ON [dbo].[Item_VendaSet]
     ([IdLivro]);
 GO
 
--- Creating foreign key on [Autor_IdAutor] in table 'Autor_do_Livro'
-ALTER TABLE [dbo].[Autor_do_Livro]
-ADD CONSTRAINT [FK_Autor_do_Livro_Autor]
-    FOREIGN KEY ([Autor_IdAutor])
-    REFERENCES [dbo].[Autor]
-        ([IdAutor])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating foreign key on [Livro_IdLivro] in table 'Autor_do_Livro'
-ALTER TABLE [dbo].[Autor_do_Livro]
-ADD CONSTRAINT [FK_Autor_do_Livro_Livro]
-    FOREIGN KEY ([Livro_IdLivro])
+-- Creating foreign key on [IdLivro] in table 'AutorLivro'
+ALTER TABLE [dbo].[AutorLivro]
+ADD CONSTRAINT [FK_LivroAutorLivro]
+    FOREIGN KEY ([IdLivro])
     REFERENCES [dbo].[Livro]
         ([IdLivro])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 
--- Creating non-clustered index for FOREIGN KEY 'FK_Autor_do_Livro_Livro'
-CREATE INDEX [IX_FK_Autor_do_Livro_Livro]
-ON [dbo].[Autor_do_Livro]
-    ([Livro_IdLivro]);
+-- Creating non-clustered index for FOREIGN KEY 'FK_LivroAutorLivro'
+CREATE INDEX [IX_FK_LivroAutorLivro]
+ON [dbo].[AutorLivro]
+    ([IdLivro]);
+GO
+
+-- Creating foreign key on [IdAutor] in table 'AutorLivro'
+ALTER TABLE [dbo].[AutorLivro]
+ADD CONSTRAINT [FK_AutorAutorLivro]
+    FOREIGN KEY ([IdAutor])
+    REFERENCES [dbo].[Autor]
+        ([IdAutor])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_AutorAutorLivro'
+CREATE INDEX [IX_FK_AutorAutorLivro]
+ON [dbo].[AutorLivro]
+    ([IdAutor]);
 GO
 
 -- --------------------------------------------------

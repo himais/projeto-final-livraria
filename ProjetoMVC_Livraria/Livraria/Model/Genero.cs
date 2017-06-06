@@ -11,7 +11,6 @@ namespace Livraria.Model
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     
     public partial class Genero
     {
@@ -21,8 +20,6 @@ namespace Livraria.Model
         }
     
         public int IdGenero { get; set; }
-
-        [Required(ErrorMessage = "Insira o nome do gênero!", AllowEmptyStrings = false)]
         public string NomeGenero { get; set; }
     
         public virtual ICollection<Livro> Livro { get; set; }

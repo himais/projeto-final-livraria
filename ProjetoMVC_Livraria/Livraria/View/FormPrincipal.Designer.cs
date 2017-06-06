@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStripPrincipal = new System.Windows.Forms.MenuStrip();
             this.tsmiArquivo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSobre = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,17 @@
             this.tsmiAutoresCadastrar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAutoresConsultar = new System.Windows.Forms.ToolStripMenuItem();
             this.lblBemVindo = new System.Windows.Forms.Label();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.opçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opção2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.menuStripPrincipal.SuspendLayout();
+            this.metroContextMenu1.SuspendLayout();
+            this.metroTabControl1.SuspendLayout();
+            this.metroTabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripPrincipal
@@ -63,9 +74,9 @@
             this.tsmiFuncionarios,
             this.tsmiEditoras,
             this.tsmiAutores});
-            this.menuStripPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.menuStripPrincipal.Location = new System.Drawing.Point(20, 60);
             this.menuStripPrincipal.Name = "menuStripPrincipal";
-            this.menuStripPrincipal.Size = new System.Drawing.Size(590, 24);
+            this.menuStripPrincipal.Size = new System.Drawing.Size(550, 24);
             this.menuStripPrincipal.TabIndex = 0;
             this.menuStripPrincipal.Text = "menuStrip1";
             // 
@@ -98,7 +109,7 @@
             this.tsmiVendasRealizar,
             this.tsmiVendasConsultar});
             this.tsmiVendas.Name = "tsmiVendas";
-            this.tsmiVendas.Size = new System.Drawing.Size(56, 20);
+            this.tsmiVendas.Size = new System.Drawing.Size(57, 20);
             this.tsmiVendas.Text = "Vendas";
             // 
             // tsmiVendasRealizar
@@ -126,14 +137,14 @@
             // tsmiLivroAdicionar
             // 
             this.tsmiLivroAdicionar.Name = "tsmiLivroAdicionar";
-            this.tsmiLivroAdicionar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiLivroAdicionar.Size = new System.Drawing.Size(125, 22);
             this.tsmiLivroAdicionar.Text = "Adicionar";
             this.tsmiLivroAdicionar.Click += new System.EventHandler(this.tsmiLivroAdicionar_Click);
             // 
             // tsmiLivroConsultar
             // 
             this.tsmiLivroConsultar.Name = "tsmiLivroConsultar";
-            this.tsmiLivroConsultar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiLivroConsultar.Size = new System.Drawing.Size(125, 22);
             this.tsmiLivroConsultar.Text = "Consultar";
             // 
             // tsmiLivroGenero
@@ -142,7 +153,7 @@
             this.tsmiLivroGeneroCadastrar,
             this.tsmiLivroGeneroListar});
             this.tsmiLivroGenero.Name = "tsmiLivroGenero";
-            this.tsmiLivroGenero.Size = new System.Drawing.Size(152, 22);
+            this.tsmiLivroGenero.Size = new System.Drawing.Size(125, 22);
             this.tsmiLivroGenero.Text = "Gênero";
             // 
             // tsmiLivroGeneroCadastrar
@@ -227,29 +238,105 @@
             // 
             this.lblBemVindo.AutoSize = true;
             this.lblBemVindo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBemVindo.Location = new System.Drawing.Point(439, 60);
+            this.lblBemVindo.Location = new System.Drawing.Point(331, 97);
             this.lblBemVindo.Name = "lblBemVindo";
             this.lblBemVindo.Size = new System.Drawing.Size(114, 18);
             this.lblBemVindo.TabIndex = 1;
             this.lblBemVindo.Text = "Seja bem-vindo,";
             // 
+            // metroTile1
+            // 
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Location = new System.Drawing.Point(47, 6);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(245, 56);
+            this.metroTile1.TabIndex = 2;
+            this.metroTile1.Text = "Realizar venda";
+            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile1.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile1.UseSelectable = true;
+            // 
+            // metroContextMenu1
+            // 
+            this.metroContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opçãoToolStripMenuItem,
+            this.opção2ToolStripMenuItem});
+            this.metroContextMenu1.Name = "metroContextMenu1";
+            this.metroContextMenu1.Size = new System.Drawing.Size(116, 48);
+            // 
+            // opçãoToolStripMenuItem
+            // 
+            this.opçãoToolStripMenuItem.Name = "opçãoToolStripMenuItem";
+            this.opçãoToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.opçãoToolStripMenuItem.Text = "Opção";
+            // 
+            // opção2ToolStripMenuItem
+            // 
+            this.opção2ToolStripMenuItem.Name = "opção2ToolStripMenuItem";
+            this.opção2ToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.opção2ToolStripMenuItem.Text = "Opção2";
+            // 
+            // metroTabControl1
+            // 
+            this.metroTabControl1.Controls.Add(this.metroTabPage1);
+            this.metroTabControl1.Controls.Add(this.metroTabPage2);
+            this.metroTabControl1.Location = new System.Drawing.Point(34, 118);
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.Size = new System.Drawing.Size(411, 169);
+            this.metroTabControl1.TabIndex = 3;
+            this.metroTabControl1.UseSelectable = true;
+            // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.Controls.Add(this.metroTile1);
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(403, 127);
+            this.metroTabPage1.TabIndex = 0;
+            this.metroTabPage1.Text = "metroTabPage1";
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(403, 127);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "metroTabPage2";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(590, 342);
+            this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.lblBemVindo);
             this.Controls.Add(this.menuStripPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStripPrincipal;
             this.MaximizeBox = false;
             this.Name = "FormPrincipal";
-            this.Text = "Livraria";
+            this.Resizable = false;
+            this.Text = "       Livraria";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.menuStripPrincipal.ResumeLayout(false);
             this.menuStripPrincipal.PerformLayout();
+            this.metroContextMenu1.ResumeLayout(false);
+            this.metroTabControl1.ResumeLayout(false);
+            this.metroTabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,5 +367,12 @@
         private System.Windows.Forms.Label lblBemVindo;
         private System.Windows.Forms.ToolStripMenuItem tsmiAutoresCadastrar;
         private System.Windows.Forms.ToolStripMenuItem tsmiAutoresConsultar;
+        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroContextMenu metroContextMenu1;
+        private System.Windows.Forms.ToolStripMenuItem opçãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opção2ToolStripMenuItem;
+        private MetroFramework.Controls.MetroTabControl metroTabControl1;
+        private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private MetroFramework.Controls.MetroTabPage metroTabPage2;
     }
 }

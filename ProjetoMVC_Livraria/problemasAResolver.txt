@@ -8,6 +8,8 @@ O meu notebook tem a entrada certa para apresentar o projeto?
 
 FEITO - Validar email com expressao regular
 
-Programar o enter para fazer uma ação, em todos os forms
+CORNOJOB: Programar o enter para fazer uma ação, em todos os forms
+
+CORNOJOB: Tratar Preço 
 
 Se der tempo, colocar funcão de log

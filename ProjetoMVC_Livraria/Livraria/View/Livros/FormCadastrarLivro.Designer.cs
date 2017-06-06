@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.lblNomeLivro = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.lblAno = new System.Windows.Forms.Label();
             this.nudAno = new System.Windows.Forms.NumericUpDown();
@@ -43,7 +41,6 @@
             this.txtISBN = new System.Windows.Forms.TextBox();
             this.lblQuantidade = new System.Windows.Forms.Label();
             this.nudQuantidade = new System.Windows.Forms.NumericUpDown();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblGenero = new System.Windows.Forms.Label();
             this.cboGenero = new System.Windows.Forms.ComboBox();
             this.lblEditora = new System.Windows.Forms.Label();
@@ -53,20 +50,12 @@
             this.lblAutores = new System.Windows.Forms.Label();
             this.toolTipAutores = new System.Windows.Forms.ToolTip(this.components);
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtNome = new MetroFramework.Controls.MetroTextBox();
+            this.txtDescricao = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudAno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPaginas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(226, 32);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(142, 18);
-            this.lblTitulo.TabIndex = 10;
-            this.lblTitulo.Text = "Cadastro de Livro";
             // 
             // lblNomeLivro
             // 
@@ -77,14 +66,6 @@
             this.lblNomeLivro.Size = new System.Drawing.Size(58, 18);
             this.lblNomeLivro.TabIndex = 11;
             this.lblNomeLivro.Text = "Nome:";
-            // 
-            // txtNome
-            // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(135, 72);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(404, 24);
-            this.txtNome.TabIndex = 12;
             // 
             // lblDescricao
             // 
@@ -221,17 +202,6 @@
             this.nudQuantidade.Size = new System.Drawing.Size(61, 24);
             this.nudQuantidade.TabIndex = 23;
             // 
-            // txtDescricao
-            // 
-            this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.Location = new System.Drawing.Point(135, 115);
-            this.txtDescricao.Multiline = true;
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDescricao.Size = new System.Drawing.Size(420, 95);
-            this.txtDescricao.TabIndex = 24;
-            // 
             // lblGenero
             // 
             this.lblGenero.AutoSize = true;
@@ -319,12 +289,74 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // txtNome
+            // 
+            // 
+            // 
+            // 
+            this.txtNome.CustomButton.Image = null;
+            this.txtNome.CustomButton.Location = new System.Drawing.Point(398, 1);
+            this.txtNome.CustomButton.Name = "";
+            this.txtNome.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtNome.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtNome.CustomButton.TabIndex = 1;
+            this.txtNome.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtNome.CustomButton.UseSelectable = true;
+            this.txtNome.CustomButton.Visible = false;
+            this.txtNome.Lines = new string[0];
+            this.txtNome.Location = new System.Drawing.Point(135, 72);
+            this.txtNome.MaxLength = 32767;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.PasswordChar = '\0';
+            this.txtNome.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtNome.SelectedText = "";
+            this.txtNome.SelectionLength = 0;
+            this.txtNome.SelectionStart = 0;
+            this.txtNome.ShortcutsEnabled = true;
+            this.txtNome.Size = new System.Drawing.Size(420, 23);
+            this.txtNome.TabIndex = 33;
+            this.txtNome.UseSelectable = true;
+            this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtNome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtDescricao
+            // 
+            // 
+            // 
+            // 
+            this.txtDescricao.CustomButton.Image = null;
+            this.txtDescricao.CustomButton.Location = new System.Drawing.Point(330, 1);
+            this.txtDescricao.CustomButton.Name = "";
+            this.txtDescricao.CustomButton.Size = new System.Drawing.Size(89, 89);
+            this.txtDescricao.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtDescricao.CustomButton.TabIndex = 1;
+            this.txtDescricao.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtDescricao.CustomButton.UseSelectable = true;
+            this.txtDescricao.CustomButton.Visible = false;
+            this.txtDescricao.Lines = new string[0];
+            this.txtDescricao.Location = new System.Drawing.Point(135, 115);
+            this.txtDescricao.MaxLength = 32767;
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.PasswordChar = '\0';
+            this.txtDescricao.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDescricao.SelectedText = "";
+            this.txtDescricao.SelectionLength = 0;
+            this.txtDescricao.SelectionStart = 0;
+            this.txtDescricao.ShortcutsEnabled = true;
+            this.txtDescricao.Size = new System.Drawing.Size(420, 91);
+            this.txtDescricao.TabIndex = 34;
+            this.txtDescricao.UseSelectable = true;
+            this.txtDescricao.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtDescricao.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // FormCadastrarLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(594, 468);
+            this.Controls.Add(this.txtDescricao);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblAutores);
             this.Controls.Add(this.lstAutores);
@@ -333,7 +365,6 @@
             this.Controls.Add(this.lblEditora);
             this.Controls.Add(this.cboGenero);
             this.Controls.Add(this.lblGenero);
-            this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.nudQuantidade);
             this.Controls.Add(this.lblQuantidade);
             this.Controls.Add(this.txtISBN);
@@ -345,13 +376,10 @@
             this.Controls.Add(this.nudAno);
             this.Controls.Add(this.lblAno);
             this.Controls.Add(this.lblDescricao);
-            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNomeLivro);
-            this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormCadastrarLivro";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Livro";
             ((System.ComponentModel.ISupportInitialize)(this.nudAno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPaginas)).EndInit();
@@ -363,9 +391,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblNomeLivro;
-        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.Label lblAno;
         private System.Windows.Forms.NumericUpDown nudAno;
@@ -377,7 +403,6 @@
         private System.Windows.Forms.TextBox txtISBN;
         private System.Windows.Forms.Label lblQuantidade;
         private System.Windows.Forms.NumericUpDown nudQuantidade;
-        private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label lblGenero;
         private System.Windows.Forms.ComboBox cboGenero;
         private System.Windows.Forms.Label lblEditora;
@@ -387,5 +412,7 @@
         private System.Windows.Forms.Label lblAutores;
         private System.Windows.Forms.ToolTip toolTipAutores;
         private System.Windows.Forms.Button btnCancelar;
+        private MetroFramework.Controls.MetroTextBox txtNome;
+        private MetroFramework.Controls.MetroTextBox txtDescricao;
     }
 }

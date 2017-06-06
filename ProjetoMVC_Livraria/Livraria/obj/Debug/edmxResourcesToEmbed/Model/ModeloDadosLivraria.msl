@@ -76,13 +76,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="Autor_do_Livro" TypeName="Model1.Autor_do_Livro" StoreEntitySet="Autor_do_Livro">
-      <EndProperty Name="Autor">
-        <ScalarProperty Name="IdAutor" ColumnName="Autor_IdAutor" />
-      </EndProperty>
-      <EndProperty Name="Livro">
-        <ScalarProperty Name="IdLivro" ColumnName="Livro_IdLivro" />
-      </EndProperty>
-    </AssociationSetMapping>
+    <EntitySetMapping Name="AutorLivro">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AutorLivro)">
+        <MappingFragment StoreEntitySet="AutorLivro">
+          <ScalarProperty Name="IdAutorLivro" ColumnName="IdAutorLivro" />
+          <ScalarProperty Name="IdLivro" ColumnName="IdLivro" />
+          <ScalarProperty Name="IdAutor" ColumnName="IdAutor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

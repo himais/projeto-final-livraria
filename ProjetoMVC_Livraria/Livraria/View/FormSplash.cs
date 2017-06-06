@@ -24,6 +24,8 @@ namespace Livraria.View
             //pgbSplash.Increment(1);
             if(this.Opacity <= 100)
                 this.Opacity = this.Opacity + 0.04;
+
+           // pgbSplash.Increment(1);
         }
     }
 }
