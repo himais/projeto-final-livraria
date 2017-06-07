@@ -68,3 +68,5 @@ C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livra
 C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.csproj.GenerateResource.Cache
 C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Livros.FormConsultarLivro.resources
 C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Livros.FormEditarLivro.resources
+D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Livros.FormConsultarLivro.resources
+D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Livros.FormEditarLivro.resources

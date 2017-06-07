@@ -380,6 +380,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormCadastrarLivro";
+            this.Resizable = false;
             this.Text = "Cadastrar Livro";
             ((System.ComponentModel.ISupportInitialize)(this.nudAno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPaginas)).EndInit();

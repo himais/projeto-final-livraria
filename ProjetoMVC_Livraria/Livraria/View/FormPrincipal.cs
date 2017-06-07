@@ -22,6 +22,7 @@ namespace Livraria.View
         public FormPrincipal(Funcionario funcionario)
         {
             InitializeComponent();
+            this.Icon = Properties.Resources.icone;
             this.funcionario = funcionario;
 
             this.FormBorderStyle = FormBorderStyle.None;

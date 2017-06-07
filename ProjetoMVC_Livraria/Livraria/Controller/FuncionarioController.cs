@@ -28,11 +28,11 @@ namespace Livraria.Controller
 
                 if (funcionarioResultado == null)
                 {
-                    MessageBox.Show("Usuário e/ou senha incorreto(s)!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MessageBox.Show("Usuário e/ou senha incorreto(s)!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return null;
                 }
                     
-                MessageBox.Show("Login realizado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Login realizado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
       
                 return funcionarioResultado;
 

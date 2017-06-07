@@ -36,7 +36,9 @@
             this.btnEntrar = new MetroFramework.Controls.MetroButton();
             this.btnSobre = new MetroFramework.Controls.MetroButton();
             this.pgbLogin = new MetroFramework.Controls.MetroProgressBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -167,11 +169,23 @@
             this.pgbLogin.TabIndex = 8;
             this.pgbLogin.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Livraria.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(157, 52);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(121, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 370);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pgbLogin);
             this.Controls.Add(this.btnSobre);
             this.Controls.Add(this.groupBox1);
@@ -180,10 +194,10 @@
             this.Name = "FormLogin";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
-            this.Text = "Login";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormLogin_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -198,6 +212,7 @@
         private MetroFramework.Controls.MetroLabel lblSenha;
         private MetroFramework.Controls.MetroButton btnSobre;
         private MetroFramework.Controls.MetroProgressBar pgbLogin;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

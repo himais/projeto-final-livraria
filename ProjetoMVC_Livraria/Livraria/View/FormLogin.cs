@@ -23,6 +23,7 @@ namespace Livraria
             this.FormBorderStyle = FormBorderStyle.None; //desativa barra superior
             pgbLogin.Enabled = false;
             pgbLogin.Visible = false;
+            this.Icon = Properties.Resources.icone;
         }
 
         public void SplashScreen()
@@ -46,6 +47,9 @@ namespace Livraria
 
             if (funcionarioRetorno != null)
             {
+                MetroFramework.MetroMessageBox.Show(this, "Login realizado com sucesso!", "Tudo certo!", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, 100);
+
                 this.Visible = false;
 
                 //inicia a tela splash
@@ -59,6 +63,8 @@ namespace Livraria
             }
             else
             {
+                MetroFramework.MetroMessageBox.Show(this, "Usuário e/ou senha incorreto(s)!", "",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, 100);
                 pgbLogin.Enabled = false;
                 pgbLogin.Visible = false;
             }
