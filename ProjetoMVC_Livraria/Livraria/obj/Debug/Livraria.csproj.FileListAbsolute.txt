@@ -53,14 +53,12 @@ C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\bin\Debug\Livra
 C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\bin\Debug\Livraria.pdb
 C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\bin\Debug\EntityFramework.dll
 C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\bin\Debug\EntityFramework.xml
-C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.csprojResolveAssemblyReference.cache
 C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Editoras.FormCadastrarEditoras.resources
 C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.FormLogin.resources
 C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.Properties.Resources.resources
 C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.FormPrincipal.resources
 C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.FormSobre.resources
 C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.FormSplash.resources
-C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Funcionarios.FormAtualizarFuncionario.resources
 C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Funcionarios.FormCadastrarFuncionario.resources
 C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Funcionarios.FormConsultarFuncionarios.resources
 C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Livros.FormCadastrarLivro.resources
@@ -70,3 +68,5 @@ C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livra
 C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Livros.FormEditarLivro.resources
 D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Livros.FormConsultarLivro.resources
 D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Livros.FormEditarLivro.resources
+C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.csprojResolveAssemblyReference.cache
+C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Funcionarios.FormEditarFuncionario.resources

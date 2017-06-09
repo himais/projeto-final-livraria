@@ -18,8 +18,7 @@ namespace Livraria.View.Livros
         public FormSelecionarAutores(ListBox autoresCadastrar)
         {
             InitializeComponent();
-            lstAutores = autoresCadastrar;
-            
+            lstAutores = autoresCadastrar;  
         }
 
         private void FormSelecionarAutores_Load(object sender, EventArgs e)

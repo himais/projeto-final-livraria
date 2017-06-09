@@ -50,7 +50,7 @@ namespace Livraria.View.Funcionarios
             f.Login = usuario;
             f.Administrador = administrador;
 
-            new FormAtualizarFuncionario(f).ShowDialog(this);
+            new FormEditarFuncionario(f).ShowDialog(this);
         }
 
         private void FormConsultarFuncionarios_Activated(object sender, EventArgs e)

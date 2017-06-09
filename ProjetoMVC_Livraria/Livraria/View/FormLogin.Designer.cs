@@ -37,12 +37,14 @@
             this.btnSobre = new MetroFramework.Controls.MetroButton();
             this.pgbLogin = new MetroFramework.Controls.MetroProgressBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.lblSenha);
             this.groupBox1.Controls.Add(this.txtUsuario);
             this.groupBox1.Controls.Add(this.lblUsuario);
@@ -180,6 +182,16 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(28, 52);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(219, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "ATALHO";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,6 +225,7 @@
         private MetroFramework.Controls.MetroButton btnSobre;
         private MetroFramework.Controls.MetroProgressBar pgbLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

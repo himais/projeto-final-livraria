@@ -8,8 +8,8 @@ O meu notebook tem a entrada certa para apresentar o projeto?
 
 FEITO - Validar email com expressao regular
 
-CORNOJOB: Programar o enter para fazer uma ação, em todos os forms
-
 CORNOJOB: Tratar Preço 
+
+Validar view do Cadastrar Livro (Autores com id -1, tratar ISBN)
 
 Se der tempo, colocar funcão de log

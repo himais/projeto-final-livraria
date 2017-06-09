@@ -95,5 +95,10 @@ namespace Livraria.Controller
                 return false;
             }
         }
+
+        public List<Autor> RecuperarAutores()
+        {
+            return context.Autor.ToList<Autor>();
+        }
     }
 }

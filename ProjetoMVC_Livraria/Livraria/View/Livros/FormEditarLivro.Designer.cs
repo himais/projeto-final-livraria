@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtDescricao = new MetroFramework.Controls.MetroTextBox();
             this.txtNome = new MetroFramework.Controls.MetroTextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -50,6 +51,7 @@
             this.lblAno = new System.Windows.Forms.Label();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.lblNomeLivro = new System.Windows.Forms.Label();
+            this.toolTipAutores = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPaginas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAno)).BeginInit();
@@ -70,7 +72,7 @@
             this.txtDescricao.CustomButton.UseSelectable = true;
             this.txtDescricao.CustomButton.Visible = false;
             this.txtDescricao.Lines = new string[0];
-            this.txtDescricao.Location = new System.Drawing.Point(144, 104);
+            this.txtDescricao.Location = new System.Drawing.Point(143, 122);
             this.txtDescricao.MaxLength = 32767;
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
@@ -101,7 +103,7 @@
             this.txtNome.CustomButton.UseSelectable = true;
             this.txtNome.CustomButton.Visible = false;
             this.txtNome.Lines = new string[0];
-            this.txtNome.Location = new System.Drawing.Point(144, 61);
+            this.txtNome.Location = new System.Drawing.Point(143, 79);
             this.txtNome.MaxLength = 32767;
             this.txtNome.Name = "txtNome";
             this.txtNome.PasswordChar = '\0';
@@ -119,7 +121,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(322, 416);
+            this.btnCancelar.Location = new System.Drawing.Point(321, 434);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(99, 29);
             this.btnCancelar.TabIndex = 54;
@@ -130,7 +132,7 @@
             // 
             this.lblAutores.AutoSize = true;
             this.lblAutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAutores.Location = new System.Drawing.Point(47, 346);
+            this.lblAutores.Location = new System.Drawing.Point(46, 364);
             this.lblAutores.Name = "lblAutores";
             this.lblAutores.Size = new System.Drawing.Size(71, 18);
             this.lblAutores.TabIndex = 53;
@@ -139,15 +141,17 @@
             // lstAutores
             // 
             this.lstAutores.FormattingEnabled = true;
-            this.lstAutores.Location = new System.Drawing.Point(144, 343);
+            this.lstAutores.Location = new System.Drawing.Point(143, 361);
             this.lstAutores.Name = "lstAutores";
             this.lstAutores.Size = new System.Drawing.Size(169, 56);
             this.lstAutores.TabIndex = 52;
+            this.toolTipAutores.SetToolTip(this.lstAutores, "Clique duas vezes para selecionar os autores!");
+            this.lstAutores.DoubleClick += new System.EventHandler(this.lstAutores_DoubleClick);
             // 
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(449, 416);
+            this.btnCadastrar.Location = new System.Drawing.Point(448, 434);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(99, 29);
             this.btnCadastrar.TabIndex = 51;
@@ -158,7 +162,7 @@
             // 
             this.cboEditora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEditora.FormattingEnabled = true;
-            this.cboEditora.Location = new System.Drawing.Point(144, 259);
+            this.cboEditora.Location = new System.Drawing.Point(143, 277);
             this.cboEditora.Name = "cboEditora";
             this.cboEditora.Size = new System.Drawing.Size(169, 26);
             this.cboEditora.TabIndex = 50;
@@ -167,7 +171,7 @@
             // 
             this.lblEditora.AutoSize = true;
             this.lblEditora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditora.Location = new System.Drawing.Point(47, 267);
+            this.lblEditora.Location = new System.Drawing.Point(46, 285);
             this.lblEditora.Name = "lblEditora";
             this.lblEditora.Size = new System.Drawing.Size(67, 18);
             this.lblEditora.TabIndex = 49;
@@ -177,7 +181,7 @@
             // 
             this.cboGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGenero.FormattingEnabled = true;
-            this.cboGenero.Location = new System.Drawing.Point(144, 298);
+            this.cboGenero.Location = new System.Drawing.Point(143, 316);
             this.cboGenero.Name = "cboGenero";
             this.cboGenero.Size = new System.Drawing.Size(169, 26);
             this.cboGenero.TabIndex = 48;
@@ -186,7 +190,7 @@
             // 
             this.lblGenero.AutoSize = true;
             this.lblGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenero.Location = new System.Drawing.Point(47, 306);
+            this.lblGenero.Location = new System.Drawing.Point(46, 324);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(69, 18);
             this.lblGenero.TabIndex = 47;
@@ -195,7 +199,7 @@
             // nudQuantidade
             // 
             this.nudQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudQuantidade.Location = new System.Drawing.Point(469, 340);
+            this.nudQuantidade.Location = new System.Drawing.Point(468, 358);
             this.nudQuantidade.Maximum = new decimal(new int[] {
             3000,
             0,
@@ -209,7 +213,7 @@
             // 
             this.lblQuantidade.AutoSize = true;
             this.lblQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantidade.Location = new System.Drawing.Point(379, 343);
+            this.lblQuantidade.Location = new System.Drawing.Point(378, 361);
             this.lblQuantidade.Name = "lblQuantidade";
             this.lblQuantidade.Size = new System.Drawing.Size(75, 18);
             this.lblQuantidade.TabIndex = 45;
@@ -218,7 +222,7 @@
             // txtISBN
             // 
             this.txtISBN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtISBN.Location = new System.Drawing.Point(144, 216);
+            this.txtISBN.Location = new System.Drawing.Point(143, 234);
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(169, 24);
             this.txtISBN.TabIndex = 44;
@@ -227,7 +231,7 @@
             // 
             this.lblISBN.AutoSize = true;
             this.lblISBN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblISBN.Location = new System.Drawing.Point(47, 219);
+            this.lblISBN.Location = new System.Drawing.Point(46, 237);
             this.lblISBN.Name = "lblISBN";
             this.lblISBN.Size = new System.Drawing.Size(51, 18);
             this.lblISBN.TabIndex = 43;
@@ -236,7 +240,7 @@
             // txtPreco
             // 
             this.txtPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPreco.Location = new System.Drawing.Point(469, 256);
+            this.txtPreco.Location = new System.Drawing.Point(468, 274);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(79, 24);
             this.txtPreco.TabIndex = 42;
@@ -245,7 +249,7 @@
             // 
             this.lblPreco.AutoSize = true;
             this.lblPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreco.Location = new System.Drawing.Point(379, 259);
+            this.lblPreco.Location = new System.Drawing.Point(378, 277);
             this.lblPreco.Name = "lblPreco";
             this.lblPreco.Size = new System.Drawing.Size(84, 18);
             this.lblPreco.TabIndex = 41;
@@ -254,7 +258,7 @@
             // nudPaginas
             // 
             this.nudPaginas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudPaginas.Location = new System.Drawing.Point(469, 300);
+            this.nudPaginas.Location = new System.Drawing.Point(468, 318);
             this.nudPaginas.Maximum = new decimal(new int[] {
             3000,
             0,
@@ -278,7 +282,7 @@
             // 
             this.lblPaginas.AutoSize = true;
             this.lblPaginas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaginas.Location = new System.Drawing.Point(379, 302);
+            this.lblPaginas.Location = new System.Drawing.Point(378, 320);
             this.lblPaginas.Name = "lblPaginas";
             this.lblPaginas.Size = new System.Drawing.Size(73, 18);
             this.lblPaginas.TabIndex = 39;
@@ -287,7 +291,7 @@
             // nudAno
             // 
             this.nudAno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudAno.Location = new System.Drawing.Point(469, 217);
+            this.nudAno.Location = new System.Drawing.Point(468, 235);
             this.nudAno.Maximum = new decimal(new int[] {
             2017,
             0,
@@ -311,7 +315,7 @@
             // 
             this.lblAno.AutoSize = true;
             this.lblAno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAno.Location = new System.Drawing.Point(379, 219);
+            this.lblAno.Location = new System.Drawing.Point(378, 237);
             this.lblAno.Name = "lblAno";
             this.lblAno.Size = new System.Drawing.Size(42, 18);
             this.lblAno.TabIndex = 37;
@@ -321,7 +325,7 @@
             // 
             this.lblDescricao.AutoSize = true;
             this.lblDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricao.Location = new System.Drawing.Point(47, 107);
+            this.lblDescricao.Location = new System.Drawing.Point(46, 125);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(90, 18);
             this.lblDescricao.TabIndex = 36;
@@ -331,11 +335,18 @@
             // 
             this.lblNomeLivro.AutoSize = true;
             this.lblNomeLivro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeLivro.Location = new System.Drawing.Point(47, 64);
+            this.lblNomeLivro.Location = new System.Drawing.Point(46, 82);
             this.lblNomeLivro.Name = "lblNomeLivro";
             this.lblNomeLivro.Size = new System.Drawing.Size(58, 18);
             this.lblNomeLivro.TabIndex = 35;
             this.lblNomeLivro.Text = "Nome:";
+            // 
+            // toolTipAutores
+            // 
+            this.toolTipAutores.AutomaticDelay = 120;
+            this.toolTipAutores.IsBalloon = true;
+            this.toolTipAutores.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTipAutores.ToolTipTitle = "Selecionar autores";
             // 
             // FormEditarLivro
             // 
@@ -398,5 +409,6 @@
         private System.Windows.Forms.Label lblAno;
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.Label lblNomeLivro;
+        private System.Windows.Forms.ToolTip toolTipAutores;
     }
 }

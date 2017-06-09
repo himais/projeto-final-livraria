@@ -1,6 +1,7 @@
 ﻿using Livraria.Controller;
 using Livraria.Model;
 using Livraria.View;
+using Livraria.View.Livros;
 using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
@@ -111,5 +112,11 @@ namespace Livraria
                 this.realizarLogin();
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            new FormEditarLivro(3).ShowDialog(this);
+        }
+
     }
 }

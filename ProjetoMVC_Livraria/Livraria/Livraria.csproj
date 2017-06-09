@@ -83,6 +83,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GeneroDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="livrariaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>livrariaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Model\Autor.cs">
       <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
@@ -155,11 +160,11 @@
     <Compile Include="View\FormSplash.Designer.cs">
       <DependentUpon>FormSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Funcionarios\FormAtualizarFuncionario.cs">
+    <Compile Include="View\Funcionarios\FormEditarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Funcionarios\FormAtualizarFuncionario.Designer.cs">
-      <DependentUpon>FormAtualizarFuncionario.cs</DependentUpon>
+    <Compile Include="View\Funcionarios\FormEditarFuncionario.Designer.cs">
+      <DependentUpon>FormEditarFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Funcionarios\FormCadastrarFuncionario.cs">
       <SubType>Form</SubType>
@@ -223,8 +228,8 @@
     <EmbeddedResource Include="View\FormSplash.resx">
       <DependentUpon>FormSplash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Funcionarios\FormAtualizarFuncionario.resx">
-      <DependentUpon>FormAtualizarFuncionario.cs</DependentUpon>
+    <EmbeddedResource Include="View\Funcionarios\FormEditarFuncionario.resx">
+      <DependentUpon>FormEditarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Funcionarios\FormCadastrarFuncionario.resx">
       <DependentUpon>FormCadastrarFuncionario.cs</DependentUpon>
@@ -280,6 +285,17 @@
     </None>
     <None Include="GeneroDataSet.xss">
       <DependentUpon>GeneroDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="livrariaDataSet.xsc">
+      <DependentUpon>livrariaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="livrariaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>livrariaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="livrariaDataSet.xss">
+      <DependentUpon>livrariaDataSet.xsd</DependentUpon>
     </None>
     <None Include="Model\ModeloDadosLivraria.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

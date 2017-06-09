@@ -25,47 +25,12 @@ namespace Livraria.View.Livros
             InitializeComponent();
             //this.FormBorderStyle = FormBorderStyle.None;
             //settando o ano máximo para cadastrar o livro, igual ao ano atual do sistema
-            nudAno.Maximum = new DateTime().Year;
+            nudAno.Maximum = (decimal)DateTime.Now.Year;
             nudAno.Minimum = 1900;
 
             this.FormBorderStyle = FormBorderStyle.None;
 
-            //controllers para recuperar genero e editora
-            GeneroController generoController = new GeneroController();
-            EditoraController editoraController = new EditoraController();
-
-            //coleções para guardar o id e o nome dos generos e editoras
-            Dictionary<int, string> dictionaryGeneros = new Dictionary<int, string>();
-            Dictionary<int, string> dictionaryEditora = new Dictionary<int, string>();
-
-            //default, ao iniciar a tela
-            //-1, para poder usar como validação depois
-            dictionaryEditora.Add(-1, "-- SELECIONE --");
-            dictionaryGeneros.Add(-1, "-- SELECIONE --");
-
-            //adicionando generos no dictiornary
-            foreach (var genero in generoController.RecuperarGeneros())
-            {
-                dictionaryGeneros.Add(genero.IdGenero, genero.NomeGenero);
-            }
-
-            //settando a fonte de dados do combobox genero
-            cboGenero.DataSource = new BindingSource(dictionaryGeneros, null);
-            cboGenero.DisplayMember = "Value"; //o que irá aparecer
-            cboGenero.ValueMember = "Key"; //o valor daquilo que apareceu
-
-            //adicionando editoras no dictiornary
-            foreach (var editora in editoraController.RecuperarEditoras())
-            {
-                dictionaryEditora.Add(editora.IdEditora, editora.NomeEditora);
-            }
-
-            //settando a fonte de dados do combobox editora
-            cboEditora.DataSource = new BindingSource(dictionaryEditora, null);
-            cboEditora.DisplayMember = "Value"; //o que irá aparecer
-            cboEditora.ValueMember = "Key"; //o valor daquilo que apareceu
-
-            
+            CarregarEditorasGeneros();            
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -103,8 +68,52 @@ namespace Livraria.View.Livros
             }
 
             LivroController livroController = new LivroController();
-            livroController.AdicionaLivro(livro, autores);
 
+            if (livroController.AdicionaLivro(livro, autores))
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Cadastro realizado com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information, 150);
+                this.Close();
+            }
+            
+
+        }
+
+        public void CarregarEditorasGeneros()
+        {
+            //controllers para recuperar genero e editora
+            GeneroController generoController = new GeneroController();
+            EditoraController editoraController = new EditoraController();
+
+            //coleções para guardar o id e o nome dos generos e editoras
+            Dictionary<int, string> dictionaryGeneros = new Dictionary<int, string>();
+            Dictionary<int, string> dictionaryEditora = new Dictionary<int, string>();
+
+            //default, ao iniciar a tela
+            //-1, para poder usar como validação depois
+            dictionaryEditora.Add(-1, "-- SELECIONE --");
+            dictionaryGeneros.Add(-1, "-- SELECIONE --");
+
+            //adicionando generos no dictiornary
+            foreach (var genero in generoController.RecuperarGeneros())
+            {
+                dictionaryGeneros.Add(genero.IdGenero, genero.NomeGenero);
+            }
+
+            //settando a fonte de dados do combobox genero
+            cboGenero.DataSource = new BindingSource(dictionaryGeneros, null);
+            cboGenero.DisplayMember = "Value"; //o que irá aparecer
+            cboGenero.ValueMember = "Key"; //o valor daquilo que apareceu
+
+            //adicionando editoras no dictiornary
+            foreach (var editora in editoraController.RecuperarEditoras())
+            {
+                dictionaryEditora.Add(editora.IdEditora, editora.NomeEditora);
+            }
+
+            //settando a fonte de dados do combobox editora
+            cboEditora.DataSource = new BindingSource(dictionaryEditora, null);
+            cboEditora.DisplayMember = "Value"; //o que irá aparecer
+            cboEditora.ValueMember = "Key"; //o valor daquilo que apareceu
         }
 
         private void lstAutores_DoubleClick(object sender, EventArgs e)

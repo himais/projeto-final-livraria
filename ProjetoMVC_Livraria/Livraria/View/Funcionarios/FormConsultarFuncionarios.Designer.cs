@@ -32,14 +32,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
-            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.funcionarioDataSet = new Livraria.FuncionarioDataSet();
-            this.funcionarioTableAdapter = new Livraria.FuncionarioDataSetTableAdapters.FuncionarioTableAdapter();
-            this.lblDica = new System.Windows.Forms.Label();
             this.idFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.administradorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.funcionarioDataSet = new Livraria.FuncionarioDataSet();
+            this.funcionarioTableAdapter = new Livraria.FuncionarioDataSetTableAdapters.FuncionarioTableAdapter();
+            this.lblDica = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataSet)).BeginInit();
@@ -85,31 +85,6 @@
             this.dgvFuncionarios.MouseEnter += new System.EventHandler(this.dataGridViewFuncionarios_MouseEnter);
             this.dgvFuncionarios.MouseLeave += new System.EventHandler(this.dataGridViewFuncionarios_MouseLeave);
             // 
-            // funcionarioBindingSource
-            // 
-            this.funcionarioBindingSource.DataMember = "Funcionario";
-            this.funcionarioBindingSource.DataSource = this.funcionarioDataSet;
-            // 
-            // funcionarioDataSet
-            // 
-            this.funcionarioDataSet.DataSetName = "FuncionarioDataSet";
-            this.funcionarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // funcionarioTableAdapter
-            // 
-            this.funcionarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // lblDica
-            // 
-            this.lblDica.AutoSize = true;
-            this.lblDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDica.ForeColor = System.Drawing.Color.Red;
-            this.lblDica.Location = new System.Drawing.Point(32, 280);
-            this.lblDica.Name = "lblDica";
-            this.lblDica.Size = new System.Drawing.Size(375, 18);
-            this.lblDica.TabIndex = 2;
-            this.lblDica.Text = "Dê um duplo clique na linha que deseja alterar ou excluir";
-            // 
             // idFuncionarioDataGridViewTextBoxColumn
             // 
             this.idFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "IdFuncionario";
@@ -141,6 +116,31 @@
             this.administradorDataGridViewCheckBoxColumn.Name = "administradorDataGridViewCheckBoxColumn";
             this.administradorDataGridViewCheckBoxColumn.ReadOnly = true;
             this.administradorDataGridViewCheckBoxColumn.Width = 80;
+            // 
+            // funcionarioBindingSource
+            // 
+            this.funcionarioBindingSource.DataMember = "Funcionario";
+            this.funcionarioBindingSource.DataSource = this.funcionarioDataSet;
+            // 
+            // funcionarioDataSet
+            // 
+            this.funcionarioDataSet.DataSetName = "FuncionarioDataSet";
+            this.funcionarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // funcionarioTableAdapter
+            // 
+            this.funcionarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // lblDica
+            // 
+            this.lblDica.AutoSize = true;
+            this.lblDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDica.ForeColor = System.Drawing.Color.Red;
+            this.lblDica.Location = new System.Drawing.Point(32, 280);
+            this.lblDica.Name = "lblDica";
+            this.lblDica.Size = new System.Drawing.Size(419, 18);
+            this.lblDica.TabIndex = 2;
+            this.lblDica.Text = "Dê um duplo clique no funcionário que deseja alterar ou excluir";
             // 
             // FormConsultarFuncionarios
             // 

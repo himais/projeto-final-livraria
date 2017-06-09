@@ -137,15 +137,16 @@
             // tsmiLivroAdicionar
             // 
             this.tsmiLivroAdicionar.Name = "tsmiLivroAdicionar";
-            this.tsmiLivroAdicionar.Size = new System.Drawing.Size(125, 22);
+            this.tsmiLivroAdicionar.Size = new System.Drawing.Size(152, 22);
             this.tsmiLivroAdicionar.Text = "Adicionar";
             this.tsmiLivroAdicionar.Click += new System.EventHandler(this.tsmiLivroAdicionar_Click);
             // 
             // tsmiLivroConsultar
             // 
             this.tsmiLivroConsultar.Name = "tsmiLivroConsultar";
-            this.tsmiLivroConsultar.Size = new System.Drawing.Size(125, 22);
+            this.tsmiLivroConsultar.Size = new System.Drawing.Size(152, 22);
             this.tsmiLivroConsultar.Text = "Consultar";
+            this.tsmiLivroConsultar.Click += new System.EventHandler(this.tsmiLivroConsultar_Click);
             // 
             // tsmiLivroGenero
             // 
@@ -153,7 +154,7 @@
             this.tsmiLivroGeneroCadastrar,
             this.tsmiLivroGeneroListar});
             this.tsmiLivroGenero.Name = "tsmiLivroGenero";
-            this.tsmiLivroGenero.Size = new System.Drawing.Size(125, 22);
+            this.tsmiLivroGenero.Size = new System.Drawing.Size(152, 22);
             this.tsmiLivroGenero.Text = "Gênero";
             // 
             // tsmiLivroGeneroCadastrar

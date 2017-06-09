@@ -97,5 +97,10 @@ namespace Livraria.View
         {
             new FormCadastrarLivro().ShowDialog(this);
         }
+
+        private void tsmiLivroConsultar_Click(object sender, EventArgs e)
+        {
+            new FormConsultarLivro().ShowDialog(this);
+        }
     }
 }

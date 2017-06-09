@@ -1,4 +1,5 @@
 ﻿using Livraria.Model;
+using Livraria.View.Livros;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -39,7 +40,8 @@ namespace Livraria.Controller
                 {
                     foreach (var erro in erros)
                     {
-                        MessageBox.Show(erro.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(FormCadastrarLivro.ActiveForm, erro.ToString(), "", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error, 150);
                         break;
                     }
                     return false;
@@ -48,7 +50,8 @@ namespace Livraria.Controller
             }
             catch (Exception e)
             {
-                MessageBox.Show("Houve um problema ao realizar o cadastro!\n" + e.Message + "\n" + e.StackTrace, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(FormCadastrarLivro.ActiveForm, "Houve um problema ao realizar o cadastro!\n"
+                    + e.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error, 150);
                 return false;
             }
         }
@@ -113,5 +116,29 @@ namespace Livraria.Controller
             }
         }
 
+        public List<Livro> RecuperarLivros()
+        {
+            return context.Livro.ToList<Livro>();
+        }
+
+        public Livro RecuperarLivro(int idLivro)
+        {
+            return context.Livro.Find(idLivro);
+        }
+
+        public List<Autor> RecuperarAutores(int idLivro)
+        {
+            List<Autor> autores = new List<Autor>();
+
+            var autoresLivro = context.AutorLivro.Where(al => al.IdLivro == idLivro);
+
+            foreach (var autorLivro in autoresLivro)
+            {
+                Autor autor = context.Autor.Find(autorLivro.IdAutor);
+                autores.Add(autor);
+            }
+
+            return autores;
+        }
     }
 }

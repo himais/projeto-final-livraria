@@ -1,4 +1,6 @@
-﻿using MetroFramework.Forms;
+﻿using Livraria.Controller;
+using Livraria.Model;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +19,49 @@ namespace Livraria.View.Livros
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
+            this.Icon = Properties.Resources.icone;
+            CarregarLivros();
         }
+
+        public void CarregarLivros(){
+
+            //controllers
+            LivroController livroController = new LivroController();
+            EditoraController editoraController = new EditoraController();
+            GeneroController generoController = new GeneroController();
+
+            //recuperando do banco de dados todos os registros
+            List<Livro> livros = livroController.RecuperarLivros();
+            List<Editora> editoras = editoraController.RecuperarEditoras();
+            List<Genero> generos = generoController.RecuperarGeneros();
+
+            //para cada livro, encontrar a respectiva editora e genero, e settar a linha com
+            //os dados do livro, o nome da editora e nome do genero
+            foreach (var livro in livros)
+            {
+                Editora editora = editoras.Find(e => e.IdEditora == livro.IdEditora);
+                Genero genero = generos.Find(g => g.IdGenero == livro.IdGenero);
+
+                dgvLivros.Rows.Add(livro.IdLivro, livro.Isbn, livro.NomeLivro, livro.Ano, editora.NomeEditora, genero.NomeGenero,
+                    livro.Preco, livro.QuantidadeEstoque);
+            }
+        }
+
+        private void dgvLivros_MouseEnter(object sender, EventArgs e)
+        {
+            this.lblDica.Visible = true;
+        }
+
+        private void dgvLivros_MouseLeave(object sender, EventArgs e)
+        {
+            this.lblDica.Visible = false;
+        }
+
+        private void dgvLivros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idLivro = (int)dgvLivros.SelectedRows[0].Cells[0].Value;
+            new FormEditarLivro(idLivro).ShowDialog(this);
+        }
+                
     }
 }

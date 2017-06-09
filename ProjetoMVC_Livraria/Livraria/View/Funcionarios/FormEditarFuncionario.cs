@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Livraria.View.Funcionarios
 {
-    public partial class FormAtualizarFuncionario : Form
+    public partial class FormEditarFuncionario : Form
     {
-        public FormAtualizarFuncionario(Funcionario f)
+        public FormEditarFuncionario(Funcionario f)
         {
             InitializeComponent();
             

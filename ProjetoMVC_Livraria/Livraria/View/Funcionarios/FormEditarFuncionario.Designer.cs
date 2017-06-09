@@ -1,6 +1,6 @@
 ﻿namespace Livraria.View.Funcionarios
 {
-    partial class FormAtualizarFuncionario
+    partial class FormEditarFuncionario
     {
         /// <summary>
         /// Required designer variable.

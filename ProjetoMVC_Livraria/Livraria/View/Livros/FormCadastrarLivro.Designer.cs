@@ -160,6 +160,7 @@
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(79, 24);
             this.txtPreco.TabIndex = 19;
+            this.txtPreco.Text = "0.00";
             // 
             // lblISBN
             // 
