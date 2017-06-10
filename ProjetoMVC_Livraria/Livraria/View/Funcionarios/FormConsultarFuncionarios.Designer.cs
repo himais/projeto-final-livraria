@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
+            this.idFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.administradorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.funcionarioDataSet = new Livraria.FuncionarioDataSet();
             this.funcionarioTableAdapter = new Livraria.FuncionarioDataSetTableAdapters.FuncionarioTableAdapter();
             this.picLogoInicial = new System.Windows.Forms.PictureBox();
             this.lblDica = new MetroFramework.Controls.MetroLabel();
             this.picAtencao = new System.Windows.Forms.PictureBox();
-            this.idFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.administradorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataSet)).BeginInit();
@@ -78,53 +78,6 @@
             this.dgvFuncionarios.MouseEnter += new System.EventHandler(this.dataGridViewFuncionarios_MouseEnter);
             this.dgvFuncionarios.MouseLeave += new System.EventHandler(this.dataGridViewFuncionarios_MouseLeave);
             // 
-            // funcionarioBindingSource
-            // 
-            this.funcionarioBindingSource.DataMember = "Funcionario";
-            this.funcionarioBindingSource.DataSource = this.funcionarioDataSet;
-            // 
-            // funcionarioDataSet
-            // 
-            this.funcionarioDataSet.DataSetName = "FuncionarioDataSet";
-            this.funcionarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // funcionarioTableAdapter
-            // 
-            this.funcionarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // picLogoInicial
-            // 
-            this.picLogoInicial.BackColor = System.Drawing.Color.Transparent;
-            this.picLogoInicial.Image = global::Livraria.Properties.Resources.logo;
-            this.picLogoInicial.Location = new System.Drawing.Point(23, 21);
-            this.picLogoInicial.Name = "picLogoInicial";
-            this.picLogoInicial.Size = new System.Drawing.Size(38, 33);
-            this.picLogoInicial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLogoInicial.TabIndex = 34;
-            this.picLogoInicial.TabStop = false;
-            // 
-            // lblDica
-            // 
-            this.lblDica.AutoSize = true;
-            this.lblDica.Location = new System.Drawing.Point(43, 284);
-            this.lblDica.Name = "lblDica";
-            this.lblDica.Size = new System.Drawing.Size(382, 19);
-            this.lblDica.Style = MetroFramework.MetroColorStyle.Blue;
-            this.lblDica.TabIndex = 35;
-            this.lblDica.Text = "Dê um duplo clique no funcionário que deseja alterar ou excluir.";
-            this.lblDica.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.lblDica.UseCustomForeColor = true;
-            this.lblDica.UseStyleColors = true;
-            // 
-            // picAtencao
-            // 
-            this.picAtencao.Image = global::Livraria.Properties.Resources.warning;
-            this.picAtencao.Location = new System.Drawing.Point(25, 285);
-            this.picAtencao.Name = "picAtencao";
-            this.picAtencao.Size = new System.Drawing.Size(20, 19);
-            this.picAtencao.TabIndex = 36;
-            this.picAtencao.TabStop = false;
-            // 
             // idFuncionarioDataGridViewTextBoxColumn
             // 
             this.idFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "IdFuncionario";
@@ -156,6 +109,54 @@
             this.administradorDataGridViewCheckBoxColumn.Name = "administradorDataGridViewCheckBoxColumn";
             this.administradorDataGridViewCheckBoxColumn.ReadOnly = true;
             this.administradorDataGridViewCheckBoxColumn.Width = 80;
+            // 
+            // funcionarioBindingSource
+            // 
+            this.funcionarioBindingSource.DataMember = "Funcionario";
+            this.funcionarioBindingSource.DataSource = this.funcionarioDataSet;
+            // 
+            // funcionarioDataSet
+            // 
+            this.funcionarioDataSet.DataSetName = "FuncionarioDataSet";
+            this.funcionarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // funcionarioTableAdapter
+            // 
+            this.funcionarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // picLogoInicial
+            // 
+            this.picLogoInicial.BackColor = System.Drawing.Color.Transparent;
+            this.picLogoInicial.Image = global::Livraria.Properties.Resources.logo;
+            this.picLogoInicial.Location = new System.Drawing.Point(23, 21);
+            this.picLogoInicial.Name = "picLogoInicial";
+            this.picLogoInicial.Size = new System.Drawing.Size(38, 33);
+            this.picLogoInicial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogoInicial.TabIndex = 34;
+            this.picLogoInicial.TabStop = false;
+            // 
+            // lblDica
+            // 
+            this.lblDica.AutoSize = true;
+            this.lblDica.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblDica.Location = new System.Drawing.Point(43, 284);
+            this.lblDica.Name = "lblDica";
+            this.lblDica.Size = new System.Drawing.Size(382, 19);
+            this.lblDica.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblDica.TabIndex = 35;
+            this.lblDica.Text = "Dê um duplo clique no funcionário que deseja alterar ou excluir.";
+            this.lblDica.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblDica.UseCustomForeColor = true;
+            this.lblDica.UseStyleColors = true;
+            // 
+            // picAtencao
+            // 
+            this.picAtencao.Image = global::Livraria.Properties.Resources.warning;
+            this.picAtencao.Location = new System.Drawing.Point(25, 285);
+            this.picAtencao.Name = "picAtencao";
+            this.picAtencao.Size = new System.Drawing.Size(20, 19);
+            this.picAtencao.TabIndex = 36;
+            this.picAtencao.TabStop = false;
             // 
             // FormConsultarFuncionarios
             // 

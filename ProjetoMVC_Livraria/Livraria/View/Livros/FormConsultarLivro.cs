@@ -20,6 +20,8 @@ namespace Livraria.View.Livros
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             this.Icon = Properties.Resources.icone;
+            this.lblDica.Visible = false;
+            this.picAtencao.Visible = false;
             CarregarLivros();
         }
 
@@ -50,11 +52,13 @@ namespace Livraria.View.Livros
         private void dgvLivros_MouseEnter(object sender, EventArgs e)
         {
             this.lblDica.Visible = true;
+            this.picAtencao.Visible = true;
         }
 
         private void dgvLivros_MouseLeave(object sender, EventArgs e)
         {
             this.lblDica.Visible = false;
+            this.picAtencao.Visible = false;
         }
 
         private void dgvLivros_DoubleClick(object sender, EventArgs e)
