@@ -152,7 +152,7 @@ namespace Livraria.View
 
         private void tsmiAutoresConsultar_Click(object sender, EventArgs e)
         {
-            //new FormConsultarAutor().ShowDialog(this);
+            new FormConsultarAutores().ShowDialog(this);
         }
 
     }
