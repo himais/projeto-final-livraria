@@ -83,6 +83,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GeneroDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="generoDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>generoDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="livrariaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -195,6 +200,12 @@
     <Compile Include="View\Generos\FormConsultarGenero.Designer.cs">
       <DependentUpon>FormConsultarGenero.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Generos\FormEditarGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Generos\FormEditarGenero.Designer.cs">
+      <DependentUpon>FormEditarGenero.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Livros\FormCadastrarLivro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +283,9 @@
     <EmbeddedResource Include="View\Generos\FormConsultarGenero.resx">
       <DependentUpon>FormConsultarGenero.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Generos\FormEditarGenero.resx">
+      <DependentUpon>FormEditarGenero.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Livros\FormCadastrarLivro.resx">
       <DependentUpon>FormCadastrarLivro.cs</DependentUpon>
     </EmbeddedResource>
@@ -326,6 +340,17 @@
     </None>
     <None Include="GeneroDataSet.xss">
       <DependentUpon>GeneroDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="generoDataSet1.xsc">
+      <DependentUpon>generoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="generoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>generoDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="generoDataSet1.xss">
+      <DependentUpon>generoDataSet1.xsd</DependentUpon>
     </None>
     <None Include="livrariaDataSet.xsc">
       <DependentUpon>livrariaDataSet.xsd</DependentUpon>

@@ -49,7 +49,7 @@ namespace Livraria.View.Funcionarios
 
                 if (funcionarioController.AtualizarFuncionario(f))
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "Funcionario atualizado com sucesso!", "",
+                    MetroFramework.MetroMessageBox.Show(this, "Funcionário atualizado com sucesso!", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
                     this.Close();
                 } 
@@ -58,7 +58,7 @@ namespace Livraria.View.Funcionarios
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            DialogResult resposta = MetroFramework.MetroMessageBox.Show(this, "Deseja mesmo excluir este funcionario?", "Confirmação para deletar",
+            DialogResult resposta = MetroFramework.MetroMessageBox.Show(this, "Deseja mesmo excluir este funcionário?", "Confirmação para deletar",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question, 100);
             
             if (resposta == DialogResult.Yes)
@@ -68,7 +68,7 @@ namespace Livraria.View.Funcionarios
 
                 if (funcionarioController.ExcluirFuncionario(id))
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "Funcionario excluído com sucesso!", "",
+                    MetroFramework.MetroMessageBox.Show(this, "Funcionário excluído com sucesso!", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
                     this.Close();
                 } 

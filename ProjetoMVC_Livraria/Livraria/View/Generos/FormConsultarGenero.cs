@@ -57,7 +57,7 @@ namespace Livraria.View.Generos
             genero.IdGenero = id;
             genero.NomeGenero = nome;
 
-            //new FormEditarGenero(genero).ShowDialog(this);
+            new FormEditarGenero(genero).ShowDialog(this);
             //atualizar a lista, assim que sair do form editar
             this.generoTableAdapter1.Fill(this.generoDataSet.Genero);
         }
