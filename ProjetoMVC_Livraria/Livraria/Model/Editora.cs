@@ -11,6 +11,7 @@ namespace Livraria.Model
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Editora
     {
@@ -20,9 +21,17 @@ namespace Livraria.Model
         }
     
         public int IdEditora { get; set; }
+
+        [Required(ErrorMessage = "Insira o nome da editora!", AllowEmptyStrings = false)]
         public string NomeEditora { get; set; }
+        [Required(ErrorMessage = "Insira a razão social da editora!", AllowEmptyStrings = false)]
         public string RazaoSocial { get; set; }
+        [Required(ErrorMessage = "Insira o CNPJ da editora!", AllowEmptyStrings = false)]
+        [StringLength(14, MinimumLength = 14, ErrorMessage = "O CNPJ deve ter 14 caracteres!")]
         public string CNPJ { get; set; }
+        [Required(ErrorMessage = "Insira o e-mail da editora!", AllowEmptyStrings = false)]
+        [RegularExpression(@"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$", ErrorMessage = "O e-mail inserido é inválido!")]
         public string Email { get; set; }
     
         public virtual ICollection<Livro> Livro { get; set; }
