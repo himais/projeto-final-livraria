@@ -103,5 +103,30 @@ namespace Livraria.View
             new FormConsultarLivro().ShowDialog(this);
         }
 
+        private void tileGenero_Click(object sender, EventArgs e)
+        {
+            //new FormConsultarGenero().ShowDialog(this);
+        }
+
+        private void tileEditora_Click(object sender, EventArgs e)
+        {
+            //new FormConsultarGenero().ShowDialog(this);
+        }
+
+        private void tileAutores_Click(object sender, EventArgs e)
+        {
+            //new FormConsultarGenero().ShowDialog(this);
+        }
+
+        private void tileLivros_Click(object sender, EventArgs e)
+        {
+            new FormConsultarLivro().ShowDialog(this);
+        }
+
+        private void tileVendas_Click(object sender, EventArgs e)
+        {
+            //new FormCadastrarVenda().ShowDialog(this);
+        }
+
     }
 }
