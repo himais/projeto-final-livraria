@@ -348,6 +348,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model\ModeloDadosLivraria.edmx.sql" />
+    <None Include="Resources\logo3.png" />
+    <None Include="Resources\padlock %281%29.png" />
+    <None Include="Resources\profile.png" />
+    <None Include="Resources\info %281%29.png" />
     <None Include="Resources\warning.png" />
     <None Include="Resources\atencao.bmp" />
     <None Include="Resources\icone.ico" />
