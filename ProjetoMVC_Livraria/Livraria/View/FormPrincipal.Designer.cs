@@ -59,10 +59,12 @@
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.picLogoInicial = new System.Windows.Forms.PictureBox();
             this.menuStripPrincipal.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripPrincipal
@@ -137,14 +139,14 @@
             // tsmiLivroAdicionar
             // 
             this.tsmiLivroAdicionar.Name = "tsmiLivroAdicionar";
-            this.tsmiLivroAdicionar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiLivroAdicionar.Size = new System.Drawing.Size(125, 22);
             this.tsmiLivroAdicionar.Text = "Adicionar";
             this.tsmiLivroAdicionar.Click += new System.EventHandler(this.tsmiLivroAdicionar_Click);
             // 
             // tsmiLivroConsultar
             // 
             this.tsmiLivroConsultar.Name = "tsmiLivroConsultar";
-            this.tsmiLivroConsultar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiLivroConsultar.Size = new System.Drawing.Size(125, 22);
             this.tsmiLivroConsultar.Text = "Consultar";
             this.tsmiLivroConsultar.Click += new System.EventHandler(this.tsmiLivroConsultar_Click);
             // 
@@ -154,7 +156,7 @@
             this.tsmiLivroGeneroCadastrar,
             this.tsmiLivroGeneroListar});
             this.tsmiLivroGenero.Name = "tsmiLivroGenero";
-            this.tsmiLivroGenero.Size = new System.Drawing.Size(152, 22);
+            this.tsmiLivroGenero.Size = new System.Drawing.Size(125, 22);
             this.tsmiLivroGenero.Text = "Gênero";
             // 
             // tsmiLivroGeneroCadastrar
@@ -317,11 +319,23 @@
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
             // 
+            // picLogoInicial
+            // 
+            this.picLogoInicial.BackColor = System.Drawing.Color.Transparent;
+            this.picLogoInicial.Image = global::Livraria.Properties.Resources.logo;
+            this.picLogoInicial.Location = new System.Drawing.Point(24, 19);
+            this.picLogoInicial.Name = "picLogoInicial";
+            this.picLogoInicial.Size = new System.Drawing.Size(38, 33);
+            this.picLogoInicial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogoInicial.TabIndex = 10;
+            this.picLogoInicial.TabStop = false;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 342);
+            this.Controls.Add(this.picLogoInicial);
             this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.lblBemVindo);
             this.Controls.Add(this.menuStripPrincipal);
@@ -330,7 +344,7 @@
             this.MaximizeBox = false;
             this.Name = "FormPrincipal";
             this.Resizable = false;
-            this.Text = "       Livraria";
+            this.Text = "      Tela Principal";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.menuStripPrincipal.ResumeLayout(false);
@@ -338,6 +352,7 @@
             this.metroContextMenu1.ResumeLayout(false);
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -375,5 +390,6 @@
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
+        private System.Windows.Forms.PictureBox picLogoInicial;
     }
 }
