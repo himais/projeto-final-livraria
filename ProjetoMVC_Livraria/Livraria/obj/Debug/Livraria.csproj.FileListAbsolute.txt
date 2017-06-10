@@ -125,3 +125,4 @@ C:\Users\Maíra\Desktop\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria
 C:\Users\Maíra\Desktop\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Generos.FormEditarGenero.resources
 C:\Users\Maíra\Desktop\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Editoras.FormConsultarEditoras.resources
 C:\Users\Maíra\Desktop\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Editoras.FormEditarEditoras.resources
+C:\Users\Maíra\Desktop\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Autores.FormCadastrarAutor.resources

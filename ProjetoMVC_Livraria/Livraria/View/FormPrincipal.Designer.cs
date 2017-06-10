@@ -208,14 +208,14 @@
             // tsmiEditorasCadastrar
             // 
             this.tsmiEditorasCadastrar.Name = "tsmiEditorasCadastrar";
-            this.tsmiEditorasCadastrar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEditorasCadastrar.Size = new System.Drawing.Size(125, 22);
             this.tsmiEditorasCadastrar.Text = "Cadastrar";
             this.tsmiEditorasCadastrar.Click += new System.EventHandler(this.tsmiEditorasCadastrar_Click);
             // 
             // tsmiEditorasConsultar
             // 
             this.tsmiEditorasConsultar.Name = "tsmiEditorasConsultar";
-            this.tsmiEditorasConsultar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEditorasConsultar.Size = new System.Drawing.Size(125, 22);
             this.tsmiEditorasConsultar.Text = "Consultar";
             this.tsmiEditorasConsultar.Click += new System.EventHandler(this.tsmiEditorasConsultar_Click);
             // 
@@ -231,14 +231,16 @@
             // tsmiAutoresCadastrar
             // 
             this.tsmiAutoresCadastrar.Name = "tsmiAutoresCadastrar";
-            this.tsmiAutoresCadastrar.Size = new System.Drawing.Size(125, 22);
+            this.tsmiAutoresCadastrar.Size = new System.Drawing.Size(152, 22);
             this.tsmiAutoresCadastrar.Text = "Cadastrar";
+            this.tsmiAutoresCadastrar.Click += new System.EventHandler(this.tsmiAutoresCadastrar_Click);
             // 
             // tsmiAutoresConsultar
             // 
             this.tsmiAutoresConsultar.Name = "tsmiAutoresConsultar";
-            this.tsmiAutoresConsultar.Size = new System.Drawing.Size(125, 22);
+            this.tsmiAutoresConsultar.Size = new System.Drawing.Size(152, 22);
             this.tsmiAutoresConsultar.Text = "Consultar";
+            this.tsmiAutoresConsultar.Click += new System.EventHandler(this.tsmiAutoresConsultar_Click);
             // 
             // picLogoInicial
             // 

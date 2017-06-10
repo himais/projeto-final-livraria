@@ -143,6 +143,12 @@
     <Compile Include="Model\Venda.cs">
       <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
+    <Compile Include="View\Autores\FormCadastrarAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Autores\FormCadastrarAutor.Designer.cs">
+      <DependentUpon>FormCadastrarAutor.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Editoras\FormCadastrarEditoras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,6 +266,9 @@
     <Compile Include="View\Vendas\FormSelecionarLivros.Designer.cs">
       <DependentUpon>FormSelecionarLivros.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Autores\FormCadastrarAutor.resx">
+      <DependentUpon>FormCadastrarAutor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Editoras\FormCadastrarEditoras.resx">
       <DependentUpon>FormCadastrarEditoras.cs</DependentUpon>
     </EmbeddedResource>
