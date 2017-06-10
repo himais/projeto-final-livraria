@@ -41,11 +41,15 @@
             this.livroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.livrariaDataSet = new Livraria.livrariaDataSet();
             this.livroTableAdapter = new Livraria.livrariaDataSetTableAdapters.LivroTableAdapter();
-            this.lblDica = new MetroFramework.Controls.MetroLabel();
             this.btnVoltar = new MetroFramework.Controls.MetroButton();
+            this.picLogoInicial = new System.Windows.Forms.PictureBox();
+            this.picAtencao = new System.Windows.Forms.PictureBox();
+            this.lblDica = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.livroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.livrariaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAtencao)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvLivros
@@ -62,10 +66,10 @@
             this.Genero,
             this.Preço,
             this.Estoque});
-            this.dgvLivros.Location = new System.Drawing.Point(17, 88);
+            this.dgvLivros.Location = new System.Drawing.Point(23, 72);
             this.dgvLivros.Name = "dgvLivros";
             this.dgvLivros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLivros.Size = new System.Drawing.Size(980, 323);
+            this.dgvLivros.Size = new System.Drawing.Size(982, 323);
             this.dgvLivros.TabIndex = 0;
             this.dgvLivros.DoubleClick += new System.EventHandler(this.dgvLivros_DoubleClick);
             this.dgvLivros.MouseEnter += new System.EventHandler(this.dgvLivros_MouseEnter);
@@ -138,46 +142,68 @@
             // 
             this.livroTableAdapter.ClearBeforeFill = true;
             // 
-            // lblDica
-            // 
-            this.lblDica.AutoSize = true;
-            this.lblDica.BackColor = System.Drawing.Color.Red;
-            this.lblDica.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblDica.ForeColor = System.Drawing.Color.Red;
-            this.lblDica.Location = new System.Drawing.Point(17, 429);
-            this.lblDica.Name = "lblDica";
-            this.lblDica.Size = new System.Drawing.Size(443, 25);
-            this.lblDica.Style = MetroFramework.MetroColorStyle.Red;
-            this.lblDica.TabIndex = 1;
-            this.lblDica.Text = "Dê um duplo clique no livro que deseja alterar ou excluir";
-            this.lblDica.UseCustomForeColor = true;
-            this.lblDica.Visible = false;
-            // 
             // btnVoltar
             // 
-            this.btnVoltar.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnVoltar.Location = new System.Drawing.Point(871, 429);
+            this.btnVoltar.Location = new System.Drawing.Point(886, 413);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(119, 25);
+            this.btnVoltar.Size = new System.Drawing.Size(119, 35);
             this.btnVoltar.TabIndex = 2;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseSelectable = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // picLogoInicial
+            // 
+            this.picLogoInicial.BackColor = System.Drawing.Color.Transparent;
+            this.picLogoInicial.Image = global::Livraria.Properties.Resources.logo;
+            this.picLogoInicial.Location = new System.Drawing.Point(23, 21);
+            this.picLogoInicial.Name = "picLogoInicial";
+            this.picLogoInicial.Size = new System.Drawing.Size(38, 33);
+            this.picLogoInicial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogoInicial.TabIndex = 35;
+            this.picLogoInicial.TabStop = false;
+            // 
+            // picAtencao
+            // 
+            this.picAtencao.Image = global::Livraria.Properties.Resources.warning;
+            this.picAtencao.Location = new System.Drawing.Point(23, 410);
+            this.picAtencao.Name = "picAtencao";
+            this.picAtencao.Size = new System.Drawing.Size(20, 19);
+            this.picAtencao.TabIndex = 38;
+            this.picAtencao.TabStop = false;
+            // 
+            // lblDica
+            // 
+            this.lblDica.AutoSize = true;
+            this.lblDica.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblDica.Location = new System.Drawing.Point(41, 409);
+            this.lblDica.Name = "lblDica";
+            this.lblDica.Size = new System.Drawing.Size(382, 19);
+            this.lblDica.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblDica.TabIndex = 37;
+            this.lblDica.Text = "Dê um duplo clique no funcionário que deseja alterar ou excluir.";
+            this.lblDica.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblDica.UseCustomForeColor = true;
+            this.lblDica.UseStyleColors = true;
+            // 
             // FormConsultarLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1013, 474);
-            this.Controls.Add(this.btnVoltar);
+            this.ClientSize = new System.Drawing.Size(1031, 462);
+            this.Controls.Add(this.picAtencao);
             this.Controls.Add(this.lblDica);
+            this.Controls.Add(this.picLogoInicial);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.dgvLivros);
             this.Name = "FormConsultarLivro";
             this.Resizable = false;
-            this.Text = "Consultar Livro";
+            this.Text = "        Consultar Livro";
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.livroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.livrariaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAtencao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,7 +215,6 @@
         private livrariaDataSet livrariaDataSet;
         private System.Windows.Forms.BindingSource livroBindingSource;
         private livrariaDataSetTableAdapters.LivroTableAdapter livroTableAdapter;
-        private MetroFramework.Controls.MetroLabel lblDica;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
@@ -199,5 +224,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Preço;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estoque;
         private MetroFramework.Controls.MetroButton btnVoltar;
+        private System.Windows.Forms.PictureBox picLogoInicial;
+        private System.Windows.Forms.PictureBox picAtencao;
+        private MetroFramework.Controls.MetroLabel lblDica;
     }
 }

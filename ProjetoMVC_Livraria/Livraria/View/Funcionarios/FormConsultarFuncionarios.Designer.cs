@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
+            this.idFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.administradorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.funcionarioDataSet = new Livraria.FuncionarioDataSet();
             this.funcionarioTableAdapter = new Livraria.FuncionarioDataSetTableAdapters.FuncionarioTableAdapter();
             this.picLogoInicial = new System.Windows.Forms.PictureBox();
             this.lblDica = new MetroFramework.Controls.MetroLabel();
             this.picAtencao = new System.Windows.Forms.PictureBox();
-            this.idFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.administradorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btnVoltar = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataSet)).BeginInit();
@@ -53,14 +54,14 @@
             this.dgvFuncionarios.AllowUserToAddRows = false;
             this.dgvFuncionarios.AllowUserToDeleteRows = false;
             this.dgvFuncionarios.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFuncionarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFuncionarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFuncionarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idFuncionarioDataGridViewTextBoxColumn,
@@ -77,53 +78,6 @@
             this.dgvFuncionarios.DoubleClick += new System.EventHandler(this.dgvFuncionarios_DoubleClick);
             this.dgvFuncionarios.MouseEnter += new System.EventHandler(this.dataGridViewFuncionarios_MouseEnter);
             this.dgvFuncionarios.MouseLeave += new System.EventHandler(this.dataGridViewFuncionarios_MouseLeave);
-            // 
-            // funcionarioBindingSource
-            // 
-            this.funcionarioBindingSource.DataMember = "Funcionario";
-            this.funcionarioBindingSource.DataSource = this.funcionarioDataSet;
-            // 
-            // funcionarioDataSet
-            // 
-            this.funcionarioDataSet.DataSetName = "FuncionarioDataSet";
-            this.funcionarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // funcionarioTableAdapter
-            // 
-            this.funcionarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // picLogoInicial
-            // 
-            this.picLogoInicial.BackColor = System.Drawing.Color.Transparent;
-            this.picLogoInicial.Image = global::Livraria.Properties.Resources.logo;
-            this.picLogoInicial.Location = new System.Drawing.Point(23, 21);
-            this.picLogoInicial.Name = "picLogoInicial";
-            this.picLogoInicial.Size = new System.Drawing.Size(38, 33);
-            this.picLogoInicial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLogoInicial.TabIndex = 34;
-            this.picLogoInicial.TabStop = false;
-            // 
-            // lblDica
-            // 
-            this.lblDica.AutoSize = true;
-            this.lblDica.Location = new System.Drawing.Point(43, 284);
-            this.lblDica.Name = "lblDica";
-            this.lblDica.Size = new System.Drawing.Size(382, 19);
-            this.lblDica.Style = MetroFramework.MetroColorStyle.Blue;
-            this.lblDica.TabIndex = 35;
-            this.lblDica.Text = "Dê um duplo clique no funcionário que deseja alterar ou excluir.";
-            this.lblDica.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.lblDica.UseCustomForeColor = true;
-            this.lblDica.UseStyleColors = true;
-            // 
-            // picAtencao
-            // 
-            this.picAtencao.Image = global::Livraria.Properties.Resources.warning;
-            this.picAtencao.Location = new System.Drawing.Point(25, 285);
-            this.picAtencao.Name = "picAtencao";
-            this.picAtencao.Size = new System.Drawing.Size(20, 19);
-            this.picAtencao.TabIndex = 36;
-            this.picAtencao.TabStop = false;
             // 
             // idFuncionarioDataGridViewTextBoxColumn
             // 
@@ -157,11 +111,70 @@
             this.administradorDataGridViewCheckBoxColumn.ReadOnly = true;
             this.administradorDataGridViewCheckBoxColumn.Width = 80;
             // 
+            // funcionarioBindingSource
+            // 
+            this.funcionarioBindingSource.DataMember = "Funcionario";
+            this.funcionarioBindingSource.DataSource = this.funcionarioDataSet;
+            // 
+            // funcionarioDataSet
+            // 
+            this.funcionarioDataSet.DataSetName = "FuncionarioDataSet";
+            this.funcionarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // funcionarioTableAdapter
+            // 
+            this.funcionarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // picLogoInicial
+            // 
+            this.picLogoInicial.BackColor = System.Drawing.Color.Transparent;
+            this.picLogoInicial.Image = global::Livraria.Properties.Resources.logo;
+            this.picLogoInicial.Location = new System.Drawing.Point(23, 21);
+            this.picLogoInicial.Name = "picLogoInicial";
+            this.picLogoInicial.Size = new System.Drawing.Size(38, 33);
+            this.picLogoInicial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogoInicial.TabIndex = 34;
+            this.picLogoInicial.TabStop = false;
+            // 
+            // lblDica
+            // 
+            this.lblDica.AutoSize = true;
+            this.lblDica.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblDica.Location = new System.Drawing.Point(43, 284);
+            this.lblDica.Name = "lblDica";
+            this.lblDica.Size = new System.Drawing.Size(382, 19);
+            this.lblDica.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblDica.TabIndex = 35;
+            this.lblDica.Text = "Dê um duplo clique no funcionário que deseja alterar ou excluir.";
+            this.lblDica.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblDica.UseCustomForeColor = true;
+            this.lblDica.UseStyleColors = true;
+            // 
+            // picAtencao
+            // 
+            this.picAtencao.Image = global::Livraria.Properties.Resources.warning;
+            this.picAtencao.Location = new System.Drawing.Point(25, 285);
+            this.picAtencao.Name = "picAtencao";
+            this.picAtencao.Size = new System.Drawing.Size(20, 19);
+            this.picAtencao.TabIndex = 36;
+            this.picAtencao.TabStop = false;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(558, 307);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(119, 35);
+            this.btnVoltar.TabIndex = 37;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseSelectable = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // FormConsultarFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 319);
+            this.ClientSize = new System.Drawing.Size(710, 354);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.picAtencao);
             this.Controls.Add(this.lblDica);
             this.Controls.Add(this.picLogoInicial);
@@ -195,5 +208,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeFuncionarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn administradorDataGridViewCheckBoxColumn;
+        private MetroFramework.Controls.MetroButton btnVoltar;
     }
 }

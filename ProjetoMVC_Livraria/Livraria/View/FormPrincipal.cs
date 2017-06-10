@@ -48,8 +48,8 @@ namespace Livraria.View
 
         private static bool FecharAplicacao()
         {
-            DialogResult resultado = MessageBox.Show("Deseja realmente fechar a aplicação?", "Sair da aplicação",
-                                                      MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resultado = MetroFramework.MetroMessageBox.Show(FormPrincipal.ActiveForm, "Deseja realmente fechar a aplicação?", "Sair da aplicação",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, 100);
 
             return resultado == DialogResult.Yes;
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Livraria.View.Livros
 {
-    public partial class FormSelecionarAutores : Form
+    public partial class FormSelecionarAutores : MetroForm
     {
         static ListBox lstAutores;
         Dictionary<int, string> dictAutores = new Dictionary<int, string>();
@@ -20,6 +21,7 @@ namespace Livraria.View.Livros
             InitializeComponent();
             lstAutores = autoresCadastrar;
             dictAutores.Clear();
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void FormSelecionarAutores_Load(object sender, EventArgs e)
@@ -125,6 +127,11 @@ namespace Livraria.View.Livros
         private void btnDesmarcarTodos_Click(object sender, EventArgs e)
         {
             DesmarcarTodos();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
