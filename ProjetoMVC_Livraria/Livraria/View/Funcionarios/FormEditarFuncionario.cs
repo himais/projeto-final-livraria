@@ -1,5 +1,6 @@
 ﻿using Livraria.Controller;
 using Livraria.Model;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,16 +13,18 @@ using System.Windows.Forms;
 
 namespace Livraria.View.Funcionarios
 {
-    public partial class FormEditarFuncionario : Form
+    public partial class FormEditarFuncionario : MetroForm
     {
         public FormEditarFuncionario(Funcionario f)
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
             
             txtId.Text = f.IdFuncionario.ToString();
             txtNome.Text = f.NomeFuncionario;
             txtUsuario.Text = f.Login;
             cbxAdministrador.Checked = f.Administrador;
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -31,7 +34,8 @@ namespace Livraria.View.Funcionarios
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
-            DialogResult resposta = MessageBox.Show("Deseja mesmo alterar os dados?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resposta = MetroFramework.MetroMessageBox.Show(this, "Deseja mesmo alterar os dados?", "Atenção",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, 100);
 
             if (resposta == DialogResult.Yes)
             {
@@ -45,8 +49,8 @@ namespace Livraria.View.Funcionarios
 
                 if (funcionarioController.AtualizarFuncionario(f))
                 {
-                   MetroFramework.MetroMessageBox.Show(this, "Funcionario atualizado com sucesso!",
-                     "", MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
+                    MetroFramework.MetroMessageBox.Show(this, "Funcionario atualizado com sucesso!", "",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
                     this.Close();
                 } 
             }
@@ -54,8 +58,8 @@ namespace Livraria.View.Funcionarios
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            DialogResult resposta = MetroFramework.MetroMessageBox.Show(this, "Deseja mesmo excluir este funcionario?",
-                   "Confirme!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, 100);
+            DialogResult resposta = MetroFramework.MetroMessageBox.Show(this, "Deseja mesmo excluir este funcionario?", "Confirmação para deletar",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, 100);
             
             if (resposta == DialogResult.Yes)
             {
@@ -64,8 +68,8 @@ namespace Livraria.View.Funcionarios
 
                 if (funcionarioController.ExcluirFuncionario(id))
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "Funcionario excluído com sucesso!",
-                     "", MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
+                    MetroFramework.MetroMessageBox.Show(this, "Funcionario excluído com sucesso!", "",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
                     this.Close();
                 } 
             }
