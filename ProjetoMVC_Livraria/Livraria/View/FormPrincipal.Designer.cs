@@ -51,20 +51,20 @@
             this.tsmiAutores = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAutoresCadastrar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAutoresConsultar = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblBemVindo = new System.Windows.Forms.Label();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
-            this.opçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opção2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.picLogoInicial = new System.Windows.Forms.PictureBox();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.menuTabPrincipal = new MetroFramework.Controls.MetroTabControl();
+            this.tabPrincipal = new MetroFramework.Controls.MetroTabPage();
+            this.tabArquivo = new MetroFramework.Controls.MetroTabPage();
+            this.tabVendas = new MetroFramework.Controls.MetroTabPage();
+            this.contextMenuVendas = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.cadastrarVendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarVendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblBemVindo = new MetroFramework.Controls.MetroLabel();
             this.menuStripPrincipal.SuspendLayout();
-            this.metroContextMenu1.SuspendLayout();
-            this.metroTabControl1.SuspendLayout();
-            this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).BeginInit();
+            this.menuTabPrincipal.SuspendLayout();
+            this.contextMenuVendas.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripPrincipal
@@ -94,14 +94,14 @@
             // tsmiSobre
             // 
             this.tsmiSobre.Name = "tsmiSobre";
-            this.tsmiSobre.Size = new System.Drawing.Size(104, 22);
+            this.tsmiSobre.Size = new System.Drawing.Size(152, 22);
             this.tsmiSobre.Text = "Sobre";
             this.tsmiSobre.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // tsmiSair
             // 
             this.tsmiSair.Name = "tsmiSair";
-            this.tsmiSair.Size = new System.Drawing.Size(104, 22);
+            this.tsmiSair.Size = new System.Drawing.Size(152, 22);
             this.tsmiSair.Text = "Sair";
             this.tsmiSair.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -237,88 +237,6 @@
             this.tsmiAutoresConsultar.Size = new System.Drawing.Size(125, 22);
             this.tsmiAutoresConsultar.Text = "Consultar";
             // 
-            // lblBemVindo
-            // 
-            this.lblBemVindo.AutoSize = true;
-            this.lblBemVindo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBemVindo.Location = new System.Drawing.Point(331, 97);
-            this.lblBemVindo.Name = "lblBemVindo";
-            this.lblBemVindo.Size = new System.Drawing.Size(114, 18);
-            this.lblBemVindo.TabIndex = 1;
-            this.lblBemVindo.Text = "Seja bem-vindo,";
-            // 
-            // metroTile1
-            // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(47, 6);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(245, 56);
-            this.metroTile1.TabIndex = 2;
-            this.metroTile1.Text = "Realizar venda";
-            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile1.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile1.UseSelectable = true;
-            // 
-            // metroContextMenu1
-            // 
-            this.metroContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opçãoToolStripMenuItem,
-            this.opção2ToolStripMenuItem});
-            this.metroContextMenu1.Name = "metroContextMenu1";
-            this.metroContextMenu1.Size = new System.Drawing.Size(116, 48);
-            // 
-            // opçãoToolStripMenuItem
-            // 
-            this.opçãoToolStripMenuItem.Name = "opçãoToolStripMenuItem";
-            this.opçãoToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.opçãoToolStripMenuItem.Text = "Opção";
-            // 
-            // opção2ToolStripMenuItem
-            // 
-            this.opção2ToolStripMenuItem.Name = "opção2ToolStripMenuItem";
-            this.opção2ToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.opção2ToolStripMenuItem.Text = "Opção2";
-            // 
-            // metroTabControl1
-            // 
-            this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage2);
-            this.metroTabControl1.Location = new System.Drawing.Point(34, 118);
-            this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(411, 169);
-            this.metroTabControl1.TabIndex = 3;
-            this.metroTabControl1.UseSelectable = true;
-            // 
-            // metroTabPage1
-            // 
-            this.metroTabPage1.Controls.Add(this.metroTile1);
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(403, 127);
-            this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "metroTabPage1";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
-            // 
-            // metroTabPage2
-            // 
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 10;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(403, 127);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "metroTabPage2";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 10;
-            // 
             // picLogoInicial
             // 
             this.picLogoInicial.BackColor = System.Drawing.Color.Transparent;
@@ -330,29 +248,125 @@
             this.picLogoInicial.TabIndex = 10;
             this.picLogoInicial.TabStop = false;
             // 
+            // metroTile1
+            // 
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Location = new System.Drawing.Point(322, 274);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(245, 56);
+            this.metroTile1.TabIndex = 11;
+            this.metroTile1.Text = "Realizar venda";
+            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile1.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile1.UseSelectable = true;
+            // 
+            // menuTabPrincipal
+            // 
+            this.menuTabPrincipal.Controls.Add(this.tabPrincipal);
+            this.menuTabPrincipal.Controls.Add(this.tabArquivo);
+            this.menuTabPrincipal.Controls.Add(this.tabVendas);
+            this.menuTabPrincipal.HotTrack = true;
+            this.menuTabPrincipal.ItemSize = new System.Drawing.Size(54, 40);
+            this.menuTabPrincipal.Location = new System.Drawing.Point(61, 144);
+            this.menuTabPrincipal.Name = "menuTabPrincipal";
+            this.menuTabPrincipal.SelectedIndex = 2;
+            this.menuTabPrincipal.Size = new System.Drawing.Size(295, 70);
+            this.menuTabPrincipal.TabIndex = 12;
+            this.menuTabPrincipal.UseSelectable = true;
+            // 
+            // tabPrincipal
+            // 
+            this.tabPrincipal.HorizontalScrollbarBarColor = true;
+            this.tabPrincipal.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabPrincipal.HorizontalScrollbarSize = 10;
+            this.tabPrincipal.Location = new System.Drawing.Point(4, 44);
+            this.tabPrincipal.Name = "tabPrincipal";
+            this.tabPrincipal.Size = new System.Drawing.Size(287, 22);
+            this.tabPrincipal.TabIndex = 0;
+            this.tabPrincipal.VerticalScrollbarBarColor = true;
+            this.tabPrincipal.VerticalScrollbarHighlightOnWheel = false;
+            this.tabPrincipal.VerticalScrollbarSize = 10;
+            // 
+            // tabArquivo
+            // 
+            this.tabArquivo.HorizontalScrollbarBarColor = true;
+            this.tabArquivo.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabArquivo.HorizontalScrollbarSize = 10;
+            this.tabArquivo.Location = new System.Drawing.Point(4, 44);
+            this.tabArquivo.Name = "tabArquivo";
+            this.tabArquivo.Size = new System.Drawing.Size(287, 22);
+            this.tabArquivo.TabIndex = 1;
+            this.tabArquivo.Text = "Arquivo";
+            this.tabArquivo.VerticalScrollbarBarColor = true;
+            this.tabArquivo.VerticalScrollbarHighlightOnWheel = false;
+            this.tabArquivo.VerticalScrollbarSize = 10;
+            // 
+            // tabVendas
+            // 
+            this.tabVendas.HorizontalScrollbarBarColor = true;
+            this.tabVendas.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabVendas.HorizontalScrollbarSize = 10;
+            this.tabVendas.Location = new System.Drawing.Point(4, 44);
+            this.tabVendas.Name = "tabVendas";
+            this.tabVendas.Size = new System.Drawing.Size(287, 22);
+            this.tabVendas.TabIndex = 2;
+            this.tabVendas.Text = "Vendas";
+            this.tabVendas.VerticalScrollbarBarColor = true;
+            this.tabVendas.VerticalScrollbarHighlightOnWheel = false;
+            this.tabVendas.VerticalScrollbarSize = 10;
+            // 
+            // contextMenuVendas
+            // 
+            this.contextMenuVendas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarVendaToolStripMenuItem,
+            this.consultarVendasToolStripMenuItem});
+            this.contextMenuVendas.Name = "contextMenuVendas";
+            this.contextMenuVendas.Size = new System.Drawing.Size(167, 48);
+            // 
+            // cadastrarVendaToolStripMenuItem
+            // 
+            this.cadastrarVendaToolStripMenuItem.Name = "cadastrarVendaToolStripMenuItem";
+            this.cadastrarVendaToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.cadastrarVendaToolStripMenuItem.Text = "Cadastrar Venda";
+            // 
+            // consultarVendasToolStripMenuItem
+            // 
+            this.consultarVendasToolStripMenuItem.Name = "consultarVendasToolStripMenuItem";
+            this.consultarVendasToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.consultarVendasToolStripMenuItem.Text = "Consultar Vendas";
+            // 
+            // lblBemVindo
+            // 
+            this.lblBemVindo.Location = new System.Drawing.Point(398, 97);
+            this.lblBemVindo.Name = "lblBemVindo";
+            this.lblBemVindo.Size = new System.Drawing.Size(172, 23);
+            this.lblBemVindo.TabIndex = 14;
+            this.lblBemVindo.Text = "Seja bem-vindo(a),";
+            this.lblBemVindo.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 342);
-            this.Controls.Add(this.picLogoInicial);
-            this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.lblBemVindo);
+            this.Controls.Add(this.menuTabPrincipal);
+            this.Controls.Add(this.metroTile1);
+            this.Controls.Add(this.picLogoInicial);
             this.Controls.Add(this.menuStripPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStripPrincipal;
             this.MaximizeBox = false;
             this.Name = "FormPrincipal";
             this.Resizable = false;
-            this.Text = "      Tela Principal";
+            this.Text = "       Tela Principal";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.menuStripPrincipal.ResumeLayout(false);
             this.menuStripPrincipal.PerformLayout();
-            this.metroContextMenu1.ResumeLayout(false);
-            this.metroTabControl1.ResumeLayout(false);
-            this.metroTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).EndInit();
+            this.menuTabPrincipal.ResumeLayout(false);
+            this.contextMenuVendas.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,16 +394,17 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiEditorasCadastrar;
         private System.Windows.Forms.ToolStripMenuItem tsmiEditorasConsultar;
         private System.Windows.Forms.ToolStripMenuItem tsmiAutores;
-        private System.Windows.Forms.Label lblBemVindo;
         private System.Windows.Forms.ToolStripMenuItem tsmiAutoresCadastrar;
         private System.Windows.Forms.ToolStripMenuItem tsmiAutoresConsultar;
-        private MetroFramework.Controls.MetroTile metroTile1;
-        private MetroFramework.Controls.MetroContextMenu metroContextMenu1;
-        private System.Windows.Forms.ToolStripMenuItem opçãoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem opção2ToolStripMenuItem;
-        private MetroFramework.Controls.MetroTabControl metroTabControl1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private System.Windows.Forms.PictureBox picLogoInicial;
+        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTabControl menuTabPrincipal;
+        private MetroFramework.Controls.MetroTabPage tabPrincipal;
+        private MetroFramework.Controls.MetroTabPage tabArquivo;
+        private MetroFramework.Controls.MetroTabPage tabVendas;
+        private MetroFramework.Controls.MetroContextMenu contextMenuVendas;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarVendaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarVendasToolStripMenuItem;
+        private MetroFramework.Controls.MetroLabel lblBemVindo;
     }
 }
