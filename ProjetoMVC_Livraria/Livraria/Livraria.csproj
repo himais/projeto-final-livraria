@@ -178,6 +178,18 @@
     <Compile Include="View\Funcionarios\FormConsultarFuncionarios.Designer.cs">
       <DependentUpon>FormConsultarFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Generos\FormCadastrarGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Generos\FormCadastrarGenero.Designer.cs">
+      <DependentUpon>FormCadastrarGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Generos\FormCadastrarGeneroaaa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Generos\FormCadastrarGeneroaaa.Designer.cs">
+      <DependentUpon>FormCadastrarGeneroaaa.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Livros\FormCadastrarLivro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,7 +214,7 @@
     <Compile Include="View\Livros\FormSelecionarAutores.Designer.cs">
       <DependentUpon>FormSelecionarAutores.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Livros\Genero.cs" />
+    <Compile Include="View\Livros\Genero1.cs" />
     <Compile Include="View\Vendas\FormCadastrarVenda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +260,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Funcionarios\FormConsultarFuncionarios.resx">
       <DependentUpon>FormConsultarFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Generos\FormCadastrarGenero.resx">
+      <DependentUpon>FormCadastrarGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Generos\FormCadastrarGeneroaaa.resx">
+      <DependentUpon>FormCadastrarGeneroaaa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Livros\FormCadastrarLivro.resx">
       <DependentUpon>FormCadastrarLivro.cs</DependentUpon>
