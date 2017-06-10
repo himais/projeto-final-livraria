@@ -131,7 +131,12 @@ namespace Livraria.View
 
         private void tsmiLivroGeneroCadastrar_Click(object sender, EventArgs e)
         {
-            new FormCadastrarGeneroaaa().ShowDialog(this);
+            new FormCadastrarGenero().ShowDialog(this);
+        }
+
+        private void tsmiLivroGeneroListar_Click(object sender, EventArgs e)
+        {
+            new FormConsultarGenero().ShowDialog(this);
         }
 
     }

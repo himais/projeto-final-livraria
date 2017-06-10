@@ -171,6 +171,7 @@
             this.tsmiLivroGeneroListar.Name = "tsmiLivroGeneroListar";
             this.tsmiLivroGeneroListar.Size = new System.Drawing.Size(152, 22);
             this.tsmiLivroGeneroListar.Text = "Listar";
+            this.tsmiLivroGeneroListar.Click += new System.EventHandler(this.tsmiLivroGeneroListar_Click);
             // 
             // tsmiFuncionarios
             // 
