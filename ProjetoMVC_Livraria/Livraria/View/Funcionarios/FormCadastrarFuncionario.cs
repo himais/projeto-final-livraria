@@ -1,5 +1,6 @@
 ﻿using Livraria.Controller;
 using Livraria.Model;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,11 +13,12 @@ using System.Windows.Forms;
 
 namespace Livraria.View.Funcionarios
 {
-    public partial class FormCadastrarFuncionario : Form
+    public partial class FormCadastrarFuncionario : MetroForm
     {
         public FormCadastrarFuncionario()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -36,7 +38,8 @@ namespace Livraria.View.Funcionarios
 
             if (funcionarioController.CadastrarFuncionario(funcionario))
             {
-                MessageBox.Show("Cadastro realizado com sucesso!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MetroFramework.MetroMessageBox.Show(this, "Cadastro realizado com sucesso!", "Cadastro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
                 this.Close();
             }
         }

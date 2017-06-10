@@ -7,3 +7,4 @@ mtx - MaskedTextBox
 nud - NumericUpDown
 cbo - ComboBox
 lst - ListBox
+pic - PictureBox

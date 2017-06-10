@@ -1,4 +1,5 @@
 ﻿using Livraria.Model;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,12 +12,14 @@ using System.Windows.Forms;
 
 namespace Livraria.View.Funcionarios
 {
-    public partial class FormConsultarFuncionarios : Form
+    public partial class FormConsultarFuncionarios : MetroForm
     {
         public FormConsultarFuncionarios()
         {
             InitializeComponent();
             this.lblDica.Visible = false;
+            this.picAtencao.Visible = false;
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void FormConsultarFuncionarios_Load(object sender, EventArgs e)
@@ -28,11 +31,13 @@ namespace Livraria.View.Funcionarios
         private void dataGridViewFuncionarios_MouseEnter(object sender, EventArgs e)
         {
             lblDica.Visible = true;
+            this.picAtencao.Visible = true;
         }
 
         private void dataGridViewFuncionarios_MouseLeave(object sender, EventArgs e)
         {
             lblDica.Visible = false;
+            this.picAtencao.Visible = false;
         }
 
         private void dgvFuncionarios_DoubleClick(object sender, EventArgs e)

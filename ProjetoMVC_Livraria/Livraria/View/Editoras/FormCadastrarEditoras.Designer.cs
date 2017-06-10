@@ -28,50 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblCNPJ = new System.Windows.Forms.Label();
             this.txtRazaoSocial = new System.Windows.Forms.TextBox();
-            this.lblRazaoSocial = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblNome = new System.Windows.Forms.Label();
             this.mtxCnpj = new System.Windows.Forms.MaskedTextBox();
+            this.picLogoInicial = new System.Windows.Forms.PictureBox();
+            this.groupBoxCadastrarEditora = new System.Windows.Forms.GroupBox();
+            this.lblNome = new MetroFramework.Controls.MetroLabel();
+            this.lblRazaoSocial = new MetroFramework.Controls.MetroLabel();
+            this.lblCNPJ = new MetroFramework.Controls.MetroLabel();
+            this.lblEmail = new MetroFramework.Controls.MetroLabel();
+            this.btnCadastrar = new MetroFramework.Controls.MetroButton();
+            this.btnCancelar = new MetroFramework.Controls.MetroButton();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).BeginInit();
+            this.groupBoxCadastrarEditora.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(299, 266);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(92, 26);
-            this.btnCancelar.TabIndex = 31;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(416, 266);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(92, 26);
-            this.btnCadastrar.TabIndex = 30;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(39, 224);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(55, 18);
-            this.lblEmail.TabIndex = 29;
-            this.lblEmail.Text = "Email:";
             // 
             // txtEmail
             // 
@@ -81,16 +52,6 @@
             this.txtEmail.Size = new System.Drawing.Size(350, 24);
             this.txtEmail.TabIndex = 28;
             // 
-            // lblCNPJ
-            // 
-            this.lblCNPJ.AutoSize = true;
-            this.lblCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCNPJ.Location = new System.Drawing.Point(39, 183);
-            this.lblCNPJ.Name = "lblCNPJ";
-            this.lblCNPJ.Size = new System.Drawing.Size(57, 18);
-            this.lblCNPJ.TabIndex = 26;
-            this.lblCNPJ.Text = "CNPJ:";
-            // 
             // txtRazaoSocial
             // 
             this.txtRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,26 +60,6 @@
             this.txtRazaoSocial.Size = new System.Drawing.Size(350, 24);
             this.txtRazaoSocial.TabIndex = 25;
             // 
-            // lblRazaoSocial
-            // 
-            this.lblRazaoSocial.AutoSize = true;
-            this.lblRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRazaoSocial.Location = new System.Drawing.Point(38, 142);
-            this.lblRazaoSocial.Name = "lblRazaoSocial";
-            this.lblRazaoSocial.Size = new System.Drawing.Size(114, 18);
-            this.lblRazaoSocial.TabIndex = 24;
-            this.lblRazaoSocial.Text = "Razão Social:";
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(200, 42);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(159, 18);
-            this.lblTitulo.TabIndex = 23;
-            this.lblTitulo.Text = "Cadastro de Editora";
-            // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,16 +67,6 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(350, 24);
             this.txtNome.TabIndex = 22;
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(38, 101);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(58, 18);
-            this.lblNome.TabIndex = 21;
-            this.lblNome.Text = "Nome:";
             // 
             // mtxCnpj
             // 
@@ -148,27 +79,110 @@
             this.mtxCnpj.TabIndex = 27;
             this.mtxCnpj.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
+            // picLogoInicial
+            // 
+            this.picLogoInicial.BackColor = System.Drawing.Color.Transparent;
+            this.picLogoInicial.Image = global::Livraria.Properties.Resources.logo;
+            this.picLogoInicial.Location = new System.Drawing.Point(23, 21);
+            this.picLogoInicial.Name = "picLogoInicial";
+            this.picLogoInicial.Size = new System.Drawing.Size(38, 33);
+            this.picLogoInicial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogoInicial.TabIndex = 32;
+            this.picLogoInicial.TabStop = false;
+            // 
+            // groupBoxCadastrarEditora
+            // 
+            this.groupBoxCadastrarEditora.Controls.Add(this.lblEmail);
+            this.groupBoxCadastrarEditora.Controls.Add(this.lblCNPJ);
+            this.groupBoxCadastrarEditora.Controls.Add(this.lblRazaoSocial);
+            this.groupBoxCadastrarEditora.Controls.Add(this.lblNome);
+            this.groupBoxCadastrarEditora.Location = new System.Drawing.Point(23, 64);
+            this.groupBoxCadastrarEditora.Name = "groupBoxCadastrarEditora";
+            this.groupBoxCadastrarEditora.Size = new System.Drawing.Size(513, 213);
+            this.groupBoxCadastrarEditora.TabIndex = 33;
+            this.groupBoxCadastrarEditora.TabStop = false;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblNome.Location = new System.Drawing.Point(53, 33);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(65, 25);
+            this.lblNome.TabIndex = 0;
+            this.lblNome.Text = "Nome:";
+            // 
+            // lblRazaoSocial
+            // 
+            this.lblRazaoSocial.AutoSize = true;
+            this.lblRazaoSocial.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblRazaoSocial.Location = new System.Drawing.Point(7, 74);
+            this.lblRazaoSocial.Name = "lblRazaoSocial";
+            this.lblRazaoSocial.Size = new System.Drawing.Size(111, 25);
+            this.lblRazaoSocial.TabIndex = 1;
+            this.lblRazaoSocial.Text = "Razão Social:";
+            // 
+            // lblCNPJ
+            // 
+            this.lblCNPJ.AutoSize = true;
+            this.lblCNPJ.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblCNPJ.Location = new System.Drawing.Point(64, 115);
+            this.lblCNPJ.Name = "lblCNPJ";
+            this.lblCNPJ.Size = new System.Drawing.Size(54, 25);
+            this.lblCNPJ.TabIndex = 2;
+            this.lblCNPJ.Text = "CNPJ:";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblEmail.Location = new System.Drawing.Point(54, 156);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(64, 25);
+            this.lblEmail.TabIndex = 3;
+            this.lblEmail.Text = "E-mail:";
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Location = new System.Drawing.Point(419, 283);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(117, 35);
+            this.btnCadastrar.TabIndex = 34;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseSelectable = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(296, 283);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(117, 35);
+            this.btnCancelar.TabIndex = 35;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseSelectable = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // FormCadastrarEditoras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(559, 332);
-            this.Controls.Add(this.mtxCnpj);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.picLogoInicial);
+            this.Controls.Add(this.mtxCnpj);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.lblCNPJ);
             this.Controls.Add(this.txtRazaoSocial);
-            this.Controls.Add(this.lblRazaoSocial);
-            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.groupBoxCadastrarEditora);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormCadastrarEditoras";
-            this.Text = "FormCadastrarEditoras";
+            this.Resizable = false;
+            this.Text = "        Cadastrar Editora";
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).EndInit();
+            this.groupBoxCadastrarEditora.ResumeLayout(false);
+            this.groupBoxCadastrarEditora.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,16 +190,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label lblCNPJ;
         private System.Windows.Forms.TextBox txtRazaoSocial;
-        private System.Windows.Forms.Label lblRazaoSocial;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.MaskedTextBox mtxCnpj;
+        private System.Windows.Forms.PictureBox picLogoInicial;
+        private System.Windows.Forms.GroupBox groupBoxCadastrarEditora;
+        private MetroFramework.Controls.MetroLabel lblEmail;
+        private MetroFramework.Controls.MetroLabel lblCNPJ;
+        private MetroFramework.Controls.MetroLabel lblRazaoSocial;
+        private MetroFramework.Controls.MetroLabel lblNome;
+        private MetroFramework.Controls.MetroButton btnCadastrar;
+        private MetroFramework.Controls.MetroButton btnCancelar;
     }
 }

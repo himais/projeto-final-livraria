@@ -51,18 +51,20 @@
             this.tsmiAutores = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAutoresCadastrar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAutoresConsultar = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblBemVindo = new System.Windows.Forms.Label();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
-            this.opçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opção2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.picLogoInicial = new System.Windows.Forms.PictureBox();
+            this.tileVendas = new MetroFramework.Controls.MetroTile();
+            this.contextMenuVendas = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.cadastrarVendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarVendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblBemVindo = new MetroFramework.Controls.MetroLabel();
+            this.tileGenero = new MetroFramework.Controls.MetroTile();
+            this.tileEditora = new MetroFramework.Controls.MetroTile();
+            this.tileLivros = new MetroFramework.Controls.MetroTile();
+            this.tileAutores = new MetroFramework.Controls.MetroTile();
+            this.tileOutros = new MetroFramework.Controls.MetroTile();
             this.menuStripPrincipal.SuspendLayout();
-            this.metroContextMenu1.SuspendLayout();
-            this.metroTabControl1.SuspendLayout();
-            this.metroTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).BeginInit();
+            this.contextMenuVendas.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripPrincipal
@@ -92,14 +94,14 @@
             // tsmiSobre
             // 
             this.tsmiSobre.Name = "tsmiSobre";
-            this.tsmiSobre.Size = new System.Drawing.Size(104, 22);
+            this.tsmiSobre.Size = new System.Drawing.Size(152, 22);
             this.tsmiSobre.Text = "Sobre";
             this.tsmiSobre.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // tsmiSair
             // 
             this.tsmiSair.Name = "tsmiSair";
-            this.tsmiSair.Size = new System.Drawing.Size(104, 22);
+            this.tsmiSair.Size = new System.Drawing.Size(152, 22);
             this.tsmiSair.Text = "Sair";
             this.tsmiSair.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -160,13 +162,13 @@
             // tsmiLivroGeneroCadastrar
             // 
             this.tsmiLivroGeneroCadastrar.Name = "tsmiLivroGeneroCadastrar";
-            this.tsmiLivroGeneroCadastrar.Size = new System.Drawing.Size(124, 22);
+            this.tsmiLivroGeneroCadastrar.Size = new System.Drawing.Size(152, 22);
             this.tsmiLivroGeneroCadastrar.Text = "Cadastrar";
             // 
             // tsmiLivroGeneroListar
             // 
             this.tsmiLivroGeneroListar.Name = "tsmiLivroGeneroListar";
-            this.tsmiLivroGeneroListar.Size = new System.Drawing.Size(124, 22);
+            this.tsmiLivroGeneroListar.Size = new System.Drawing.Size(152, 22);
             this.tsmiLivroGeneroListar.Text = "Listar";
             // 
             // tsmiFuncionarios
@@ -176,19 +178,19 @@
             this.tsmiFuncionariosConsultar});
             this.tsmiFuncionarios.Name = "tsmiFuncionarios";
             this.tsmiFuncionarios.Size = new System.Drawing.Size(87, 20);
-            this.tsmiFuncionarios.Text = "Funcionarios";
+            this.tsmiFuncionarios.Text = "Funcionários";
             // 
             // tsmiFuncionariosCadastrar
             // 
             this.tsmiFuncionariosCadastrar.Name = "tsmiFuncionariosCadastrar";
-            this.tsmiFuncionariosCadastrar.Size = new System.Drawing.Size(125, 22);
+            this.tsmiFuncionariosCadastrar.Size = new System.Drawing.Size(152, 22);
             this.tsmiFuncionariosCadastrar.Text = "Cadastrar";
             this.tsmiFuncionariosCadastrar.Click += new System.EventHandler(this.tsmiFuncionariosCadastrar_Click);
             // 
             // tsmiFuncionariosConsultar
             // 
             this.tsmiFuncionariosConsultar.Name = "tsmiFuncionariosConsultar";
-            this.tsmiFuncionariosConsultar.Size = new System.Drawing.Size(125, 22);
+            this.tsmiFuncionariosConsultar.Size = new System.Drawing.Size(152, 22);
             this.tsmiFuncionariosConsultar.Text = "Consultar";
             this.tsmiFuncionariosConsultar.Click += new System.EventHandler(this.tsmiFuncionariosConsultar_Click);
             // 
@@ -204,14 +206,14 @@
             // tsmiEditorasCadastrar
             // 
             this.tsmiEditorasCadastrar.Name = "tsmiEditorasCadastrar";
-            this.tsmiEditorasCadastrar.Size = new System.Drawing.Size(125, 22);
+            this.tsmiEditorasCadastrar.Size = new System.Drawing.Size(152, 22);
             this.tsmiEditorasCadastrar.Text = "Cadastrar";
             this.tsmiEditorasCadastrar.Click += new System.EventHandler(this.tsmiEditorasCadastrar_Click);
             // 
             // tsmiEditorasConsultar
             // 
             this.tsmiEditorasConsultar.Name = "tsmiEditorasConsultar";
-            this.tsmiEditorasConsultar.Size = new System.Drawing.Size(125, 22);
+            this.tsmiEditorasConsultar.Size = new System.Drawing.Size(152, 22);
             this.tsmiEditorasConsultar.Text = "Consultar";
             // 
             // tsmiAutores
@@ -226,118 +228,148 @@
             // tsmiAutoresCadastrar
             // 
             this.tsmiAutoresCadastrar.Name = "tsmiAutoresCadastrar";
-            this.tsmiAutoresCadastrar.Size = new System.Drawing.Size(125, 22);
+            this.tsmiAutoresCadastrar.Size = new System.Drawing.Size(152, 22);
             this.tsmiAutoresCadastrar.Text = "Cadastrar";
             // 
             // tsmiAutoresConsultar
             // 
             this.tsmiAutoresConsultar.Name = "tsmiAutoresConsultar";
-            this.tsmiAutoresConsultar.Size = new System.Drawing.Size(125, 22);
+            this.tsmiAutoresConsultar.Size = new System.Drawing.Size(152, 22);
             this.tsmiAutoresConsultar.Text = "Consultar";
+            // 
+            // picLogoInicial
+            // 
+            this.picLogoInicial.BackColor = System.Drawing.Color.Transparent;
+            this.picLogoInicial.Image = global::Livraria.Properties.Resources.logo;
+            this.picLogoInicial.Location = new System.Drawing.Point(24, 19);
+            this.picLogoInicial.Name = "picLogoInicial";
+            this.picLogoInicial.Size = new System.Drawing.Size(38, 33);
+            this.picLogoInicial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogoInicial.TabIndex = 10;
+            this.picLogoInicial.TabStop = false;
+            // 
+            // tileVendas
+            // 
+            this.tileVendas.ActiveControl = null;
+            this.tileVendas.Location = new System.Drawing.Point(372, 127);
+            this.tileVendas.Name = "tileVendas";
+            this.tileVendas.Size = new System.Drawing.Size(198, 192);
+            this.tileVendas.TabIndex = 11;
+            this.tileVendas.Text = "Registrar Venda";
+            this.tileVendas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tileVendas.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tileVendas.UseSelectable = true;
+            this.tileVendas.Click += new System.EventHandler(this.tileVendas_Click);
+            // 
+            // contextMenuVendas
+            // 
+            this.contextMenuVendas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarVendaToolStripMenuItem,
+            this.consultarVendasToolStripMenuItem});
+            this.contextMenuVendas.Name = "contextMenuVendas";
+            this.contextMenuVendas.Size = new System.Drawing.Size(167, 48);
+            // 
+            // cadastrarVendaToolStripMenuItem
+            // 
+            this.cadastrarVendaToolStripMenuItem.Name = "cadastrarVendaToolStripMenuItem";
+            this.cadastrarVendaToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.cadastrarVendaToolStripMenuItem.Text = "Cadastrar Venda";
+            // 
+            // consultarVendasToolStripMenuItem
+            // 
+            this.consultarVendasToolStripMenuItem.Name = "consultarVendasToolStripMenuItem";
+            this.consultarVendasToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.consultarVendasToolStripMenuItem.Text = "Consultar Vendas";
             // 
             // lblBemVindo
             // 
-            this.lblBemVindo.AutoSize = true;
-            this.lblBemVindo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBemVindo.Location = new System.Drawing.Point(331, 97);
+            this.lblBemVindo.Location = new System.Drawing.Point(398, 97);
             this.lblBemVindo.Name = "lblBemVindo";
-            this.lblBemVindo.Size = new System.Drawing.Size(114, 18);
-            this.lblBemVindo.TabIndex = 1;
-            this.lblBemVindo.Text = "Seja bem-vindo,";
+            this.lblBemVindo.Size = new System.Drawing.Size(172, 23);
+            this.lblBemVindo.TabIndex = 14;
+            this.lblBemVindo.Text = "Seja bem-vindo(a),";
+            this.lblBemVindo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // metroTile1
+            // tileGenero
             // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(47, 6);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(245, 56);
-            this.metroTile1.TabIndex = 2;
-            this.metroTile1.Text = "Realizar venda";
-            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile1.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile1.UseSelectable = true;
+            this.tileGenero.ActiveControl = null;
+            this.tileGenero.Location = new System.Drawing.Point(24, 127);
+            this.tileGenero.Name = "tileGenero";
+            this.tileGenero.Size = new System.Drawing.Size(102, 89);
+            this.tileGenero.TabIndex = 15;
+            this.tileGenero.Text = "Consultar \r\nGêneros";
+            this.tileGenero.UseSelectable = true;
+            this.tileGenero.Click += new System.EventHandler(this.tileGenero_Click);
             // 
-            // metroContextMenu1
+            // tileEditora
             // 
-            this.metroContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opçãoToolStripMenuItem,
-            this.opção2ToolStripMenuItem});
-            this.metroContextMenu1.Name = "metroContextMenu1";
-            this.metroContextMenu1.Size = new System.Drawing.Size(116, 48);
+            this.tileEditora.ActiveControl = null;
+            this.tileEditora.Location = new System.Drawing.Point(140, 127);
+            this.tileEditora.Name = "tileEditora";
+            this.tileEditora.Size = new System.Drawing.Size(102, 89);
+            this.tileEditora.TabIndex = 16;
+            this.tileEditora.Text = "Consultar\r\nEditoras";
+            this.tileEditora.UseSelectable = true;
+            this.tileEditora.Click += new System.EventHandler(this.tileEditora_Click);
             // 
-            // opçãoToolStripMenuItem
+            // tileLivros
             // 
-            this.opçãoToolStripMenuItem.Name = "opçãoToolStripMenuItem";
-            this.opçãoToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.opçãoToolStripMenuItem.Text = "Opção";
+            this.tileLivros.ActiveControl = null;
+            this.tileLivros.Location = new System.Drawing.Point(24, 230);
+            this.tileLivros.Name = "tileLivros";
+            this.tileLivros.Size = new System.Drawing.Size(218, 89);
+            this.tileLivros.TabIndex = 17;
+            this.tileLivros.Text = "Consultar Livros";
+            this.tileLivros.UseSelectable = true;
+            this.tileLivros.Click += new System.EventHandler(this.tileLivros_Click);
             // 
-            // opção2ToolStripMenuItem
+            // tileAutores
             // 
-            this.opção2ToolStripMenuItem.Name = "opção2ToolStripMenuItem";
-            this.opção2ToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.opção2ToolStripMenuItem.Text = "Opção2";
+            this.tileAutores.ActiveControl = null;
+            this.tileAutores.Location = new System.Drawing.Point(257, 127);
+            this.tileAutores.Name = "tileAutores";
+            this.tileAutores.Size = new System.Drawing.Size(102, 89);
+            this.tileAutores.TabIndex = 18;
+            this.tileAutores.Text = "Consultar\r\nAutores";
+            this.tileAutores.UseSelectable = true;
+            this.tileAutores.Click += new System.EventHandler(this.tileAutores_Click);
             // 
-            // metroTabControl1
+            // tileOutros
             // 
-            this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage2);
-            this.metroTabControl1.Location = new System.Drawing.Point(34, 118);
-            this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(411, 169);
-            this.metroTabControl1.TabIndex = 3;
-            this.metroTabControl1.UseSelectable = true;
-            // 
-            // metroTabPage1
-            // 
-            this.metroTabPage1.Controls.Add(this.metroTile1);
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(403, 127);
-            this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "metroTabPage1";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
-            // 
-            // metroTabPage2
-            // 
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 10;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(403, 127);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "metroTabPage2";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 10;
+            this.tileOutros.ActiveControl = null;
+            this.tileOutros.Location = new System.Drawing.Point(257, 230);
+            this.tileOutros.Name = "tileOutros";
+            this.tileOutros.Size = new System.Drawing.Size(102, 89);
+            this.tileOutros.TabIndex = 19;
+            this.tileOutros.Text = "metroTile6";
+            this.tileOutros.UseSelectable = true;
             // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 342);
-            this.Controls.Add(this.metroTabControl1);
+            this.Controls.Add(this.tileOutros);
+            this.Controls.Add(this.tileAutores);
+            this.Controls.Add(this.tileLivros);
+            this.Controls.Add(this.tileEditora);
+            this.Controls.Add(this.tileGenero);
             this.Controls.Add(this.lblBemVindo);
+            this.Controls.Add(this.tileVendas);
+            this.Controls.Add(this.picLogoInicial);
             this.Controls.Add(this.menuStripPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStripPrincipal;
             this.MaximizeBox = false;
             this.Name = "FormPrincipal";
             this.Resizable = false;
-            this.Text = "       Livraria";
+            this.Text = "       Tela Principal";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.menuStripPrincipal.ResumeLayout(false);
             this.menuStripPrincipal.PerformLayout();
-            this.metroContextMenu1.ResumeLayout(false);
-            this.metroTabControl1.ResumeLayout(false);
-            this.metroTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).EndInit();
+            this.contextMenuVendas.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,15 +397,18 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiEditorasCadastrar;
         private System.Windows.Forms.ToolStripMenuItem tsmiEditorasConsultar;
         private System.Windows.Forms.ToolStripMenuItem tsmiAutores;
-        private System.Windows.Forms.Label lblBemVindo;
         private System.Windows.Forms.ToolStripMenuItem tsmiAutoresCadastrar;
         private System.Windows.Forms.ToolStripMenuItem tsmiAutoresConsultar;
-        private MetroFramework.Controls.MetroTile metroTile1;
-        private MetroFramework.Controls.MetroContextMenu metroContextMenu1;
-        private System.Windows.Forms.ToolStripMenuItem opçãoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem opção2ToolStripMenuItem;
-        private MetroFramework.Controls.MetroTabControl metroTabControl1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage2;
+        private System.Windows.Forms.PictureBox picLogoInicial;
+        private MetroFramework.Controls.MetroTile tileVendas;
+        private MetroFramework.Controls.MetroContextMenu contextMenuVendas;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarVendaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarVendasToolStripMenuItem;
+        private MetroFramework.Controls.MetroLabel lblBemVindo;
+        private MetroFramework.Controls.MetroTile tileGenero;
+        private MetroFramework.Controls.MetroTile tileEditora;
+        private MetroFramework.Controls.MetroTile tileLivros;
+        private MetroFramework.Controls.MetroTile tileAutores;
+        private MetroFramework.Controls.MetroTile tileOutros;
     }
 }

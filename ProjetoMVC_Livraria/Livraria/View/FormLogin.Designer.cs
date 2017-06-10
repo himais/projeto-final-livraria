@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblSenha = new MetroFramework.Controls.MetroLabel();
             this.txtUsuario = new MetroFramework.Controls.MetroTextBox();
             this.lblUsuario = new MetroFramework.Controls.MetroLabel();
@@ -36,10 +37,9 @@
             this.btnEntrar = new MetroFramework.Controls.MetroButton();
             this.btnSobre = new MetroFramework.Controls.MetroButton();
             this.pgbLogin = new MetroFramework.Controls.MetroProgressBar();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.picLogoInicial = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -55,6 +55,16 @@
             this.groupBox1.Size = new System.Drawing.Size(263, 159);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(28, 52);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(219, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "ATALHO";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // lblSenha
             // 
@@ -171,33 +181,23 @@
             this.pgbLogin.TabIndex = 8;
             this.pgbLogin.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
-            // pictureBox1
+            // picLogoInicial
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Livraria.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(157, 52);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(28, 52);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(219, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "ATALHO";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.picLogoInicial.BackColor = System.Drawing.Color.Transparent;
+            this.picLogoInicial.Image = global::Livraria.Properties.Resources.logo;
+            this.picLogoInicial.Location = new System.Drawing.Point(157, 52);
+            this.picLogoInicial.Name = "picLogoInicial";
+            this.picLogoInicial.Size = new System.Drawing.Size(121, 100);
+            this.picLogoInicial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogoInicial.TabIndex = 9;
+            this.picLogoInicial.TabStop = false;
             // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 370);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picLogoInicial);
             this.Controls.Add(this.pgbLogin);
             this.Controls.Add(this.btnSobre);
             this.Controls.Add(this.groupBox1);
@@ -209,7 +209,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormLogin_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,7 +224,7 @@
         private MetroFramework.Controls.MetroLabel lblSenha;
         private MetroFramework.Controls.MetroButton btnSobre;
         private MetroFramework.Controls.MetroProgressBar pgbLogin;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picLogoInicial;
         private System.Windows.Forms.Button button1;
     }
 }
