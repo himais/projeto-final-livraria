@@ -38,7 +38,8 @@ namespace Livraria.View.Editoras
 
             if (editoraController.CadastrarEditora(editora))
             {
-                MessageBox.Show("Cadastro realizado com sucesso!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MetroFramework.MetroMessageBox.Show(FormLogin.ActiveForm, "Cadastro realizado com sucesso!", "Cadastro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
                 this.Close();
             }
         }
