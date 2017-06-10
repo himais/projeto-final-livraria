@@ -67,7 +67,8 @@ namespace Livraria.View.Livros
 
             if (livroController.AdicionaLivro(livro, autores))
             {
-                MetroFramework.MetroMessageBox.Show(this, "Cadastro realizado com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
+                MetroFramework.MetroMessageBox.Show(this, "Cadastro realizado com sucesso!", "Cadastro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
                 this.Close();
             }
             
