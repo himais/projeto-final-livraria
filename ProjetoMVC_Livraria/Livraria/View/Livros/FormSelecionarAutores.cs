@@ -18,7 +18,8 @@ namespace Livraria.View.Livros
         public FormSelecionarAutores(ListBox autoresCadastrar)
         {
             InitializeComponent();
-            lstAutores = autoresCadastrar;  
+            lstAutores = autoresCadastrar;
+            dictAutores.Clear();
         }
 
         private void FormSelecionarAutores_Load(object sender, EventArgs e)
@@ -37,11 +38,21 @@ namespace Livraria.View.Livros
         //nos autores que foram selecionados neste form
         private void PreencherListaCadastro()
         {
+            lstAutores.DataSource = null;
+
             for (int i = 0; i < dgvAutoresLivro.Rows.Count; i++)
             {
-                //verifica o valor da checkbox, se é igual a null, recebe falso
-                bool adicionar = dgvAutoresLivro.Rows[i].Cells[2].Value == null ? false : true;
 
+                bool adicionar = false; ;
+                //verifica o valor da checkbox, se é igual a null, não verifica se é true ou false (evitar NullPointerException)
+                if (dgvAutoresLivro.Rows[i].Cells[2].Value != null)
+                {
+                    if ((bool)dgvAutoresLivro.Rows[i].Cells[2].Value)
+                    {
+                        adicionar = true;
+                    }
+                }                
+               
                 //adiciona o autor na Dictionary dictAutores
                 if (adicionar)
                 {
@@ -60,7 +71,7 @@ namespace Livraria.View.Livros
                 lstAutores.ValueMember = "Key";
             }
 
-            this.Close();
+            this.Dispose();
         }
 
         //preenche os selecinados da lista deste form (se já tiver algum selecionado na lista
@@ -84,6 +95,12 @@ namespace Livraria.View.Livros
                             checkbox.TrueValue = true; //falando pra checkbox qual é o valor de true para ela
                             checkbox.Value = checkbox.TrueValue; //settando o valor de true como valor da checkbox
                         }
+                        //else
+                        //{
+                        //    DataGridViewCheckBoxCell checkbox = (DataGridViewCheckBoxCell)linha.Cells[2];
+                        //    checkbox.FalseValue = true; //falando pra checkbox qual é o valor de true para ela
+                        //    checkbox.Value = checkbox.FalseValue; //settando o valor de true como valor da checkbox
+                        //}
                     }
                     
                 }

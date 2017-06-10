@@ -23,7 +23,6 @@ namespace Livraria.View.Funcionarios
         {
             // TODO: This line of code loads data into the 'funcionarioDataSet.Funcionario' table. You can move, or remove it, as needed.
             this.funcionarioTableAdapter.Fill(this.funcionarioDataSet.Funcionario);
-
         }
 
         private void dataGridViewFuncionarios_MouseEnter(object sender, EventArgs e)
@@ -51,13 +50,9 @@ namespace Livraria.View.Funcionarios
             f.Administrador = administrador;
 
             new FormEditarFuncionario(f).ShowDialog(this);
-        }
-
-        private void FormConsultarFuncionarios_Activated(object sender, EventArgs e)
-        {
-            //dgvFuncionarios.Update();
-            //dgvFuncionarios.Refresh();
+            //atualizar a lista, assim que sair do form editar
             this.funcionarioTableAdapter.Fill(this.funcionarioDataSet.Funcionario);
+
         }
 
     }

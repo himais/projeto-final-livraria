@@ -57,11 +57,19 @@ namespace Livraria.View.Livros
             this.lblDica.Visible = false;
         }
 
-        private void dgvLivros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvLivros_DoubleClick(object sender, EventArgs e)
         {
             int idLivro = (int)dgvLivros.SelectedRows[0].Cells[0].Value;
             new FormEditarLivro(idLivro).ShowDialog(this);
+            //apaga e preenche a lista novamente, assim que sair do formeditar
+            dgvLivros.Rows.Clear();
+            CarregarLivros();
         }
-                
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+  
     }
 }

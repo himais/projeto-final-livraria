@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\Model\ModeloDadosLivraria.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\Model\ModeloDadosLivraria.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

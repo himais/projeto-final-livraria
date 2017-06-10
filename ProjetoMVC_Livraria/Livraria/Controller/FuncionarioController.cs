@@ -1,5 +1,6 @@
 ﻿using Livraria.Model;
 using Livraria.View;
+using Livraria.View.Funcionarios;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -19,7 +20,8 @@ namespace Livraria.Controller
         {
             var erros = Validacao.ValidarObjeto(funcionario);
 
-            if (erros.Count() == 0) { 
+            if (erros.Count() == 0)
+            { 
                 //Recupera no banco de dados, o funcionario que tem o mesmo usuario e senha digitados no login
                 var resultado = context.Funcionario.Where(f => funcionario.Login.Equals(f.Login))
                                                    .Where(f => funcionario.Senha.Equals(f.Senha));
@@ -28,11 +30,13 @@ namespace Livraria.Controller
 
                 if (funcionarioResultado == null)
                 {
-                    //MessageBox.Show("Usuário e/ou senha incorreto(s)!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(FormLogin.ActiveForm, "Usuário e/ou senha incorretos!", "",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
                     return null;
                 }
-                    
-                //MessageBox.Show("Login realizado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MetroFramework.MetroMessageBox.Show(FormLogin.ActiveForm, "Login realizado com sucesso!", "Tudo certo!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information,100);
       
                 return funcionarioResultado;
 
@@ -41,7 +45,8 @@ namespace Livraria.Controller
             {
                 foreach (var erro in erros)
                 {
-                    MessageBox.Show(erro.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(FormLogin.ActiveForm, erro.ToString(), "Erro!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
                     break;
                 }
                 return null;
@@ -66,7 +71,8 @@ namespace Livraria.Controller
                 {
                     foreach (var erro in erros)
                     {
-                        MessageBox.Show(erro.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(FormCadastrarFuncionario.ActiveForm, erro.ToString(),
+                             "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
                         break;
                     }
                     return false;
@@ -74,7 +80,8 @@ namespace Livraria.Controller
             }
             catch (Exception e)
             {
-                MessageBox.Show("Houve um problema ao realizar o cadastro!\n" + e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(FormCadastrarFuncionario.ActiveForm, "Houve um problema ao realizar o cadastro!\n"
+                    + e.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
                 return false;
             }
         }
@@ -104,7 +111,8 @@ namespace Livraria.Controller
                     }
                     catch (Exception e)
                     {
-                        MessageBox.Show("Houve um problema ao realizar a alteração! \n" + e.Message);
+                        MetroFramework.MetroMessageBox.Show(FormCadastrarFuncionario.ActiveForm, "Houve um problema ao atualizar o funcionario!\n"
+                         + e.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
                     }
                 }
             }
@@ -112,7 +120,8 @@ namespace Livraria.Controller
             {
                 foreach (var erro in erros)
                 {
-                    MessageBox.Show(erro.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(FormCadastrarFuncionario.ActiveForm, erro.ToString(),
+                             "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
                     break;
                 }
             }
@@ -131,7 +140,8 @@ namespace Livraria.Controller
             }
             catch (Exception e)
             {
-                MessageBox.Show("Houve um problema ao excluir o funcionário! \n" + e.Message);
+                MetroFramework.MetroMessageBox.Show(FormCadastrarFuncionario.ActiveForm, "Houve um problema ao excluir o funcionario!\n"
+                         + e.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
                 return false;
             }
         }

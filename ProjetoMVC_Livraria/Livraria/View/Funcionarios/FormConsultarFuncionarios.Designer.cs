@@ -155,7 +155,6 @@
             this.MaximizeBox = false;
             this.Name = "FormConsultarFuncionarios";
             this.Text = "Consulta de Funcionarios";
-            this.Activated += new System.EventHandler(this.FormConsultarFuncionarios_Activated);
             this.Load += new System.EventHandler(this.FormConsultarFuncionarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();

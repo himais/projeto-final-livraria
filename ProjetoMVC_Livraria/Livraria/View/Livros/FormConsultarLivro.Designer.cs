@@ -42,6 +42,7 @@
             this.livrariaDataSet = new Livraria.livrariaDataSet();
             this.livroTableAdapter = new Livraria.livrariaDataSetTableAdapters.LivroTableAdapter();
             this.lblDica = new MetroFramework.Controls.MetroLabel();
+            this.btnVoltar = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.livroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.livrariaDataSet)).BeginInit();
@@ -64,9 +65,9 @@
             this.dgvLivros.Location = new System.Drawing.Point(17, 88);
             this.dgvLivros.Name = "dgvLivros";
             this.dgvLivros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLivros.Size = new System.Drawing.Size(976, 323);
+            this.dgvLivros.Size = new System.Drawing.Size(980, 323);
             this.dgvLivros.TabIndex = 0;
-            this.dgvLivros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLivros_CellContentClick);
+            this.dgvLivros.DoubleClick += new System.EventHandler(this.dgvLivros_DoubleClick);
             this.dgvLivros.MouseEnter += new System.EventHandler(this.dgvLivros_MouseEnter);
             this.dgvLivros.MouseLeave += new System.EventHandler(this.dgvLivros_MouseLeave);
             // 
@@ -101,6 +102,7 @@
             this.Editora.HeaderText = "Editora";
             this.Editora.Name = "Editora";
             this.Editora.ReadOnly = true;
+            this.Editora.Width = 102;
             // 
             // Genero
             // 
@@ -151,11 +153,23 @@
             this.lblDica.UseCustomForeColor = true;
             this.lblDica.Visible = false;
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnVoltar.Location = new System.Drawing.Point(871, 429);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(119, 25);
+            this.btnVoltar.TabIndex = 2;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseSelectable = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // FormConsultarLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1013, 474);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.lblDica);
             this.Controls.Add(this.dgvLivros);
             this.Name = "FormConsultarLivro";
@@ -175,6 +189,7 @@
         private livrariaDataSet livrariaDataSet;
         private System.Windows.Forms.BindingSource livroBindingSource;
         private livrariaDataSetTableAdapters.LivroTableAdapter livroTableAdapter;
+        private MetroFramework.Controls.MetroLabel lblDica;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
@@ -183,6 +198,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
         private System.Windows.Forms.DataGridViewTextBoxColumn Preço;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estoque;
-        private MetroFramework.Controls.MetroLabel lblDica;
+        private MetroFramework.Controls.MetroButton btnVoltar;
     }
 }

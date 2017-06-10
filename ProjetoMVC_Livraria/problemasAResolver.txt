@@ -12,4 +12,6 @@ CORNOJOB: Tratar Preço
 
 Validar view do Cadastrar Livro (Autores com id -1, tratar ISBN)
 
+Exclusão de livro
+
 Se der tempo, colocar funcão de log

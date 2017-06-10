@@ -28,22 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.txtDescricao = new MetroFramework.Controls.MetroTextBox();
             this.txtNome = new MetroFramework.Controls.MetroTextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblAutores = new System.Windows.Forms.Label();
             this.lstAutores = new System.Windows.Forms.ListBox();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.cboEditora = new System.Windows.Forms.ComboBox();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.lblEditora = new System.Windows.Forms.Label();
-            this.cboGenero = new System.Windows.Forms.ComboBox();
             this.lblGenero = new System.Windows.Forms.Label();
             this.nudQuantidade = new System.Windows.Forms.NumericUpDown();
             this.lblQuantidade = new System.Windows.Forms.Label();
             this.txtISBN = new System.Windows.Forms.TextBox();
             this.lblISBN = new System.Windows.Forms.Label();
-            this.txtPreco = new System.Windows.Forms.TextBox();
             this.lblPreco = new System.Windows.Forms.Label();
             this.nudPaginas = new System.Windows.Forms.NumericUpDown();
             this.lblPaginas = new System.Windows.Forms.Label();
@@ -51,7 +47,11 @@
             this.lblAno = new System.Windows.Forms.Label();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.lblNomeLivro = new System.Windows.Forms.Label();
-            this.toolTipAutores = new System.Windows.Forms.ToolTip(this.components);
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.cboGenero = new MetroFramework.Controls.MetroComboBox();
+            this.cboEditora = new MetroFramework.Controls.MetroComboBox();
+            this.txtPreco = new MetroFramework.Controls.MetroTextBox();
+            this.toolTip = new MetroFramework.Components.MetroToolTip();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPaginas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAno)).BeginInit();
@@ -127,6 +127,7 @@
             this.btnCancelar.TabIndex = 54;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblAutores
             // 
@@ -145,52 +146,35 @@
             this.lstAutores.Name = "lstAutores";
             this.lstAutores.Size = new System.Drawing.Size(169, 56);
             this.lstAutores.TabIndex = 52;
-            this.toolTipAutores.SetToolTip(this.lstAutores, "Clique duas vezes para selecionar os autores!");
+            this.toolTip.SetToolTip(this.lstAutores, "Clique duas vezes para selecionar os autores!");
             this.lstAutores.DoubleClick += new System.EventHandler(this.lstAutores_DoubleClick);
             // 
-            // btnCadastrar
+            // btnAtualizar
             // 
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(448, 434);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(99, 29);
-            this.btnCadastrar.TabIndex = 51;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            // 
-            // cboEditora
-            // 
-            this.cboEditora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboEditora.FormattingEnabled = true;
-            this.cboEditora.Location = new System.Drawing.Point(143, 277);
-            this.cboEditora.Name = "cboEditora";
-            this.cboEditora.Size = new System.Drawing.Size(169, 26);
-            this.cboEditora.TabIndex = 50;
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(448, 434);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(99, 29);
+            this.btnAtualizar.TabIndex = 51;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // lblEditora
             // 
             this.lblEditora.AutoSize = true;
             this.lblEditora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditora.Location = new System.Drawing.Point(46, 285);
+            this.lblEditora.Location = new System.Drawing.Point(46, 281);
             this.lblEditora.Name = "lblEditora";
             this.lblEditora.Size = new System.Drawing.Size(67, 18);
             this.lblEditora.TabIndex = 49;
             this.lblEditora.Text = "Editora:";
             // 
-            // cboGenero
-            // 
-            this.cboGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboGenero.FormattingEnabled = true;
-            this.cboGenero.Location = new System.Drawing.Point(143, 316);
-            this.cboGenero.Name = "cboGenero";
-            this.cboGenero.Size = new System.Drawing.Size(169, 26);
-            this.cboGenero.TabIndex = 48;
-            // 
             // lblGenero
             // 
             this.lblGenero.AutoSize = true;
             this.lblGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenero.Location = new System.Drawing.Point(46, 324);
+            this.lblGenero.Location = new System.Drawing.Point(46, 325);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(69, 18);
             this.lblGenero.TabIndex = 47;
@@ -236,14 +220,6 @@
             this.lblISBN.Size = new System.Drawing.Size(51, 18);
             this.lblISBN.TabIndex = 43;
             this.lblISBN.Text = "ISBN:";
-            // 
-            // txtPreco
-            // 
-            this.txtPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPreco.Location = new System.Drawing.Point(468, 274);
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(79, 24);
-            this.txtPreco.TabIndex = 42;
             // 
             // lblPreco
             // 
@@ -341,33 +317,107 @@
             this.lblNomeLivro.TabIndex = 35;
             this.lblNomeLivro.Text = "Nome:";
             // 
-            // toolTipAutores
+            // btnExcluir
             // 
-            this.toolTipAutores.AutomaticDelay = 120;
-            this.toolTipAutores.IsBalloon = true;
-            this.toolTipAutores.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTipAutores.ToolTipTitle = "Selecionar autores";
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(23, 434);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(99, 29);
+            this.btnExcluir.TabIndex = 57;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // cboGenero
+            // 
+            this.cboGenero.DropDownHeight = 85;
+            this.cboGenero.FontSize = MetroFramework.MetroComboBoxSize.Small;
+            this.cboGenero.FormattingEnabled = true;
+            this.cboGenero.IntegralHeight = false;
+            this.cboGenero.ItemHeight = 19;
+            this.cboGenero.Location = new System.Drawing.Point(143, 322);
+            this.cboGenero.Name = "cboGenero";
+            this.cboGenero.Size = new System.Drawing.Size(169, 25);
+            this.cboGenero.TabIndex = 59;
+            this.cboGenero.UseSelectable = true;
+            // 
+            // cboEditora
+            // 
+            this.cboEditora.DropDownHeight = 85;
+            this.cboEditora.FontSize = MetroFramework.MetroComboBoxSize.Small;
+            this.cboEditora.FormattingEnabled = true;
+            this.cboEditora.IntegralHeight = false;
+            this.cboEditora.ItemHeight = 19;
+            this.cboEditora.Location = new System.Drawing.Point(143, 278);
+            this.cboEditora.Name = "cboEditora";
+            this.cboEditora.Size = new System.Drawing.Size(169, 25);
+            this.cboEditora.TabIndex = 58;
+            this.cboEditora.UseSelectable = true;
+            // 
+            // txtPreco
+            // 
+            // 
+            // 
+            // 
+            this.txtPreco.CustomButton.Image = null;
+            this.txtPreco.CustomButton.Location = new System.Drawing.Point(39, 1);
+            this.txtPreco.CustomButton.Name = "";
+            this.txtPreco.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtPreco.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPreco.CustomButton.TabIndex = 1;
+            this.txtPreco.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPreco.CustomButton.UseSelectable = true;
+            this.txtPreco.CustomButton.Visible = false;
+            this.txtPreco.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtPreco.Lines = new string[] {
+        "0,00"};
+            this.txtPreco.Location = new System.Drawing.Point(468, 275);
+            this.txtPreco.MaxLength = 32767;
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.PasswordChar = '\0';
+            this.txtPreco.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPreco.SelectedText = "";
+            this.txtPreco.SelectionLength = 0;
+            this.txtPreco.SelectionStart = 0;
+            this.txtPreco.ShortcutsEnabled = true;
+            this.txtPreco.Size = new System.Drawing.Size(61, 23);
+            this.txtPreco.TabIndex = 60;
+            this.txtPreco.Text = "0,00";
+            this.txtPreco.UseSelectable = true;
+            this.txtPreco.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPreco.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // toolTip
+            // 
+            this.toolTip.AutomaticDelay = 120;
+            this.toolTip.AutoPopDelay = 4000;
+            this.toolTip.InitialDelay = 120;
+            this.toolTip.ReshowDelay = 24;
+            this.toolTip.Style = MetroFramework.MetroColorStyle.Blue;
+            this.toolTip.StyleManager = null;
+            this.toolTip.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // FormEditarLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 507);
+            this.ClientSize = new System.Drawing.Size(610, 481);
+            this.Controls.Add(this.txtPreco);
+            this.Controls.Add(this.cboGenero);
+            this.Controls.Add(this.cboEditora);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblAutores);
             this.Controls.Add(this.lstAutores);
-            this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.cboEditora);
+            this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.lblEditora);
-            this.Controls.Add(this.cboGenero);
             this.Controls.Add(this.lblGenero);
             this.Controls.Add(this.nudQuantidade);
             this.Controls.Add(this.lblQuantidade);
             this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.lblISBN);
-            this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.lblPreco);
             this.Controls.Add(this.nudPaginas);
             this.Controls.Add(this.lblPaginas);
@@ -376,6 +426,7 @@
             this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.lblNomeLivro);
             this.Name = "FormEditarLivro";
+            this.Resizable = false;
             this.Text = "Editar Livro";
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPaginas)).EndInit();
@@ -392,16 +443,13 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblAutores;
         private System.Windows.Forms.ListBox lstAutores;
-        private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.ComboBox cboEditora;
+        private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Label lblEditora;
-        private System.Windows.Forms.ComboBox cboGenero;
         private System.Windows.Forms.Label lblGenero;
         private System.Windows.Forms.NumericUpDown nudQuantidade;
         private System.Windows.Forms.Label lblQuantidade;
         private System.Windows.Forms.TextBox txtISBN;
         private System.Windows.Forms.Label lblISBN;
-        private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.Label lblPreco;
         private System.Windows.Forms.NumericUpDown nudPaginas;
         private System.Windows.Forms.Label lblPaginas;
@@ -409,6 +457,10 @@
         private System.Windows.Forms.Label lblAno;
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.Label lblNomeLivro;
-        private System.Windows.Forms.ToolTip toolTipAutores;
+        private System.Windows.Forms.Button btnExcluir;
+        private MetroFramework.Controls.MetroComboBox cboGenero;
+        private MetroFramework.Controls.MetroComboBox cboEditora;
+        private MetroFramework.Controls.MetroTextBox txtPreco;
+        private MetroFramework.Components.MetroToolTip toolTip;
     }
 }

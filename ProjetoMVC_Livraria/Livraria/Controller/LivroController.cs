@@ -27,6 +27,7 @@ namespace Livraria.Controller
                     
                     foreach (var autor in autores)
                     {
+                        MessageBox.Show("ID Autor: " + autor.IdAutor + "\nIdLivro: " + livro.IdLivro);
                         AutorLivro autorLivro = new AutorLivro();
                         autorLivro.IdAutor = autor.IdAutor;
                         autorLivro.IdLivro = livro.IdLivro;
@@ -52,11 +53,12 @@ namespace Livraria.Controller
             {
                 MetroFramework.MetroMessageBox.Show(FormCadastrarLivro.ActiveForm, "Houve um problema ao realizar o cadastro!\n"
                     + e.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error, 150);
+                MessageBox.Show(e.StackTrace);
                 return false;
             }
         }
 
-        public bool AtualizarLivro(Livro livro)
+        public bool AtualizarLivro(Livro livro, List<Autor> autores)
         {
             var erros = Validacao.ValidarObjeto(livro);
 
@@ -78,13 +80,31 @@ namespace Livraria.Controller
                     original.QuantidadeEstoque = livro.QuantidadeEstoque;
                     
                     context.Entry(original).State = EntityState.Modified;
+
+                    //excluindo cada autorLivro, que tem relação autor x livro, para colocar os novos autores no livro
+                    foreach (var autorLivro in context.AutorLivro.Where(al => al.IdLivro == original.IdLivro))
+                    {
+                        context.AutorLivro.Remove(autorLivro);
+                    }
+
                     context.SaveChanges();
+
+                    foreach (var autor in autores)
+                    {
+                        AutorLivro autorLivro = new AutorLivro();
+                        autorLivro.IdAutor = autor.IdAutor;
+                        autorLivro.IdLivro = original.IdLivro;
+                        context.AutorLivro.Add(autorLivro);
+                        context.SaveChanges();
+                    }
 
                     return true;
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show("Houve um problema ao realizar a alteração! \n" + e.Message);
+                    MetroFramework.MetroMessageBox.Show(FormCadastrarLivro.ActiveForm, "Houve um problema ao realizar a alteração!\n"
+                    + e.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error, 150);
+                    
                     return false;
                 }
             }
@@ -92,7 +112,8 @@ namespace Livraria.Controller
             {
                 foreach (var erro in erros)
                 {
-                    MessageBox.Show(erro.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(FormCadastrarLivro.ActiveForm, erro.ToString(), "", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error, 150);
                     break;
                 }
             }

@@ -16,6 +16,7 @@ namespace Livraria.View.Livros
     public partial class FormEditarLivro : MetroForm
     {
         LivroController livroController = new LivroController();
+        Livro livro = new Livro();
 
         public FormEditarLivro(int idLivro)
         {
@@ -74,6 +75,7 @@ namespace Livraria.View.Livros
 
         public void CarregarLivro(Livro livro)
         {
+            this.livro = livro;
             //settando o livro nos campos
             txtNome.Text = livro.NomeLivro;
             txtDescricao.Text = livro.Descricao;
@@ -108,6 +110,59 @@ namespace Livraria.View.Livros
         private void lstAutores_DoubleClick(object sender, EventArgs e)
         {
             new FormSelecionarAutores(lstAutores).ShowDialog(this);
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MetroFramework.MetroMessageBox.Show(this, "Deseja mesmo atualizar este livro?",
+                   "Confirme!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, 100);
+
+            if (result == DialogResult.Yes)
+            {
+                livro.NomeLivro = txtNome.Text.Trim();
+                livro.Ano = (int)nudAno.Value;
+                livro.Descricao = txtDescricao.Text.Trim();
+                livro.Preco = decimal.Parse(txtPreco.Text);
+                livro.Isbn = txtISBN.Text;
+                livro.QuantidadeEstoque = (int)nudQuantidade.Value;
+                livro.Paginas = (int)nudPaginas.Value;
+
+                int idEditora = (int)cboEditora.SelectedValue;
+                int idGenero = (int)cboGenero.SelectedValue;
+
+                Editora ed = new Editora();
+                Genero g = new Genero();
+
+                livro.IdEditora = idEditora;
+                livro.IdGenero = idGenero;
+
+                List<Autor> autores = new List<Autor>();
+
+                foreach (var item in lstAutores.Items)
+                {
+                    int idAutor = ((KeyValuePair<int, string>)item).Key;
+                    Autor autor = new Autor();
+                    autor.IdAutor = idAutor;
+                    autores.Add(autor);
+                }
+
+                if (livroController.AtualizarLivro(livro, autores))
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Alterações realizadas com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
+                    this.Close();
+                }
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MetroFramework.MetroMessageBox.Show(this, "Deseja mesmo excluir este livro?",
+                   "Confirme!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, 100);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

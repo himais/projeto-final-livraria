@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/05/2017 20:46:44
--- Generated from EDMX file: C:\Faculdade\C#LP1\Projeto\livraria\ProjetoMVC_Livraria\Livraria\Model\ModeloDadosLivraria.edmx
+-- Date Created: 06/09/2017 20:42:22
+-- Generated from EDMX file: D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\Model\ModeloDadosLivraria.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -32,6 +32,12 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_Item_VendaLivro]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Item_VendaSet] DROP CONSTRAINT [FK_Item_VendaLivro];
 GO
+IF OBJECT_ID(N'[dbo].[FK_LivroAutorLivro]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[AutorLivro] DROP CONSTRAINT [FK_LivroAutorLivro];
+GO
+IF OBJECT_ID(N'[dbo].[FK_AutorAutorLivro]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[AutorLivro] DROP CONSTRAINT [FK_AutorAutorLivro];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -57,6 +63,9 @@ IF OBJECT_ID(N'[dbo].[Venda]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[Item_VendaSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Item_VendaSet];
+GO
+IF OBJECT_ID(N'[dbo].[AutorLivro]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[AutorLivro];
 GO
 
 -- --------------------------------------------------

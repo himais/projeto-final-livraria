@@ -47,9 +47,6 @@ namespace Livraria.View.Livros
             int idEditora = (int)cboEditora.SelectedValue;
             int idGenero  = (int)cboGenero.SelectedValue;
 
-            MessageBox.Show(idEditora.ToString());
-            MessageBox.Show(idGenero.ToString());
-
             Editora ed = new Editora();
             Genero g = new Genero();
 
@@ -61,7 +58,6 @@ namespace Livraria.View.Livros
             foreach (var item in lstAutores.Items)
             {
                 int idAutor = ((KeyValuePair<int, string>)item).Key;
-                MessageBox.Show(idAutor.ToString());
                 Autor autor = new Autor();
                 autor.IdAutor = idAutor;
                 autores.Add(autor);
@@ -71,7 +67,7 @@ namespace Livraria.View.Livros
 
             if (livroController.AdicionaLivro(livro, autores))
             {
-                MetroFramework.MetroMessageBox.Show(this, "Cadastro realizado com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information, 150);
+                MetroFramework.MetroMessageBox.Show(this, "Cadastro realizado com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
                 this.Close();
             }
             

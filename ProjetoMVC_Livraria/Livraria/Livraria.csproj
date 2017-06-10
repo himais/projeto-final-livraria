@@ -203,6 +203,18 @@
       <DependentUpon>FormSelecionarAutores.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Livros\Genero.cs" />
+    <Compile Include="View\Vendas\FormCadastrarVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Vendas\FormCadastrarVenda.Designer.cs">
+      <DependentUpon>FormCadastrarVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Vendas\FormSelecionarLivros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Vendas\FormSelecionarLivros.Designer.cs">
+      <DependentUpon>FormSelecionarLivros.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\Editoras\FormCadastrarEditoras.resx">
       <DependentUpon>FormCadastrarEditoras.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +260,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Livros\FormSelecionarAutores.resx">
       <DependentUpon>FormSelecionarAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Vendas\FormCadastrarVenda.resx">
+      <DependentUpon>FormCadastrarVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Vendas\FormSelecionarLivros.resx">
+      <DependentUpon>FormSelecionarLivros.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\ModeloDadosLivraria.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

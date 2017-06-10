@@ -2,6 +2,7 @@
 using Livraria.Model;
 using Livraria.View;
 using Livraria.View.Livros;
+using Livraria.View.Vendas;
 using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
@@ -48,9 +49,6 @@ namespace Livraria
 
             if (funcionarioRetorno != null)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Login realizado com sucesso!", "Tudo certo!", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, 100);
-
                 this.Visible = false;
 
                 //inicia a tela splash
@@ -64,8 +62,6 @@ namespace Livraria
             }
             else
             {
-                MetroFramework.MetroMessageBox.Show(this, "Usuário e/ou senha incorreto(s)!", "",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, 100);
                 pgbLogin.Enabled = false;
                 pgbLogin.Visible = false;
             }
@@ -115,7 +111,7 @@ namespace Livraria
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            new FormEditarLivro(3).ShowDialog(this);
+            new FormCadastrarVenda().ShowDialog(this);
         }
 
     }
