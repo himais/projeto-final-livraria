@@ -1,5 +1,6 @@
 ﻿using Livraria.Controller;
 using Livraria.Model;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,11 +13,12 @@ using System.Windows.Forms;
 
 namespace Livraria.View.Editoras
 {
-    public partial class FormCadastrarEditoras : Form
+    public partial class FormCadastrarEditoras : MetroForm
     {
         public FormCadastrarEditoras()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
