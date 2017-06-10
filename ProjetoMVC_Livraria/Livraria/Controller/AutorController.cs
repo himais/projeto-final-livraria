@@ -75,7 +75,7 @@ namespace Livraria.Controller
             {
                 foreach (var erro in erros)
                 {
-                    MetroFramework.MetroMessageBox.Show(FormLogin.ActiveForm, erro.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(FormLogin.ActiveForm, erro.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
                     break;
                 }
             }

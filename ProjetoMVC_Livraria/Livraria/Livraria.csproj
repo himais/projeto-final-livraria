@@ -165,6 +165,12 @@
     <Compile Include="View\Autores\FormConsultarAutores.Designer.cs">
       <DependentUpon>FormConsultarAutores.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Autores\FormEditarAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Autores\FormEditarAutor.Designer.cs">
+      <DependentUpon>FormEditarAutor.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Editoras\FormCadastrarEditoras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Autores\FormConsultarAutores.resx">
       <DependentUpon>FormConsultarAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Autores\FormEditarAutor.resx">
+      <DependentUpon>FormEditarAutor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Editoras\FormCadastrarEditoras.resx">
       <DependentUpon>FormCadastrarEditoras.cs</DependentUpon>

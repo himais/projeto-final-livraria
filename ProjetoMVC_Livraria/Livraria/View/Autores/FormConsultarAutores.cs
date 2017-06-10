@@ -43,7 +43,7 @@ namespace Livraria.View.Autores
             autor.IdAutor = id;
             autor.NomeAutor = nome;
 
-            //new FormEditarAutor(nome).ShowDialog(this);
+            new FormEditarAutor(autor).ShowDialog(this);
             //atualizar a lista, assim que sair do form editar
             this.autorTableAdapter1.Fill(this.autorDataSet.Autor);
         }
