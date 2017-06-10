@@ -139,5 +139,10 @@ namespace Livraria.View
             new FormConsultarGenero().ShowDialog(this);
         }
 
+        private void tsmiEditorasConsultar_Click(object sender, EventArgs e)
+        {
+            new FormConsultarEditoras().ShowDialog(this);
+        }
+
     }
 }

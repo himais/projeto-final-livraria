@@ -30,7 +30,7 @@ namespace Livraria.View.Editoras
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Close;
+            this.Close();
         }
 
         private void dgvEditoras_MouseEnter(object sender, EventArgs e)
