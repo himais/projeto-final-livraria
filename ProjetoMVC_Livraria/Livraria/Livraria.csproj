@@ -155,6 +155,12 @@
     <Compile Include="View\Editoras\FormConsultarEditoras.Designer.cs">
       <DependentUpon>FormConsultarEditoras.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Editoras\FormEditarEditoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Editoras\FormEditarEditoras.Designer.cs">
+      <DependentUpon>FormEditarEditoras.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Editoras\FormConsultarEditoras.resx">
       <DependentUpon>FormConsultarEditoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Editoras\FormEditarEditoras.resx">
+      <DependentUpon>FormEditarEditoras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

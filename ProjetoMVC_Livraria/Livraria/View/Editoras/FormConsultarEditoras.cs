@@ -62,7 +62,7 @@ namespace Livraria.View.Editoras
             editora.CNPJ = cnpj;
             editora.Email = email;
 
-            //new FormEditarEditora(editora).ShowDialog(this);
+            new FormEditarEditoras(editora).ShowDialog(this);
             //atualizar a lista, assim que sair do form editar
             this.editoraTableAdapter.Fill(this.editoraDataSet.Editora);
         }
