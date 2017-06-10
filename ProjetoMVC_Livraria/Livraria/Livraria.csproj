@@ -73,6 +73,11 @@
     <Compile Include="Controller\FuncionarioController.cs" />
     <Compile Include="Controller\GeneroController.cs" />
     <Compile Include="Controller\LivroController.cs" />
+    <Compile Include="EditoraDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditoraDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FuncionarioDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -143,6 +148,18 @@
     </Compile>
     <Compile Include="View\Editoras\FormCadastrarEditoras.Designer.cs">
       <DependentUpon>FormCadastrarEditoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Editoras\FormConsultarEditoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Editoras\FormConsultarEditoras.Designer.cs">
+      <DependentUpon>FormConsultarEditoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Editoras\FormEditarEditoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Editoras\FormEditarEditoras.Designer.cs">
+      <DependentUpon>FormEditarEditoras.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
@@ -246,6 +263,12 @@
     <EmbeddedResource Include="View\Editoras\FormCadastrarEditoras.resx">
       <DependentUpon>FormCadastrarEditoras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Editoras\FormConsultarEditoras.resx">
+      <DependentUpon>FormConsultarEditoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Editoras\FormEditarEditoras.resx">
+      <DependentUpon>FormEditarEditoras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,6 +341,17 @@
     </None>
     <None Include="AutorDataSet.xss">
       <DependentUpon>AutorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EditoraDataSet.xsc">
+      <DependentUpon>EditoraDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EditoraDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EditoraDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EditoraDataSet.xss">
+      <DependentUpon>EditoraDataSet.xsd</DependentUpon>
     </None>
     <None Include="FuncionarioDataSet.xsc">
       <DependentUpon>FuncionarioDataSet.xsd</DependentUpon>

@@ -34,10 +34,10 @@
             this.mtxCnpj = new System.Windows.Forms.MaskedTextBox();
             this.picLogoInicial = new System.Windows.Forms.PictureBox();
             this.groupBoxCadastrarEditora = new System.Windows.Forms.GroupBox();
-            this.lblNome = new MetroFramework.Controls.MetroLabel();
-            this.lblRazaoSocial = new MetroFramework.Controls.MetroLabel();
-            this.lblCNPJ = new MetroFramework.Controls.MetroLabel();
             this.lblEmail = new MetroFramework.Controls.MetroLabel();
+            this.lblCNPJ = new MetroFramework.Controls.MetroLabel();
+            this.lblRazaoSocial = new MetroFramework.Controls.MetroLabel();
+            this.lblNome = new MetroFramework.Controls.MetroLabel();
             this.btnCadastrar = new MetroFramework.Controls.MetroButton();
             this.btnCancelar = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).BeginInit();
@@ -102,25 +102,15 @@
             this.groupBoxCadastrarEditora.TabIndex = 33;
             this.groupBoxCadastrarEditora.TabStop = false;
             // 
-            // lblNome
+            // lblEmail
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblNome.Location = new System.Drawing.Point(53, 33);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(65, 25);
-            this.lblNome.TabIndex = 0;
-            this.lblNome.Text = "Nome:";
-            // 
-            // lblRazaoSocial
-            // 
-            this.lblRazaoSocial.AutoSize = true;
-            this.lblRazaoSocial.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblRazaoSocial.Location = new System.Drawing.Point(7, 74);
-            this.lblRazaoSocial.Name = "lblRazaoSocial";
-            this.lblRazaoSocial.Size = new System.Drawing.Size(111, 25);
-            this.lblRazaoSocial.TabIndex = 1;
-            this.lblRazaoSocial.Text = "Razão Social:";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblEmail.Location = new System.Drawing.Point(54, 156);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(64, 25);
+            this.lblEmail.TabIndex = 3;
+            this.lblEmail.Text = "E-mail:";
             // 
             // lblCNPJ
             // 
@@ -132,15 +122,25 @@
             this.lblCNPJ.TabIndex = 2;
             this.lblCNPJ.Text = "CNPJ:";
             // 
-            // lblEmail
+            // lblRazaoSocial
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblEmail.Location = new System.Drawing.Point(54, 156);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(64, 25);
-            this.lblEmail.TabIndex = 3;
-            this.lblEmail.Text = "E-mail:";
+            this.lblRazaoSocial.AutoSize = true;
+            this.lblRazaoSocial.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblRazaoSocial.Location = new System.Drawing.Point(7, 74);
+            this.lblRazaoSocial.Name = "lblRazaoSocial";
+            this.lblRazaoSocial.Size = new System.Drawing.Size(111, 25);
+            this.lblRazaoSocial.TabIndex = 1;
+            this.lblRazaoSocial.Text = "Razão Social:";
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblNome.Location = new System.Drawing.Point(53, 33);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(63, 25);
+            this.lblNome.TabIndex = 0;
+            this.lblNome.Text = "Nome:";
             // 
             // btnCadastrar
             // 
