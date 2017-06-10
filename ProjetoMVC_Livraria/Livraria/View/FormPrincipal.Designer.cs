@@ -94,14 +94,14 @@
             // tsmiSobre
             // 
             this.tsmiSobre.Name = "tsmiSobre";
-            this.tsmiSobre.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSobre.Size = new System.Drawing.Size(104, 22);
             this.tsmiSobre.Text = "Sobre";
             this.tsmiSobre.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // tsmiSair
             // 
             this.tsmiSair.Name = "tsmiSair";
-            this.tsmiSair.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSair.Size = new System.Drawing.Size(104, 22);
             this.tsmiSair.Text = "Sair";
             this.tsmiSair.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -164,12 +164,14 @@
             this.tsmiLivroGeneroCadastrar.Name = "tsmiLivroGeneroCadastrar";
             this.tsmiLivroGeneroCadastrar.Size = new System.Drawing.Size(152, 22);
             this.tsmiLivroGeneroCadastrar.Text = "Cadastrar";
+            this.tsmiLivroGeneroCadastrar.Click += new System.EventHandler(this.tsmiLivroGeneroCadastrar_Click);
             // 
             // tsmiLivroGeneroListar
             // 
             this.tsmiLivroGeneroListar.Name = "tsmiLivroGeneroListar";
             this.tsmiLivroGeneroListar.Size = new System.Drawing.Size(152, 22);
             this.tsmiLivroGeneroListar.Text = "Listar";
+            this.tsmiLivroGeneroListar.Click += new System.EventHandler(this.tsmiLivroGeneroListar_Click);
             // 
             // tsmiFuncionarios
             // 
@@ -183,14 +185,14 @@
             // tsmiFuncionariosCadastrar
             // 
             this.tsmiFuncionariosCadastrar.Name = "tsmiFuncionariosCadastrar";
-            this.tsmiFuncionariosCadastrar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiFuncionariosCadastrar.Size = new System.Drawing.Size(125, 22);
             this.tsmiFuncionariosCadastrar.Text = "Cadastrar";
             this.tsmiFuncionariosCadastrar.Click += new System.EventHandler(this.tsmiFuncionariosCadastrar_Click);
             // 
             // tsmiFuncionariosConsultar
             // 
             this.tsmiFuncionariosConsultar.Name = "tsmiFuncionariosConsultar";
-            this.tsmiFuncionariosConsultar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiFuncionariosConsultar.Size = new System.Drawing.Size(125, 22);
             this.tsmiFuncionariosConsultar.Text = "Consultar";
             this.tsmiFuncionariosConsultar.Click += new System.EventHandler(this.tsmiFuncionariosConsultar_Click);
             // 
@@ -206,14 +208,14 @@
             // tsmiEditorasCadastrar
             // 
             this.tsmiEditorasCadastrar.Name = "tsmiEditorasCadastrar";
-            this.tsmiEditorasCadastrar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEditorasCadastrar.Size = new System.Drawing.Size(125, 22);
             this.tsmiEditorasCadastrar.Text = "Cadastrar";
             this.tsmiEditorasCadastrar.Click += new System.EventHandler(this.tsmiEditorasCadastrar_Click);
             // 
             // tsmiEditorasConsultar
             // 
             this.tsmiEditorasConsultar.Name = "tsmiEditorasConsultar";
-            this.tsmiEditorasConsultar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEditorasConsultar.Size = new System.Drawing.Size(125, 22);
             this.tsmiEditorasConsultar.Text = "Consultar";
             // 
             // tsmiAutores
@@ -228,13 +230,13 @@
             // tsmiAutoresCadastrar
             // 
             this.tsmiAutoresCadastrar.Name = "tsmiAutoresCadastrar";
-            this.tsmiAutoresCadastrar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAutoresCadastrar.Size = new System.Drawing.Size(125, 22);
             this.tsmiAutoresCadastrar.Text = "Cadastrar";
             // 
             // tsmiAutoresConsultar
             // 
             this.tsmiAutoresConsultar.Name = "tsmiAutoresConsultar";
-            this.tsmiAutoresConsultar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAutoresConsultar.Size = new System.Drawing.Size(125, 22);
             this.tsmiAutoresConsultar.Text = "Consultar";
             // 
             // picLogoInicial

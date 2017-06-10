@@ -120,3 +120,6 @@ C:\Users\Maíra\Desktop\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\
 C:\Users\Maíra\Desktop\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Vendas.FormCadastrarVenda.resources
 C:\Users\Maíra\Desktop\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Vendas.FormSelecionarLivros.resources
 C:\Users\Maíra\Desktop\Projeto\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.csproj.GenerateResource.Cache
+C:\Users\Maíra\Desktop\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Generos.FormCadastrarGenero.resources
+C:\Users\Maíra\Desktop\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Generos.FormConsultarGenero.resources
+C:\Users\Maíra\Desktop\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Generos.FormEditarGenero.resources

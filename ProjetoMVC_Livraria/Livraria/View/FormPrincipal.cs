@@ -2,6 +2,7 @@
 using Livraria.View.Editoras;
 using Livraria.View.Funcionarios;
 using Livraria.View.Livros;
+using Livraria.View.Generos;
 using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
@@ -126,6 +127,16 @@ namespace Livraria.View
         private void tileVendas_Click(object sender, EventArgs e)
         {
             //new FormCadastrarVenda().ShowDialog(this);
+        }
+
+        private void tsmiLivroGeneroCadastrar_Click(object sender, EventArgs e)
+        {
+            new FormCadastrarGenero().ShowDialog(this);
+        }
+
+        private void tsmiLivroGeneroListar_Click(object sender, EventArgs e)
+        {
+            new FormConsultarGenero().ShowDialog(this);
         }
 
     }
