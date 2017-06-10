@@ -20,6 +20,7 @@ namespace Livraria.Model
         }
     
         public int IdAutor { get; set; }
+        [Required(ErrorMessage = "Insira o nome do autor!", AllowEmptyStrings = false)]
         public string NomeAutor { get; set; }
     
         public virtual ICollection<AutorLivro> AutorLivro { get; set; }
