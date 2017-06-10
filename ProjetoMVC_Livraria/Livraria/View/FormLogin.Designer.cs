@@ -152,7 +152,7 @@
             // 
             // bntSobre
             // 
-            this.bntSobre.Image = global::Livraria.Properties.Resources.info__1_;
+            this.bntSobre.Image = global::Livraria.Properties.Resources.info;
             this.bntSobre.Location = new System.Drawing.Point(300, 34);
             this.bntSobre.Name = "bntSobre";
             this.bntSobre.Size = new System.Drawing.Size(16, 16);
@@ -163,7 +163,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Livraria.Properties.Resources.logo3;
+            this.pictureBox3.Image = global::Livraria.Properties.Resources.logo1;
             this.pictureBox3.Location = new System.Drawing.Point(44, 93);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(225, 64);
@@ -173,7 +173,7 @@
             // 
             // picSenha
             // 
-            this.picSenha.Image = global::Livraria.Properties.Resources.padlock__1_;
+            this.picSenha.Image = global::Livraria.Properties.Resources.padlock;
             this.picSenha.Location = new System.Drawing.Point(26, 71);
             this.picSenha.Name = "picSenha";
             this.picSenha.Size = new System.Drawing.Size(16, 16);

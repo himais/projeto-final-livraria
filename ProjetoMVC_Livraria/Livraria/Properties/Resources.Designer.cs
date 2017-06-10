@@ -73,9 +73,9 @@ namespace Livraria.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap info__1_ {
+        internal static System.Drawing.Bitmap info {
             get {
-                object obj = ResourceManager.GetObject("info__1_", resourceCulture);
+                object obj = ResourceManager.GetObject("info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace Livraria.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo3 {
+        internal static System.Drawing.Bitmap logo1 {
             get {
-                object obj = ResourceManager.GetObject("logo3", resourceCulture);
+                object obj = ResourceManager.GetObject("logo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Livraria.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap padlock__1_ {
+        internal static System.Drawing.Bitmap padlock {
             get {
-                object obj = ResourceManager.GetObject("padlock__1_", resourceCulture);
+                object obj = ResourceManager.GetObject("padlock", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

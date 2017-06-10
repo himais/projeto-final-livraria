@@ -111,7 +111,7 @@ namespace Livraria
 
         private void bntSobre_Click(object sender, EventArgs e)
         {
-            new FormCadastrarVenda().ShowDialog(this);
+            new FormSobre().ShowDialog(this);
         }
 
     }
