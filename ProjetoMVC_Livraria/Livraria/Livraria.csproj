@@ -68,6 +68,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AutorDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="autorDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>autorDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controller\AutorController.cs" />
     <Compile Include="Controller\EditoraController.cs" />
     <Compile Include="Controller\FuncionarioController.cs" />
@@ -102,6 +107,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>livrariaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="livrariaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>livrariaDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Model\Autor.cs">
       <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
@@ -142,6 +152,24 @@
     <Compile Include="Model\Validacao.cs" />
     <Compile Include="Model\Venda.cs">
       <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View\Autores\FormCadastrarAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Autores\FormCadastrarAutor.Designer.cs">
+      <DependentUpon>FormCadastrarAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Autores\FormConsultarAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Autores\FormConsultarAutores.Designer.cs">
+      <DependentUpon>FormConsultarAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Autores\FormEditarAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Autores\FormEditarAutor.Designer.cs">
+      <DependentUpon>FormEditarAutor.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Editoras\FormCadastrarEditoras.cs">
       <SubType>Form</SubType>
@@ -260,6 +288,15 @@
     <Compile Include="View\Vendas\FormSelecionarLivros.Designer.cs">
       <DependentUpon>FormSelecionarLivros.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Autores\FormCadastrarAutor.resx">
+      <DependentUpon>FormCadastrarAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Autores\FormConsultarAutores.resx">
+      <DependentUpon>FormConsultarAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Autores\FormEditarAutor.resx">
+      <DependentUpon>FormEditarAutor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Editoras\FormCadastrarEditoras.resx">
       <DependentUpon>FormCadastrarEditoras.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,6 +379,17 @@
     <None Include="AutorDataSet.xss">
       <DependentUpon>AutorDataSet.xsd</DependentUpon>
     </None>
+    <None Include="autorDataSet1.xsc">
+      <DependentUpon>autorDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="autorDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>autorDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="autorDataSet1.xss">
+      <DependentUpon>autorDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="EditoraDataSet.xsc">
       <DependentUpon>EditoraDataSet.xsd</DependentUpon>
     </None>
@@ -407,6 +455,17 @@
     </None>
     <None Include="livrariaDataSet1.xss">
       <DependentUpon>livrariaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="livrariaDataSet2.xsc">
+      <DependentUpon>livrariaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="livrariaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>livrariaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="livrariaDataSet2.xss">
+      <DependentUpon>livrariaDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Model\ModeloDadosLivraria.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

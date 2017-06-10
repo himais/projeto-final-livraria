@@ -3,6 +3,7 @@ using Livraria.View.Editoras;
 using Livraria.View.Funcionarios;
 using Livraria.View.Livros;
 using Livraria.View.Generos;
+using Livraria.View.Autores;
 using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
@@ -142,6 +143,16 @@ namespace Livraria.View
         private void tsmiEditorasConsultar_Click(object sender, EventArgs e)
         {
             new FormConsultarEditoras().ShowDialog(this);
+        }
+
+        private void tsmiAutoresCadastrar_Click(object sender, EventArgs e)
+        {
+            new FormCadastrarAutor().ShowDialog(this);
+        }
+
+        private void tsmiAutoresConsultar_Click(object sender, EventArgs e)
+        {
+            new FormConsultarAutores().ShowDialog(this);
         }
 
     }

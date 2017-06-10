@@ -29,7 +29,8 @@ namespace Livraria.Controller
                 {
                     foreach (var erro in erros)
                     {
-                        MessageBox.Show(erro.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(FormLogin.ActiveForm, erro.ToString(), "Erro",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
                         break;
                     }
                     return false;
@@ -38,7 +39,8 @@ namespace Livraria.Controller
             }
             catch (Exception e)
             {
-                MessageBox.Show("Houve um problema ao realizar o cadastro!\n" + e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(FormLogin.ActiveForm, "Houve um problema ao realizar o cadastro!\n" + e.Message, "Erro",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error, 100); 
                 return false;
             }
         }
@@ -64,7 +66,8 @@ namespace Livraria.Controller
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show("Houve um problema ao realizar a alteração! \n" + e.Message);
+                    MetroFramework.MetroMessageBox.Show(FormLogin.ActiveForm, "Houve um problema ao realizar a alteração\n" + e.Message, "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
                     return false;
                 }
             }
@@ -72,7 +75,7 @@ namespace Livraria.Controller
             {
                 foreach (var erro in erros)
                 {
-                    MessageBox.Show(erro.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(FormLogin.ActiveForm, erro.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
                     break;
                 }
             }
@@ -91,7 +94,8 @@ namespace Livraria.Controller
             }
             catch (Exception e)
             {
-                MessageBox.Show("Houve um problema ao excluir o autor! \n" + e.Message);
+                MetroFramework.MetroMessageBox.Show(FormLogin.ActiveForm, "Houve um problema ao excluir o autor! \n" + e.Message, "Erro",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }

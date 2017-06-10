@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.picSenha = new System.Windows.Forms.PictureBox();
             this.txtUsuario = new MetroFramework.Controls.MetroTextBox();
             this.txtSenha = new MetroFramework.Controls.MetroTextBox();
+            this.picUsuario = new System.Windows.Forms.PictureBox();
             this.btnEntrar = new MetroFramework.Controls.MetroButton();
             this.pgbLogin = new MetroFramework.Controls.MetroProgressBar();
-            this.picUsuario = new System.Windows.Forms.PictureBox();
             this.bntSobre = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.picSenha = new System.Windows.Forms.PictureBox();
             this.lblSubTitulo = new MetroFramework.Controls.MetroLabel();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bntSobre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSenha)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -51,11 +51,21 @@
             this.groupBox1.Controls.Add(this.txtUsuario);
             this.groupBox1.Controls.Add(this.txtSenha);
             this.groupBox1.Controls.Add(this.picUsuario);
-            this.groupBox1.Location = new System.Drawing.Point(44, 163);
+            this.groupBox1.Location = new System.Drawing.Point(44, 125);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(240, 111);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
+            // 
+            // picSenha
+            // 
+            this.picSenha.Image = global::Livraria.Properties.Resources.padlock;
+            this.picSenha.Location = new System.Drawing.Point(26, 71);
+            this.picSenha.Name = "picSenha";
+            this.picSenha.Size = new System.Drawing.Size(16, 16);
+            this.picSenha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picSenha.TabIndex = 12;
+            this.picSenha.TabStop = false;
             // 
             // txtUsuario
             // 
@@ -119,9 +129,19 @@
             this.txtSenha.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
             // 
+            // picUsuario
+            // 
+            this.picUsuario.Image = global::Livraria.Properties.Resources.profile;
+            this.picUsuario.Location = new System.Drawing.Point(26, 35);
+            this.picUsuario.Name = "picUsuario";
+            this.picUsuario.Size = new System.Drawing.Size(16, 16);
+            this.picUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picUsuario.TabIndex = 9;
+            this.picUsuario.TabStop = false;
+            // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(44, 280);
+            this.btnEntrar.Location = new System.Drawing.Point(44, 242);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(240, 26);
             this.btnEntrar.TabIndex = 3;
@@ -132,23 +152,13 @@
             // 
             // pgbLogin
             // 
-            this.pgbLogin.Location = new System.Drawing.Point(44, 328);
+            this.pgbLogin.Location = new System.Drawing.Point(44, 290);
             this.pgbLogin.MarqueeAnimationSpeed = 1000;
             this.pgbLogin.Name = "pgbLogin";
             this.pgbLogin.ProgressBarStyle = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.pgbLogin.Size = new System.Drawing.Size(240, 13);
             this.pgbLogin.TabIndex = 8;
             this.pgbLogin.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
-            // picUsuario
-            // 
-            this.picUsuario.Image = global::Livraria.Properties.Resources.profile;
-            this.picUsuario.Location = new System.Drawing.Point(26, 35);
-            this.picUsuario.Name = "picUsuario";
-            this.picUsuario.Size = new System.Drawing.Size(16, 16);
-            this.picUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picUsuario.TabIndex = 9;
-            this.picUsuario.TabStop = false;
             // 
             // bntSobre
             // 
@@ -164,27 +174,17 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Livraria.Properties.Resources.logo1;
-            this.pictureBox3.Location = new System.Drawing.Point(44, 93);
+            this.pictureBox3.Location = new System.Drawing.Point(44, 55);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(225, 64);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox3.TabIndex = 11;
             this.pictureBox3.TabStop = false;
             // 
-            // picSenha
-            // 
-            this.picSenha.Image = global::Livraria.Properties.Resources.padlock;
-            this.picSenha.Location = new System.Drawing.Point(26, 71);
-            this.picSenha.Name = "picSenha";
-            this.picSenha.Size = new System.Drawing.Size(16, 16);
-            this.picSenha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picSenha.TabIndex = 12;
-            this.picSenha.TabStop = false;
-            // 
             // lblSubTitulo
             // 
             this.lblSubTitulo.AutoSize = true;
-            this.lblSubTitulo.Location = new System.Drawing.Point(162, 144);
+            this.lblSubTitulo.Location = new System.Drawing.Point(162, 106);
             this.lblSubTitulo.Name = "lblSubTitulo";
             this.lblSubTitulo.Size = new System.Drawing.Size(127, 19);
             this.lblSubTitulo.TabIndex = 12;
@@ -194,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 370);
+            this.ClientSize = new System.Drawing.Size(326, 325);
             this.Controls.Add(this.lblSubTitulo);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.bntSobre);
@@ -206,13 +206,14 @@
             this.Name = "FormLogin";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormLogin_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSenha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bntSobre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSenha)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
