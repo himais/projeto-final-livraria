@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,12 @@ using System.Windows.Forms;
 
 namespace Livraria.View
 {
-    public partial class FormSobre : Form
+    public partial class FormSobre : MetroForm
     {
         public FormSobre()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None; 
         }
     }
 }

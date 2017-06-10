@@ -117,4 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="metroLabel1.Text" xml:space="preserve">
+    <value>Aplicação desenvolvida por:
+Caique Aquino Borges (1566806)
+Maíra Satiko Tabata (1561545)
+
+Para a disciplina de A5LP1 - Linguagem de Programação Plataforma .NET 1 
+do quinto semestre de Tecnologia em Análise e Desenvolvimento de Sistemas 
+do Instituto Federal de São Paulo.
+
+Data de entrega: 12/06/2017</value>
+  </data>
 </root>
