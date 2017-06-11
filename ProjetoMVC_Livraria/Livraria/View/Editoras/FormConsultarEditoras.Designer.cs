@@ -31,6 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvEditoras = new System.Windows.Forms.DataGridView();
+            this.idEditoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeEditoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.razaoSocialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cNPJDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.editoraDataSet = new Livraria.EditoraDataSet();
             this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.funcionarioDataSet = new Livraria.FuncionarioDataSet();
             this.funcionarioTableAdapter = new Livraria.FuncionarioDataSetTableAdapters.FuncionarioTableAdapter();
@@ -38,21 +45,14 @@
             this.picAtencao = new System.Windows.Forms.PictureBox();
             this.lblDica = new MetroFramework.Controls.MetroLabel();
             this.picLogoInicial = new System.Windows.Forms.PictureBox();
-            this.editoraDataSet = new Livraria.EditoraDataSet();
-            this.editoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.editoraTableAdapter = new Livraria.EditoraDataSetTableAdapters.EditoraTableAdapter();
-            this.idEditoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeEditoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.razaoSocialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cNPJDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditoras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editoraDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtencao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.editoraDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvEditoras
@@ -85,78 +85,6 @@
             this.dgvEditoras.DoubleClick += new System.EventHandler(this.dgvEditoras_DoubleClick);
             this.dgvEditoras.MouseEnter += new System.EventHandler(this.dgvEditoras_MouseEnter);
             this.dgvEditoras.MouseLeave += new System.EventHandler(this.dgvEditoras_MouseLeave);
-            // 
-            // funcionarioBindingSource
-            // 
-            this.funcionarioBindingSource.DataMember = "Funcionario";
-            this.funcionarioBindingSource.DataSource = this.funcionarioDataSet;
-            // 
-            // funcionarioDataSet
-            // 
-            this.funcionarioDataSet.DataSetName = "FuncionarioDataSet";
-            this.funcionarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // funcionarioTableAdapter
-            // 
-            this.funcionarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.Location = new System.Drawing.Point(558, 302);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(119, 35);
-            this.btnVoltar.TabIndex = 42;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseSelectable = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // picAtencao
-            // 
-            this.picAtencao.Image = global::Livraria.Properties.Resources.warning;
-            this.picAtencao.Location = new System.Drawing.Point(25, 280);
-            this.picAtencao.Name = "picAtencao";
-            this.picAtencao.Size = new System.Drawing.Size(20, 19);
-            this.picAtencao.TabIndex = 41;
-            this.picAtencao.TabStop = false;
-            // 
-            // lblDica
-            // 
-            this.lblDica.AutoSize = true;
-            this.lblDica.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblDica.Location = new System.Drawing.Point(43, 279);
-            this.lblDica.Name = "lblDica";
-            this.lblDica.Size = new System.Drawing.Size(382, 19);
-            this.lblDica.Style = MetroFramework.MetroColorStyle.Blue;
-            this.lblDica.TabIndex = 40;
-            this.lblDica.Text = "Dê um duplo clique no funcionário que deseja alterar ou excluir.";
-            this.lblDica.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.lblDica.UseCustomForeColor = true;
-            this.lblDica.UseStyleColors = true;
-            // 
-            // picLogoInicial
-            // 
-            this.picLogoInicial.BackColor = System.Drawing.Color.Transparent;
-            this.picLogoInicial.Image = global::Livraria.Properties.Resources.logo;
-            this.picLogoInicial.Location = new System.Drawing.Point(21, 23);
-            this.picLogoInicial.Name = "picLogoInicial";
-            this.picLogoInicial.Size = new System.Drawing.Size(38, 33);
-            this.picLogoInicial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLogoInicial.TabIndex = 39;
-            this.picLogoInicial.TabStop = false;
-            // 
-            // editoraDataSet
-            // 
-            this.editoraDataSet.DataSetName = "EditoraDataSet";
-            this.editoraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // editoraBindingSource
-            // 
-            this.editoraBindingSource.DataMember = "Editora";
-            this.editoraBindingSource.DataSource = this.editoraDataSet;
-            // 
-            // editoraTableAdapter
-            // 
-            this.editoraTableAdapter.ClearBeforeFill = true;
             // 
             // idEditoraDataGridViewTextBoxColumn
             // 
@@ -197,6 +125,78 @@
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             this.emailDataGridViewTextBoxColumn.Width = 160;
             // 
+            // editoraBindingSource
+            // 
+            this.editoraBindingSource.DataMember = "Editora";
+            this.editoraBindingSource.DataSource = this.editoraDataSet;
+            // 
+            // editoraDataSet
+            // 
+            this.editoraDataSet.DataSetName = "EditoraDataSet";
+            this.editoraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // funcionarioBindingSource
+            // 
+            this.funcionarioBindingSource.DataMember = "Funcionario";
+            this.funcionarioBindingSource.DataSource = this.funcionarioDataSet;
+            // 
+            // funcionarioDataSet
+            // 
+            this.funcionarioDataSet.DataSetName = "FuncionarioDataSet";
+            this.funcionarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // funcionarioTableAdapter
+            // 
+            this.funcionarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(558, 302);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(119, 35);
+            this.btnVoltar.TabIndex = 42;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseSelectable = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // picAtencao
+            // 
+            this.picAtencao.Image = global::Livraria.Properties.Resources.warning;
+            this.picAtencao.Location = new System.Drawing.Point(25, 280);
+            this.picAtencao.Name = "picAtencao";
+            this.picAtencao.Size = new System.Drawing.Size(20, 19);
+            this.picAtencao.TabIndex = 41;
+            this.picAtencao.TabStop = false;
+            // 
+            // lblDica
+            // 
+            this.lblDica.AutoSize = true;
+            this.lblDica.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblDica.Location = new System.Drawing.Point(43, 279);
+            this.lblDica.Name = "lblDica";
+            this.lblDica.Size = new System.Drawing.Size(358, 19);
+            this.lblDica.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblDica.TabIndex = 40;
+            this.lblDica.Text = "Dê um duplo clique na editora que deseja alterar ou excluir.";
+            this.lblDica.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblDica.UseCustomForeColor = true;
+            this.lblDica.UseStyleColors = true;
+            // 
+            // picLogoInicial
+            // 
+            this.picLogoInicial.BackColor = System.Drawing.Color.Transparent;
+            this.picLogoInicial.Image = global::Livraria.Properties.Resources.logo;
+            this.picLogoInicial.Location = new System.Drawing.Point(21, 23);
+            this.picLogoInicial.Name = "picLogoInicial";
+            this.picLogoInicial.Size = new System.Drawing.Size(38, 33);
+            this.picLogoInicial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogoInicial.TabIndex = 39;
+            this.picLogoInicial.TabStop = false;
+            // 
+            // editoraTableAdapter
+            // 
+            this.editoraTableAdapter.ClearBeforeFill = true;
+            // 
             // FormConsultarEditoras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,12 +212,12 @@
             this.Text = "        Consultar Editoras";
             this.Load += new System.EventHandler(this.FormConsultarEditoras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditoras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editoraDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtencao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.editoraDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

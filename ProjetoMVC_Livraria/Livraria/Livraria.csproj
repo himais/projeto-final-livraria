@@ -78,6 +78,7 @@
     <Compile Include="Controller\FuncionarioController.cs" />
     <Compile Include="Controller\GeneroController.cs" />
     <Compile Include="Controller\LivroController.cs" />
+    <Compile Include="Controller\VendaController.cs" />
     <Compile Include="EditoraDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -128,7 +129,7 @@
     <Compile Include="Model\Genero.cs">
       <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Item_Venda.cs">
+    <Compile Include="Model\ItemVenda.cs">
       <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Livro.cs">

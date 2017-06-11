@@ -44,16 +44,16 @@
             this.toolTip = new MetroFramework.Components.MetroToolTip();
             this.picLogoInicial = new System.Windows.Forms.PictureBox();
             this.groupBoxCadastrarLivro = new System.Windows.Forms.GroupBox();
-            this.lblNomeLivro = new MetroFramework.Controls.MetroLabel();
-            this.lblDescricao = new MetroFramework.Controls.MetroLabel();
-            this.lblISBN = new MetroFramework.Controls.MetroLabel();
-            this.lblEditora = new MetroFramework.Controls.MetroLabel();
-            this.lblGenero = new MetroFramework.Controls.MetroLabel();
-            this.lblAutores = new MetroFramework.Controls.MetroLabel();
-            this.lblAno = new MetroFramework.Controls.MetroLabel();
-            this.lblPreco = new MetroFramework.Controls.MetroLabel();
-            this.lblPaginas = new MetroFramework.Controls.MetroLabel();
             this.lblQuantidade = new MetroFramework.Controls.MetroLabel();
+            this.lblPaginas = new MetroFramework.Controls.MetroLabel();
+            this.lblPreco = new MetroFramework.Controls.MetroLabel();
+            this.lblAno = new MetroFramework.Controls.MetroLabel();
+            this.lblAutores = new MetroFramework.Controls.MetroLabel();
+            this.lblGenero = new MetroFramework.Controls.MetroLabel();
+            this.lblEditora = new MetroFramework.Controls.MetroLabel();
+            this.lblISBN = new MetroFramework.Controls.MetroLabel();
+            this.lblDescricao = new MetroFramework.Controls.MetroLabel();
+            this.lblNomeLivro = new MetroFramework.Controls.MetroLabel();
             this.btnCadastrar = new MetroFramework.Controls.MetroButton();
             this.btnCancelar = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.nudAno)).BeginInit();
@@ -335,85 +335,15 @@
             this.groupBoxCadastrarLivro.TabIndex = 40;
             this.groupBoxCadastrarLivro.TabStop = false;
             // 
-            // lblNomeLivro
+            // lblQuantidade
             // 
-            this.lblNomeLivro.AutoSize = true;
-            this.lblNomeLivro.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblNomeLivro.Location = new System.Drawing.Point(44, 28);
-            this.lblNomeLivro.Name = "lblNomeLivro";
-            this.lblNomeLivro.Size = new System.Drawing.Size(63, 25);
-            this.lblNomeLivro.TabIndex = 0;
-            this.lblNomeLivro.Text = "Nome:";
-            // 
-            // lblDescricao
-            // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblDescricao.Location = new System.Drawing.Point(18, 73);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(89, 25);
-            this.lblDescricao.TabIndex = 1;
-            this.lblDescricao.Text = "Descrição:";
-            // 
-            // lblISBN
-            // 
-            this.lblISBN.AutoSize = true;
-            this.lblISBN.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblISBN.Location = new System.Drawing.Point(55, 186);
-            this.lblISBN.Name = "lblISBN";
-            this.lblISBN.Size = new System.Drawing.Size(52, 25);
-            this.lblISBN.TabIndex = 2;
-            this.lblISBN.Text = "ISBN:";
-            // 
-            // lblEditora
-            // 
-            this.lblEditora.AutoSize = true;
-            this.lblEditora.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblEditora.Location = new System.Drawing.Point(38, 228);
-            this.lblEditora.Name = "lblEditora";
-            this.lblEditora.Size = new System.Drawing.Size(69, 25);
-            this.lblEditora.TabIndex = 3;
-            this.lblEditora.Text = "Editora:";
-            // 
-            // lblGenero
-            // 
-            this.lblGenero.AutoSize = true;
-            this.lblGenero.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblGenero.Location = new System.Drawing.Point(35, 272);
-            this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(72, 25);
-            this.lblGenero.TabIndex = 4;
-            this.lblGenero.Text = "Gênero:";
-            // 
-            // lblAutores
-            // 
-            this.lblAutores.AutoSize = true;
-            this.lblAutores.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblAutores.Location = new System.Drawing.Point(33, 309);
-            this.lblAutores.Name = "lblAutores";
-            this.lblAutores.Size = new System.Drawing.Size(74, 25);
-            this.lblAutores.TabIndex = 5;
-            this.lblAutores.Text = "Autores:";
-            // 
-            // lblAno
-            // 
-            this.lblAno.AutoSize = true;
-            this.lblAno.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblAno.Location = new System.Drawing.Point(354, 183);
-            this.lblAno.Name = "lblAno";
-            this.lblAno.Size = new System.Drawing.Size(47, 25);
-            this.lblAno.TabIndex = 6;
-            this.lblAno.Text = "Ano:";
-            // 
-            // lblPreco
-            // 
-            this.lblPreco.AutoSize = true;
-            this.lblPreco.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblPreco.Location = new System.Drawing.Point(328, 224);
-            this.lblPreco.Name = "lblPreco";
-            this.lblPreco.Size = new System.Drawing.Size(83, 25);
-            this.lblPreco.TabIndex = 7;
-            this.lblPreco.Text = "Preço: R$";
+            this.lblQuantidade.AutoSize = true;
+            this.lblQuantidade.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblQuantidade.Location = new System.Drawing.Point(328, 308);
+            this.lblQuantidade.Name = "lblQuantidade";
+            this.lblQuantidade.Size = new System.Drawing.Size(76, 25);
+            this.lblQuantidade.TabIndex = 9;
+            this.lblQuantidade.Text = "Estoque:";
             // 
             // lblPaginas
             // 
@@ -425,15 +355,85 @@
             this.lblPaginas.TabIndex = 8;
             this.lblPaginas.Text = "Páginas:";
             // 
-            // lblQuantidade
+            // lblPreco
             // 
-            this.lblQuantidade.AutoSize = true;
-            this.lblQuantidade.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblQuantidade.Location = new System.Drawing.Point(328, 308);
-            this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(76, 25);
-            this.lblQuantidade.TabIndex = 9;
-            this.lblQuantidade.Text = "Estoque:";
+            this.lblPreco.AutoSize = true;
+            this.lblPreco.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblPreco.Location = new System.Drawing.Point(328, 224);
+            this.lblPreco.Name = "lblPreco";
+            this.lblPreco.Size = new System.Drawing.Size(83, 25);
+            this.lblPreco.TabIndex = 7;
+            this.lblPreco.Text = "Preço: R$";
+            // 
+            // lblAno
+            // 
+            this.lblAno.AutoSize = true;
+            this.lblAno.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblAno.Location = new System.Drawing.Point(354, 183);
+            this.lblAno.Name = "lblAno";
+            this.lblAno.Size = new System.Drawing.Size(47, 25);
+            this.lblAno.TabIndex = 6;
+            this.lblAno.Text = "Ano:";
+            // 
+            // lblAutores
+            // 
+            this.lblAutores.AutoSize = true;
+            this.lblAutores.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblAutores.Location = new System.Drawing.Point(33, 309);
+            this.lblAutores.Name = "lblAutores";
+            this.lblAutores.Size = new System.Drawing.Size(74, 25);
+            this.lblAutores.TabIndex = 5;
+            this.lblAutores.Text = "Autores:";
+            // 
+            // lblGenero
+            // 
+            this.lblGenero.AutoSize = true;
+            this.lblGenero.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblGenero.Location = new System.Drawing.Point(35, 272);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(72, 25);
+            this.lblGenero.TabIndex = 4;
+            this.lblGenero.Text = "Gênero:";
+            // 
+            // lblEditora
+            // 
+            this.lblEditora.AutoSize = true;
+            this.lblEditora.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblEditora.Location = new System.Drawing.Point(38, 228);
+            this.lblEditora.Name = "lblEditora";
+            this.lblEditora.Size = new System.Drawing.Size(69, 25);
+            this.lblEditora.TabIndex = 3;
+            this.lblEditora.Text = "Editora:";
+            // 
+            // lblISBN
+            // 
+            this.lblISBN.AutoSize = true;
+            this.lblISBN.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblISBN.Location = new System.Drawing.Point(55, 186);
+            this.lblISBN.Name = "lblISBN";
+            this.lblISBN.Size = new System.Drawing.Size(52, 25);
+            this.lblISBN.TabIndex = 2;
+            this.lblISBN.Text = "ISBN:";
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblDescricao.Location = new System.Drawing.Point(18, 73);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(89, 25);
+            this.lblDescricao.TabIndex = 1;
+            this.lblDescricao.Text = "Descrição:";
+            // 
+            // lblNomeLivro
+            // 
+            this.lblNomeLivro.AutoSize = true;
+            this.lblNomeLivro.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblNomeLivro.Location = new System.Drawing.Point(44, 28);
+            this.lblNomeLivro.Name = "lblNomeLivro";
+            this.lblNomeLivro.Size = new System.Drawing.Size(63, 25);
+            this.lblNomeLivro.TabIndex = 0;
+            this.lblNomeLivro.Text = "Nome:";
             // 
             // btnCadastrar
             // 
@@ -443,6 +443,7 @@
             this.btnCadastrar.TabIndex = 41;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseSelectable = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnCancelar
             // 

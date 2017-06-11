@@ -105,5 +105,10 @@ namespace Livraria.Controller
         {
             return context.Genero.ToList<Genero>();
         }
+
+        public Genero RecuperarGenero(int idGenero)
+        {
+            return context.Genero.Find(idGenero);
+        }
     }
 }

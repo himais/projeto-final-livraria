@@ -178,10 +178,10 @@
             this.lblDica.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblDica.Location = new System.Drawing.Point(41, 409);
             this.lblDica.Name = "lblDica";
-            this.lblDica.Size = new System.Drawing.Size(382, 19);
+            this.lblDica.Size = new System.Drawing.Size(342, 19);
             this.lblDica.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblDica.TabIndex = 37;
-            this.lblDica.Text = "Dê um duplo clique no funcionário que deseja alterar ou excluir.";
+            this.lblDica.Text = "Dê um duplo clique no livro que deseja alterar ou excluir.";
             this.lblDica.Theme = MetroFramework.MetroThemeStyle.Light;
             this.lblDica.UseCustomForeColor = true;
             this.lblDica.UseStyleColors = true;

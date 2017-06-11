@@ -69,6 +69,7 @@
             // 
             // menuStripPrincipal
             // 
+            this.menuStripPrincipal.BackColor = System.Drawing.Color.White;
             this.menuStripPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiArquivo,
             this.tsmiVendas,
@@ -111,7 +112,7 @@
             this.tsmiVendasRealizar,
             this.tsmiVendasConsultar});
             this.tsmiVendas.Name = "tsmiVendas";
-            this.tsmiVendas.Size = new System.Drawing.Size(57, 20);
+            this.tsmiVendas.Size = new System.Drawing.Size(56, 20);
             this.tsmiVendas.Text = "Vendas";
             // 
             // tsmiVendasRealizar
@@ -208,14 +209,14 @@
             // tsmiEditorasCadastrar
             // 
             this.tsmiEditorasCadastrar.Name = "tsmiEditorasCadastrar";
-            this.tsmiEditorasCadastrar.Size = new System.Drawing.Size(125, 22);
+            this.tsmiEditorasCadastrar.Size = new System.Drawing.Size(152, 22);
             this.tsmiEditorasCadastrar.Text = "Cadastrar";
             this.tsmiEditorasCadastrar.Click += new System.EventHandler(this.tsmiEditorasCadastrar_Click);
             // 
             // tsmiEditorasConsultar
             // 
             this.tsmiEditorasConsultar.Name = "tsmiEditorasConsultar";
-            this.tsmiEditorasConsultar.Size = new System.Drawing.Size(125, 22);
+            this.tsmiEditorasConsultar.Size = new System.Drawing.Size(152, 22);
             this.tsmiEditorasConsultar.Text = "Consultar";
             this.tsmiEditorasConsultar.Click += new System.EventHandler(this.tsmiEditorasConsultar_Click);
             // 
@@ -231,14 +232,14 @@
             // tsmiAutoresCadastrar
             // 
             this.tsmiAutoresCadastrar.Name = "tsmiAutoresCadastrar";
-            this.tsmiAutoresCadastrar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAutoresCadastrar.Size = new System.Drawing.Size(125, 22);
             this.tsmiAutoresCadastrar.Text = "Cadastrar";
             this.tsmiAutoresCadastrar.Click += new System.EventHandler(this.tsmiAutoresCadastrar_Click);
             // 
             // tsmiAutoresConsultar
             // 
             this.tsmiAutoresConsultar.Name = "tsmiAutoresConsultar";
-            this.tsmiAutoresConsultar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAutoresConsultar.Size = new System.Drawing.Size(125, 22);
             this.tsmiAutoresConsultar.Text = "Consultar";
             this.tsmiAutoresConsultar.Click += new System.EventHandler(this.tsmiAutoresConsultar_Click);
             // 
@@ -272,18 +273,18 @@
             this.cadastrarVendaToolStripMenuItem,
             this.consultarVendasToolStripMenuItem});
             this.contextMenuVendas.Name = "contextMenuVendas";
-            this.contextMenuVendas.Size = new System.Drawing.Size(167, 48);
+            this.contextMenuVendas.Size = new System.Drawing.Size(166, 48);
             // 
             // cadastrarVendaToolStripMenuItem
             // 
             this.cadastrarVendaToolStripMenuItem.Name = "cadastrarVendaToolStripMenuItem";
-            this.cadastrarVendaToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.cadastrarVendaToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.cadastrarVendaToolStripMenuItem.Text = "Cadastrar Venda";
             // 
             // consultarVendasToolStripMenuItem
             // 
             this.consultarVendasToolStripMenuItem.Name = "consultarVendasToolStripMenuItem";
-            this.consultarVendasToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.consultarVendasToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.consultarVendasToolStripMenuItem.Text = "Consultar Vendas";
             // 
             // lblBemVindo

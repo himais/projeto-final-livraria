@@ -14,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Livraria.View.Vendas;
 
 namespace Livraria.View
 {
@@ -127,7 +128,7 @@ namespace Livraria.View
 
         private void tileVendas_Click(object sender, EventArgs e)
         {
-            //new FormCadastrarVenda().ShowDialog(this);
+            new FormCadastrarVenda(funcionario).ShowDialog(this);
         }
 
         private void tsmiLivroGeneroCadastrar_Click(object sender, EventArgs e)

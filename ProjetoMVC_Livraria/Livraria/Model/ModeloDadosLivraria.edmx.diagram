@@ -13,7 +13,7 @@
         <AssociationConnector Association="Model1.EditoraLivro" />
         <EntityTypeShape EntityType="Model1.Funcionario" Width="1.5" PointX="3.25" PointY="5.125" />
         <EntityTypeShape EntityType="Model1.Venda" Width="1.5" PointX="5.5" PointY="4.75" />
-        <EntityTypeShape EntityType="Model1.Item_Venda" Width="1.5" PointX="7.5" PointY="3.75" />
+        <EntityTypeShape EntityType="Model1.ItemVenda" Width="1.5" PointX="7.5" PointY="3.75" />
         <AssociationConnector Association="Model1.VendaFuncionario" />
         <AssociationConnector Association="Model1.Item_VendaVenda" />
         <AssociationConnector Association="Model1.Item_VendaLivro" />

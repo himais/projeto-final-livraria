@@ -66,9 +66,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Item_VendaSet">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.Item_Venda)">
-        <MappingFragment StoreEntitySet="Item_VendaSet">
+    <EntitySetMapping Name="ItemVenda">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.ItemVenda)">
+        <MappingFragment StoreEntitySet="ItemVenda">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdVenda" ColumnName="IdVenda" />
           <ScalarProperty Name="IdLivro" ColumnName="IdLivro" />

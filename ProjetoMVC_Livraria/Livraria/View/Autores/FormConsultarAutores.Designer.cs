@@ -35,20 +35,20 @@
             this.dgvAutores = new System.Windows.Forms.DataGridView();
             this.idAutorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeAutorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.autorDataSet = new Livraria.autorDataSet();
             this.autorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.livrariaDataSet2 = new Livraria.livrariaDataSet2();
             this.picAtencao = new System.Windows.Forms.PictureBox();
             this.autorTableAdapter = new Livraria.livrariaDataSet2TableAdapters.AutorTableAdapter();
-            this.autorDataSet = new Livraria.autorDataSet();
-            this.autorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.autorTableAdapter1 = new Livraria.autorDataSetTableAdapters.AutorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autorBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autorDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.livrariaDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtencao)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autorDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autorBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVoltar
@@ -67,10 +67,10 @@
             this.lblDica.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblDica.Location = new System.Drawing.Point(40, 246);
             this.lblDica.Name = "lblDica";
-            this.lblDica.Size = new System.Drawing.Size(359, 19);
+            this.lblDica.Size = new System.Drawing.Size(348, 19);
             this.lblDica.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblDica.TabIndex = 42;
-            this.lblDica.Text = "Dê um duplo clique no gênero que deseja alterar ou excluir.";
+            this.lblDica.Text = "Dê um duplo clique no autor que deseja alterar ou excluir.";
             this.lblDica.Theme = MetroFramework.MetroThemeStyle.Light;
             this.lblDica.UseCustomForeColor = true;
             this.lblDica.UseStyleColors = true;
@@ -123,6 +123,16 @@
             this.nomeAutorDataGridViewTextBoxColumn.ReadOnly = true;
             this.nomeAutorDataGridViewTextBoxColumn.Width = 250;
             // 
+            // autorBindingSource1
+            // 
+            this.autorBindingSource1.DataMember = "Autor";
+            this.autorBindingSource1.DataSource = this.autorDataSet;
+            // 
+            // autorDataSet
+            // 
+            this.autorDataSet.DataSetName = "autorDataSet";
+            this.autorDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // autorBindingSource
             // 
             this.autorBindingSource.DataMember = "Autor";
@@ -146,16 +156,6 @@
             // 
             this.autorTableAdapter.ClearBeforeFill = true;
             // 
-            // autorDataSet
-            // 
-            this.autorDataSet.DataSetName = "autorDataSet";
-            this.autorDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // autorBindingSource1
-            // 
-            this.autorBindingSource1.DataMember = "Autor";
-            this.autorBindingSource1.DataSource = this.autorDataSet;
-            // 
             // autorTableAdapter1
             // 
             this.autorTableAdapter1.ClearBeforeFill = true;
@@ -175,11 +175,11 @@
             this.Load += new System.EventHandler(this.FormConsultarAutores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autorBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autorDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.autorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.livrariaDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtencao)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autorDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autorBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

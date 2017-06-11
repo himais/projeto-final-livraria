@@ -31,7 +31,7 @@ namespace Livraria.Model
         public DbSet<Editora> Editora { get; set; }
         public DbSet<Funcionario> Funcionario { get; set; }
         public DbSet<Venda> Venda { get; set; }
-        public DbSet<Item_Venda> Item_VendaSet { get; set; }
+        public DbSet<ItemVenda> ItemVenda { get; set; }
         public DbSet<AutorLivro> AutorLivro { get; set; }
     }
 }

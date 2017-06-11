@@ -7,7 +7,7 @@
     <EntitySet Name="Editora" EntityType="Model1.Store.Editora" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Funcionario" EntityType="Model1.Store.Funcionario" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Venda" EntityType="Model1.Store.Venda" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Item_VendaSet" EntityType="Model1.Store.Item_VendaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ItemVenda" EntityType="Model1.Store.ItemVenda" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="AutorLivro" EntityType="Model1.Store.AutorLivro" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="LivroGenero" Association="Model1.Store.LivroGenero">
       <End Role="Livro" EntitySet="Livro" />
@@ -21,12 +21,12 @@
       <End Role="Venda" EntitySet="Venda" />
       <End Role="Funcionario" EntitySet="Funcionario" />
     </AssociationSet>
-    <AssociationSet Name="Item_VendaVenda" Association="Model1.Store.Item_VendaVenda">
-      <End Role="Item_Venda" EntitySet="Item_VendaSet" />
+    <AssociationSet Name="ItemVenda_Venda" Association="Model1.Store.Item_VendaVenda">
+      <End Role="Item_Venda" EntitySet="ItemVenda" />
       <End Role="Venda" EntitySet="Venda" />
     </AssociationSet>
-    <AssociationSet Name="Item_VendaLivro" Association="Model1.Store.Item_VendaLivro">
-      <End Role="Item_Venda" EntitySet="Item_VendaSet" />
+    <AssociationSet Name="ItemVenda_Livro" Association="Model1.Store.Item_VendaLivro">
+      <End Role="Item_Venda" EntitySet="ItemVenda" />
       <End Role="Livro" EntitySet="Livro" />
     </AssociationSet>
     <AssociationSet Name="Livro_para_AutorLivro" Association="Model1.Store.LivroAutorLivro">
@@ -57,7 +57,7 @@
     <Property Name="Paginas" Type="int" Nullable="false" />
     <Property Name="IdEditora" Type="int" Nullable="false" />
     <Property Name="Isbn" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Preco" Type="decimal" Nullable="false" />
+    <Property Name="Preco" Type="decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="QuantidadeEstoque" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Genero">
@@ -93,18 +93,18 @@
     </Key>
     <Property Name="IdVenda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="DataVenda" Type="datetime" Nullable="false" />
-    <Property Name="PrecoTotal" Type="decimal" Nullable="false" />
+    <Property Name="PrecoTotal" Type="decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="TotalLivros" Type="int" Nullable="false" />
     <Property Name="IdFuncionario" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="Item_VendaSet">
+  <EntityType Name="ItemVenda">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IdVenda" Type="int" Nullable="false" />
     <Property Name="IdLivro" Type="int" Nullable="false" />
-    <Property Name="Quantidade" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Quantidade" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="AutorLivro">
     <Key>
@@ -151,7 +151,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="Item_VendaVenda">
-    <End Role="Item_Venda" Type="Model1.Store.Item_VendaSet" Multiplicity="*" />
+    <End Role="Item_Venda" Type="Model1.Store.ItemVenda" Multiplicity="*" />
     <End Role="Venda" Type="Model1.Store.Venda" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="Venda">
@@ -163,7 +163,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="Item_VendaLivro">
-    <End Role="Item_Venda" Type="Model1.Store.Item_VendaSet" Multiplicity="*" />
+    <End Role="Item_Venda" Type="Model1.Store.ItemVenda" Multiplicity="*" />
     <End Role="Livro" Type="Model1.Store.Livro" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="Livro">

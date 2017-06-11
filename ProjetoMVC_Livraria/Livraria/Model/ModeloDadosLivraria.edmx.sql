@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/09/2017 20:42:22
+-- Date Created: 06/11/2017 13:14:28
 -- Generated from EDMX file: D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\Model\ModeloDadosLivraria.edmx
 -- --------------------------------------------------
 
@@ -89,7 +89,7 @@ CREATE TABLE [dbo].[Livro] (
     [Paginas] int  NOT NULL,
     [IdEditora] int  NOT NULL,
     [Isbn] nvarchar(max)  NOT NULL,
-    [Preco] decimal(18,0)  NOT NULL,
+    [Preco] decimal(18,2)  NOT NULL,
     [QuantidadeEstoque] int  NOT NULL
 );
 GO
@@ -125,18 +125,18 @@ GO
 CREATE TABLE [dbo].[Venda] (
     [IdVenda] int IDENTITY(1,1) NOT NULL,
     [DataVenda] datetime  NOT NULL,
-    [PrecoTotal] decimal(18,0)  NOT NULL,
+    [PrecoTotal] decimal(18,2)  NOT NULL,
     [TotalLivros] int  NOT NULL,
     [IdFuncionario] int  NOT NULL
 );
 GO
 
--- Creating table 'Item_VendaSet'
-CREATE TABLE [dbo].[Item_VendaSet] (
+-- Creating table 'ItemVenda'
+CREATE TABLE [dbo].[ItemVenda] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [IdVenda] int  NOT NULL,
     [IdLivro] int  NOT NULL,
-    [Quantidade] nvarchar(max)  NOT NULL
+    [Quantidade] int  NOT NULL
 );
 GO
 
@@ -188,9 +188,9 @@ ADD CONSTRAINT [PK_Venda]
     PRIMARY KEY CLUSTERED ([IdVenda] ASC);
 GO
 
--- Creating primary key on [Id] in table 'Item_VendaSet'
-ALTER TABLE [dbo].[Item_VendaSet]
-ADD CONSTRAINT [PK_Item_VendaSet]
+-- Creating primary key on [Id] in table 'ItemVenda'
+ALTER TABLE [dbo].[ItemVenda]
+ADD CONSTRAINT [PK_ItemVenda]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -246,8 +246,8 @@ ON [dbo].[Venda]
     ([IdFuncionario]);
 GO
 
--- Creating foreign key on [IdVenda] in table 'Item_VendaSet'
-ALTER TABLE [dbo].[Item_VendaSet]
+-- Creating foreign key on [IdVenda] in table 'ItemVenda'
+ALTER TABLE [dbo].[ItemVenda]
 ADD CONSTRAINT [FK_Item_VendaVenda]
     FOREIGN KEY ([IdVenda])
     REFERENCES [dbo].[Venda]
@@ -256,12 +256,12 @@ ADD CONSTRAINT [FK_Item_VendaVenda]
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_Item_VendaVenda'
 CREATE INDEX [IX_FK_Item_VendaVenda]
-ON [dbo].[Item_VendaSet]
+ON [dbo].[ItemVenda]
     ([IdVenda]);
 GO
 
--- Creating foreign key on [IdLivro] in table 'Item_VendaSet'
-ALTER TABLE [dbo].[Item_VendaSet]
+-- Creating foreign key on [IdLivro] in table 'ItemVenda'
+ALTER TABLE [dbo].[ItemVenda]
 ADD CONSTRAINT [FK_Item_VendaLivro]
     FOREIGN KEY ([IdLivro])
     REFERENCES [dbo].[Livro]
@@ -270,7 +270,7 @@ ADD CONSTRAINT [FK_Item_VendaLivro]
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_Item_VendaLivro'
 CREATE INDEX [IX_FK_Item_VendaLivro]
-ON [dbo].[Item_VendaSet]
+ON [dbo].[ItemVenda]
     ([IdLivro]);
 GO
 

@@ -11,7 +11,6 @@ namespace Livraria.Model
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     
     public partial class Autor
     {
@@ -21,7 +20,6 @@ namespace Livraria.Model
         }
     
         public int IdAutor { get; set; }
-        [Required(ErrorMessage = "Insira o nome do autor!", AllowEmptyStrings = false)]
         public string NomeAutor { get; set; }
     
         public virtual ICollection<AutorLivro> AutorLivro { get; set; }

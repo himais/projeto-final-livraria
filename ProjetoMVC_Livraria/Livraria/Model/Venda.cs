@@ -16,7 +16,7 @@ namespace Livraria.Model
     {
         public Venda()
         {
-            this.Item_Venda = new HashSet<Item_Venda>();
+            this.Item_Venda = new HashSet<ItemVenda>();
         }
     
         public int IdVenda { get; set; }
@@ -26,6 +26,6 @@ namespace Livraria.Model
         public int IdFuncionario { get; set; }
     
         public virtual Funcionario Funcionario { get; set; }
-        public virtual ICollection<Item_Venda> Item_Venda { get; set; }
+        public virtual ICollection<ItemVenda> Item_Venda { get; set; }
     }
 }

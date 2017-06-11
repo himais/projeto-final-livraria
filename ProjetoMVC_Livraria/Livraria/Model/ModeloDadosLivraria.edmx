@@ -12,7 +12,7 @@
     <EntitySet Name="Editora" EntityType="Model1.Store.Editora" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Funcionario" EntityType="Model1.Store.Funcionario" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Venda" EntityType="Model1.Store.Venda" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Item_VendaSet" EntityType="Model1.Store.Item_VendaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ItemVenda" EntityType="Model1.Store.ItemVenda" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="AutorLivro" EntityType="Model1.Store.AutorLivro" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="LivroGenero" Association="Model1.Store.LivroGenero">
       <End Role="Livro" EntitySet="Livro" />
@@ -26,12 +26,12 @@
       <End Role="Venda" EntitySet="Venda" />
       <End Role="Funcionario" EntitySet="Funcionario" />
     </AssociationSet>
-    <AssociationSet Name="Item_VendaVenda" Association="Model1.Store.Item_VendaVenda">
-      <End Role="Item_Venda" EntitySet="Item_VendaSet" />
+    <AssociationSet Name="ItemVenda_Venda" Association="Model1.Store.Item_VendaVenda">
+      <End Role="Item_Venda" EntitySet="ItemVenda" />
       <End Role="Venda" EntitySet="Venda" />
     </AssociationSet>
-    <AssociationSet Name="Item_VendaLivro" Association="Model1.Store.Item_VendaLivro">
-      <End Role="Item_Venda" EntitySet="Item_VendaSet" />
+    <AssociationSet Name="ItemVenda_Livro" Association="Model1.Store.Item_VendaLivro">
+      <End Role="Item_Venda" EntitySet="ItemVenda" />
       <End Role="Livro" EntitySet="Livro" />
     </AssociationSet>
     <AssociationSet Name="Livro_para_AutorLivro" Association="Model1.Store.LivroAutorLivro">
@@ -62,7 +62,7 @@
     <Property Name="Paginas" Type="int" Nullable="false" />
     <Property Name="IdEditora" Type="int" Nullable="false" />
     <Property Name="Isbn" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Preco" Type="decimal" Nullable="false" />
+    <Property Name="Preco" Type="decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="QuantidadeEstoque" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Genero">
@@ -98,18 +98,18 @@
     </Key>
     <Property Name="IdVenda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="DataVenda" Type="datetime" Nullable="false" />
-    <Property Name="PrecoTotal" Type="decimal" Nullable="false" />
+    <Property Name="PrecoTotal" Type="decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="TotalLivros" Type="int" Nullable="false" />
     <Property Name="IdFuncionario" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="Item_VendaSet">
+  <EntityType Name="ItemVenda">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IdVenda" Type="int" Nullable="false" />
     <Property Name="IdLivro" Type="int" Nullable="false" />
-    <Property Name="Quantidade" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Quantidade" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="AutorLivro">
     <Key>
@@ -156,7 +156,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="Item_VendaVenda">
-    <End Role="Item_Venda" Type="Model1.Store.Item_VendaSet" Multiplicity="*" />
+    <End Role="Item_Venda" Type="Model1.Store.ItemVenda" Multiplicity="*" />
     <End Role="Venda" Type="Model1.Store.Venda" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="Venda">
@@ -168,7 +168,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="Item_VendaLivro">
-    <End Role="Item_Venda" Type="Model1.Store.Item_VendaSet" Multiplicity="*" />
+    <End Role="Item_Venda" Type="Model1.Store.ItemVenda" Multiplicity="*" />
     <End Role="Livro" Type="Model1.Store.Livro" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="Livro">
@@ -222,17 +222,17 @@
           </AssociationSet>
           <EntitySet Name="Funcionario" EntityType="Model1.Funcionario" />
           <EntitySet Name="Venda" EntityType="Model1.Venda" />
-          <EntitySet Name="Item_VendaSet" EntityType="Model1.Item_Venda" />
+          <EntitySet Name="ItemVenda" EntityType="Model1.ItemVenda" />
           <AssociationSet Name="VendaFuncionario" Association="Model1.VendaFuncionario">
             <End Role="Venda" EntitySet="Venda" />
             <End Role="Funcionario" EntitySet="Funcionario" />
           </AssociationSet>
-          <AssociationSet Name="Item_VendaVenda" Association="Model1.Item_VendaVenda">
-            <End Role="Item_Venda" EntitySet="Item_VendaSet" />
+          <AssociationSet Name="ItemVenda_Venda" Association="Model1.Item_VendaVenda">
+            <End Role="Item_Venda" EntitySet="ItemVenda" />
             <End Role="Venda" EntitySet="Venda" />
           </AssociationSet>
-          <AssociationSet Name="Item_VendaLivro" Association="Model1.Item_VendaLivro">
-            <End Role="Item_Venda" EntitySet="Item_VendaSet" />
+          <AssociationSet Name="ItemVenda_Livro" Association="Model1.Item_VendaLivro">
+            <End Role="Item_Venda" EntitySet="ItemVenda" />
             <End Role="Livro" EntitySet="Livro" />
           </AssociationSet>
           <EntitySet Name="AutorLivro" EntityType="Model1.AutorLivro" />
@@ -250,7 +250,7 @@
             <PropertyRef Name="IdAutor" />
           </Key>
           <Property Name="IdAutor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NomeAutor" Type="String" Nullable="false" />
+          <Property Name="NomeAutor" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="AutorLivro" Relationship="Model1.AutorAutorLivro" FromRole="Autor" ToRole="AutorLivro" />
         </EntityType>
         <EntityType Name="Livro">
@@ -260,15 +260,15 @@
           <Property Name="IdLivro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Genero" Relationship="Model1.LivroGenero" FromRole="Livro" ToRole="Genero" />
           <Property Name="IdGenero" Type="Int32" Nullable="false" />
-          <Property Name="NomeLivro" Type="String" Nullable="false" />
+          <Property Name="NomeLivro" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="Ano" Type="Int32" Nullable="false" />
-          <Property Name="Descricao" Type="String" Nullable="false" />
+          <Property Name="Descricao" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="Paginas" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Editora" Relationship="Model1.EditoraLivro" FromRole="Livro" ToRole="Editora" />
           <Property Name="IdEditora" Type="Int32" Nullable="false" />
-          <Property Name="Isbn" Type="String" Nullable="false" />
+          <Property Name="Isbn" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Item_Venda" Relationship="Model1.Item_VendaLivro" FromRole="Livro" ToRole="Item_Venda" />
-          <Property Name="Preco" Type="Decimal" Nullable="false" />
+          <Property Name="Preco" Type="Decimal" Nullable="false" Scale="2" Precision="18" />
           <Property Name="QuantidadeEstoque" Type="Int32" Nullable="false" />
           <NavigationProperty Name="AutorLivro" Relationship="Model1.LivroAutorLivro" FromRole="Livro" ToRole="AutorLivro" />
         </EntityType>
@@ -278,7 +278,7 @@
           </Key>
           <Property Name="IdGenero" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Livro" Relationship="Model1.LivroGenero" FromRole="Genero" ToRole="Livro" />
-          <Property Name="NomeGenero" Type="String" Nullable="false" />
+          <Property Name="NomeGenero" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <Association Name="LivroGenero">
           <End Type="Model1.Livro" Role="Livro" Multiplicity="*" />
@@ -298,10 +298,10 @@
           </Key>
           <Property Name="IdEditora" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Livro" Relationship="Model1.EditoraLivro" FromRole="Editora" ToRole="Livro" />
-          <Property Name="NomeEditora" Type="String" Nullable="false" />
-          <Property Name="RazaoSocial" Type="String" Nullable="false" />
-          <Property Name="CNPJ" Type="String" Nullable="false" />
-          <Property Name="Email" Type="String" Nullable="false" />
+          <Property Name="NomeEditora" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="RazaoSocial" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CNPJ" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <Association Name="EditoraLivro">
           <End Type="Model1.Editora" Role="Editora" Multiplicity="1" />
@@ -320,9 +320,9 @@
             <PropertyRef Name="IdFuncionario" />
           </Key>
           <Property Name="IdFuncionario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NomeFuncionario" Type="String" Nullable="false" />
-          <Property Name="Login" Type="String" Nullable="false" />
-          <Property Name="Senha" Type="String" Nullable="false" />
+          <Property Name="NomeFuncionario" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Login" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Senha" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="Administrador" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Venda" Relationship="Model1.VendaFuncionario" FromRole="Funcionario" ToRole="Venda" />
         </EntityType>
@@ -331,14 +331,14 @@
             <PropertyRef Name="IdVenda" />
           </Key>
           <Property Name="IdVenda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DataVenda" Type="DateTime" Nullable="false" />
-          <Property Name="PrecoTotal" Type="Decimal" Nullable="false" />
+          <Property Name="DataVenda" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PrecoTotal" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="TotalLivros" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Funcionario" Relationship="Model1.VendaFuncionario" FromRole="Venda" ToRole="Funcionario" />
           <Property Name="IdFuncionario" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Item_Venda" Relationship="Model1.Item_VendaVenda" FromRole="Venda" ToRole="Item_Venda" />
         </EntityType>
-        <EntityType Name="Item_Venda">
+        <EntityType Name="ItemVenda">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -347,7 +347,7 @@
           <Property Name="IdVenda" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Livro" Relationship="Model1.Item_VendaLivro" FromRole="Item_Venda" ToRole="Livro" />
           <Property Name="IdLivro" Type="Int32" Nullable="false" />
-          <Property Name="Quantidade" Type="String" Nullable="false" />
+          <Property Name="Quantidade" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="VendaFuncionario">
           <End Type="Model1.Venda" Role="Venda" Multiplicity="*" />
@@ -362,7 +362,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="Item_VendaVenda">
-          <End Type="Model1.Item_Venda" Role="Item_Venda" Multiplicity="*" />
+          <End Type="Model1.ItemVenda" Role="Item_Venda" Multiplicity="*" />
           <End Type="Model1.Venda" Role="Venda" Multiplicity="1" />
           <ReferentialConstraint>
             <Principal Role="Venda">
@@ -374,7 +374,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="Item_VendaLivro">
-          <End Type="Model1.Item_Venda" Role="Item_Venda" Multiplicity="*" />
+          <End Type="Model1.ItemVenda" Role="Item_Venda" Multiplicity="*" />
           <End Type="Model1.Livro" Role="Livro" Multiplicity="1" />
           <ReferentialConstraint>
             <Principal Role="Livro">
@@ -490,9 +490,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Item_VendaSet">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.Item_Venda)">
-        <MappingFragment StoreEntitySet="Item_VendaSet">
+    <EntitySetMapping Name="ItemVenda">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.ItemVenda)">
+        <MappingFragment StoreEntitySet="ItemVenda">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdVenda" ColumnName="IdVenda" />
           <ScalarProperty Name="IdLivro" ColumnName="IdLivro" />
@@ -525,6 +525,7 @@
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
         <DesignerProperty Name="UseLegacyProvider" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->

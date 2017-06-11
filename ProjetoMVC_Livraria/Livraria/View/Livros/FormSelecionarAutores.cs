@@ -73,7 +73,7 @@ namespace Livraria.View.Livros
                 lstAutores.ValueMember = "Key";
             }
 
-            this.Dispose();
+            this.Close();
         }
 
         //preenche os selecinados da lista deste form (se já tiver algum selecionado na lista

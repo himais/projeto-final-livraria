@@ -105,5 +105,10 @@ namespace Livraria.Controller
             return context.Editora.ToList<Editora>();
         }
 
+        public Editora RecuperarEditora(int idEditora)
+        {
+            return context.Editora.Find(idEditora);
+        }
+
     }
 }

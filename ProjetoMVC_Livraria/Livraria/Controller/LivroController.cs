@@ -27,7 +27,6 @@ namespace Livraria.Controller
                     
                     foreach (var autor in autores)
                     {
-                        MessageBox.Show("ID Autor: " + autor.IdAutor + "\nIdLivro: " + livro.IdLivro);
                         AutorLivro autorLivro = new AutorLivro();
                         autorLivro.IdAutor = autor.IdAutor;
                         autorLivro.IdLivro = livro.IdLivro;
