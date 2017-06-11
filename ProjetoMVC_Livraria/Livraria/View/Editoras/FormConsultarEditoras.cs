@@ -14,11 +14,20 @@ namespace Livraria.View.Editoras
 {
     public partial class FormConsultarEditoras : MetroForm
     {
-        public FormConsultarEditoras()
+        Funcionario funcionario;
+        public FormConsultarEditoras(Funcionario f)
         {
             InitializeComponent();
-            this.lblDica.Visible = false;
-            this.picAtencao.Visible = false;
+            lblDica.Visible = false;
+            picAtencao.Visible = false;
+
+            this.funcionario = f;
+
+            if (!funcionario.Administrador)
+            {
+                lblDica.Enabled = false;
+                picAtencao.Enabled = false;
+            }
         }
 
         private void FormConsultarEditoras_Load(object sender, EventArgs e)
@@ -35,36 +44,44 @@ namespace Livraria.View.Editoras
 
         private void dgvEditoras_MouseEnter(object sender, EventArgs e)
         {
-            this.lblDica.Visible = true;
-            this.picAtencao.Visible = true;
-
+            if (funcionario.Administrador)
+            {
+                this.lblDica.Visible = true;
+                this.picAtencao.Visible = true;
+            }
         }
 
         private void dgvEditoras_MouseLeave(object sender, EventArgs e)
         {
-            this.lblDica.Visible = false;
-            this.picAtencao.Visible = false;
+            if (funcionario.Administrador)
+            {
+                this.lblDica.Visible = false;
+                this.picAtencao.Visible = false;
+            }
         }
 
         private void dgvEditoras_DoubleClick(object sender, EventArgs e)
         {
-            Editora editora = new Editora();
-            //Recuperando os dados dos campos para passar pro próximo formulário, via objeto Funcionario
-            int id = Convert.ToInt32(dgvEditoras.SelectedRows[0].Cells[0].Value.ToString());
-            string nome = dgvEditoras.SelectedRows[0].Cells[1].Value.ToString();
-            string razaoSocial = dgvEditoras.SelectedRows[0].Cells[2].Value.ToString();
-            string cnpj = dgvEditoras.SelectedRows[0].Cells[3].Value.ToString();
-            string email = dgvEditoras.SelectedRows[0].Cells[4].Value.ToString();
+            if (funcionario.Administrador)
+            {
+                Editora editora = new Editora();
+                //Recuperando os dados dos campos para passar pro próximo formulário, via objeto Funcionario
+                int id = Convert.ToInt32(dgvEditoras.SelectedRows[0].Cells[0].Value.ToString());
+                string nome = dgvEditoras.SelectedRows[0].Cells[1].Value.ToString();
+                string razaoSocial = dgvEditoras.SelectedRows[0].Cells[2].Value.ToString();
+                string cnpj = dgvEditoras.SelectedRows[0].Cells[3].Value.ToString();
+                string email = dgvEditoras.SelectedRows[0].Cells[4].Value.ToString();
 
-            editora.IdEditora = id;
-            editora.NomeEditora = nome;
-            editora.RazaoSocial = razaoSocial;
-            editora.CNPJ = cnpj;
-            editora.Email = email;
+                editora.IdEditora = id;
+                editora.NomeEditora = nome;
+                editora.RazaoSocial = razaoSocial;
+                editora.CNPJ = cnpj;
+                editora.Email = email;
 
-            new FormEditarEditoras(editora).ShowDialog(this);
-            //atualizar a lista, assim que sair do form editar
-            this.editoraTableAdapter.Fill(this.editoraDataSet.Editora);
+                new FormEditarEditoras(editora).ShowDialog(this);
+                //atualizar a lista, assim que sair do form editar
+                this.editoraTableAdapter.Fill(this.editoraDataSet.Editora);
+            }
         }
     }
 }

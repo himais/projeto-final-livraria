@@ -61,7 +61,7 @@
             this.tileEditora = new MetroFramework.Controls.MetroTile();
             this.tileLivros = new MetroFramework.Controls.MetroTile();
             this.tileAutores = new MetroFramework.Controls.MetroTile();
-            this.tileOutros = new MetroFramework.Controls.MetroTile();
+            this.tileConsultarVendas = new MetroFramework.Controls.MetroTile();
             this.menuStripPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).BeginInit();
             this.contextMenuVendas.SuspendLayout();
@@ -126,6 +126,7 @@
             this.tsmiVendasConsultar.Name = "tsmiVendasConsultar";
             this.tsmiVendasConsultar.Size = new System.Drawing.Size(160, 22);
             this.tsmiVendasConsultar.Text = "Consultar venda";
+            this.tsmiVendasConsultar.Click += new System.EventHandler(this.tsmiVendasConsultar_Click);
             // 
             // tsmiLivros
             // 
@@ -209,14 +210,14 @@
             // tsmiEditorasCadastrar
             // 
             this.tsmiEditorasCadastrar.Name = "tsmiEditorasCadastrar";
-            this.tsmiEditorasCadastrar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEditorasCadastrar.Size = new System.Drawing.Size(125, 22);
             this.tsmiEditorasCadastrar.Text = "Cadastrar";
             this.tsmiEditorasCadastrar.Click += new System.EventHandler(this.tsmiEditorasCadastrar_Click);
             // 
             // tsmiEditorasConsultar
             // 
             this.tsmiEditorasConsultar.Name = "tsmiEditorasConsultar";
-            this.tsmiEditorasConsultar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEditorasConsultar.Size = new System.Drawing.Size(125, 22);
             this.tsmiEditorasConsultar.Text = "Consultar";
             this.tsmiEditorasConsultar.Click += new System.EventHandler(this.tsmiEditorasConsultar_Click);
             // 
@@ -340,22 +341,23 @@
             this.tileAutores.UseSelectable = true;
             this.tileAutores.Click += new System.EventHandler(this.tileAutores_Click);
             // 
-            // tileOutros
+            // tileConsultarVendas
             // 
-            this.tileOutros.ActiveControl = null;
-            this.tileOutros.Location = new System.Drawing.Point(257, 230);
-            this.tileOutros.Name = "tileOutros";
-            this.tileOutros.Size = new System.Drawing.Size(102, 89);
-            this.tileOutros.TabIndex = 19;
-            this.tileOutros.Text = "metroTile6";
-            this.tileOutros.UseSelectable = true;
+            this.tileConsultarVendas.ActiveControl = null;
+            this.tileConsultarVendas.Location = new System.Drawing.Point(257, 230);
+            this.tileConsultarVendas.Name = "tileConsultarVendas";
+            this.tileConsultarVendas.Size = new System.Drawing.Size(102, 89);
+            this.tileConsultarVendas.TabIndex = 19;
+            this.tileConsultarVendas.Text = "Consultar Vendas";
+            this.tileConsultarVendas.UseSelectable = true;
+            this.tileConsultarVendas.Click += new System.EventHandler(this.tileConsultarVendas_Click);
             // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 342);
-            this.Controls.Add(this.tileOutros);
+            this.Controls.Add(this.tileConsultarVendas);
             this.Controls.Add(this.tileAutores);
             this.Controls.Add(this.tileLivros);
             this.Controls.Add(this.tileEditora);
@@ -415,6 +417,6 @@
         private MetroFramework.Controls.MetroTile tileEditora;
         private MetroFramework.Controls.MetroTile tileLivros;
         private MetroFramework.Controls.MetroTile tileAutores;
-        private MetroFramework.Controls.MetroTile tileOutros;
+        private MetroFramework.Controls.MetroTile tileConsultarVendas;
     }
 }

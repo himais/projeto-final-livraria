@@ -32,11 +32,11 @@
             this.btnCancelar = new MetroFramework.Controls.MetroButton();
             this.bntAtualizar = new MetroFramework.Controls.MetroButton();
             this.groupBoxCadastrarGenero = new System.Windows.Forms.GroupBox();
+            this.lblNome = new MetroFramework.Controls.MetroLabel();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.lblId = new MetroFramework.Controls.MetroLabel();
             this.txtId = new System.Windows.Forms.TextBox();
             this.btnExcluir = new MetroFramework.Controls.MetroButton();
-            this.lblNome = new MetroFramework.Controls.MetroLabel();
-            this.txtNome = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).BeginInit();
             this.groupBoxCadastrarGenero.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +84,24 @@
             this.groupBoxCadastrarGenero.TabIndex = 39;
             this.groupBoxCadastrarGenero.TabStop = false;
             // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblNome.Location = new System.Drawing.Point(17, 63);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(63, 25);
+            this.lblNome.TabIndex = 26;
+            this.lblNome.Text = "Nome:";
+            // 
+            // txtNome
+            // 
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(86, 64);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(283, 24);
+            this.txtNome.TabIndex = 25;
+            // 
             // lblId
             // 
             this.lblId.AutoSize = true;
@@ -115,24 +133,6 @@
             this.btnExcluir.UseSelectable = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblNome.Location = new System.Drawing.Point(17, 63);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(63, 25);
-            this.lblNome.TabIndex = 26;
-            this.lblNome.Text = "Nome:";
-            // 
-            // txtNome
-            // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(86, 64);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(283, 24);
-            this.txtNome.TabIndex = 25;
-            // 
             // FormEditarGenero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,6 +143,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.bntAtualizar);
             this.Controls.Add(this.groupBoxCadastrarGenero);
+            this.MaximizeBox = false;
             this.Name = "FormEditarGenero";
             this.Resizable = false;
             this.Text = "        Editar Gênero";

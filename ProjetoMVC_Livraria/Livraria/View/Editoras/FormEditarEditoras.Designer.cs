@@ -36,12 +36,12 @@
             this.txtRazaoSocial = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.groupBoxCadastrarEditora = new System.Windows.Forms.GroupBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.lblId = new MetroFramework.Controls.MetroLabel();
             this.lblEmail = new MetroFramework.Controls.MetroLabel();
             this.lblCNPJ = new MetroFramework.Controls.MetroLabel();
             this.lblRazaoSocial = new MetroFramework.Controls.MetroLabel();
             this.lblNome = new MetroFramework.Controls.MetroLabel();
-            this.lblId = new MetroFramework.Controls.MetroLabel();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.btnExcluir = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).BeginInit();
             this.groupBoxCadastrarEditora.SuspendLayout();
@@ -131,6 +131,25 @@
             this.groupBoxCadastrarEditora.TabIndex = 41;
             this.groupBoxCadastrarEditora.TabStop = false;
             // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(134, 30);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(80, 24);
+            this.txtId.TabIndex = 41;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblId.Location = new System.Drawing.Point(44, 29);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(71, 25);
+            this.lblId.TabIndex = 40;
+            this.lblId.Text = "Código:";
+            // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
@@ -171,25 +190,6 @@
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome:";
             // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblId.Location = new System.Drawing.Point(44, 29);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(71, 25);
-            this.lblId.TabIndex = 40;
-            this.lblId.Text = "Código:";
-            // 
-            // txtId
-            // 
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(134, 30);
-            this.txtId.Name = "txtId";
-            this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(80, 24);
-            this.txtId.TabIndex = 41;
-            // 
             // btnExcluir
             // 
             this.btnExcluir.Location = new System.Drawing.Point(23, 315);
@@ -210,6 +210,7 @@
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.picLogoInicial);
             this.Controls.Add(this.groupBoxCadastrarEditora);
+            this.MaximizeBox = false;
             this.Name = "FormEditarEditoras";
             this.Resizable = false;
             this.Text = "        Editar Editora";

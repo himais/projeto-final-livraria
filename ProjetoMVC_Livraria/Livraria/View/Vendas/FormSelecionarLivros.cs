@@ -56,7 +56,7 @@ namespace Livraria.View.Vendas
                     autoresConcat.Append(autores.FirstOrDefault().NomeAutor);
                 }
 
-                dgvLivros.Rows.Add(livro.IdLivro, livro.NomeLivro, "R$" + livro.Preco, editora.NomeEditora, genero.NomeGenero,
+                dgvLivros.Rows.Add(livro.IdLivro, livro.NomeLivro, livro.Preco, editora.NomeEditora, genero.NomeGenero,
                     autoresConcat.ToString(), livro.QuantidadeEstoque);
             }
         }

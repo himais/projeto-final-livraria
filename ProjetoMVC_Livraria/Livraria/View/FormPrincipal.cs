@@ -60,8 +60,7 @@ namespace Livraria.View
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if(FecharAplicacao())
-                Environment.Exit(0); 
-            
+                Environment.Exit(0);         
         }
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
@@ -103,27 +102,27 @@ namespace Livraria.View
 
         private void tsmiLivroConsultar_Click(object sender, EventArgs e)
         {
-            new FormConsultarLivro().ShowDialog(this);
+            new FormConsultarLivro(funcionario).ShowDialog(this);
         }
 
         private void tileGenero_Click(object sender, EventArgs e)
         {
-            //new FormConsultarGenero().ShowDialog(this);
+            new FormConsultarGenero(funcionario).ShowDialog(this);
         }
 
         private void tileEditora_Click(object sender, EventArgs e)
         {
-            //new FormConsultarGenero().ShowDialog(this);
+            new FormConsultarEditoras(funcionario).ShowDialog(this);
         }
 
         private void tileAutores_Click(object sender, EventArgs e)
         {
-            //new FormConsultarGenero().ShowDialog(this);
+            new FormConsultarAutores(funcionario).ShowDialog(this);
         }
 
         private void tileLivros_Click(object sender, EventArgs e)
         {
-            new FormConsultarLivro().ShowDialog(this);
+            new FormConsultarLivro(funcionario).ShowDialog(this);
         }
 
         private void tileVendas_Click(object sender, EventArgs e)
@@ -138,12 +137,12 @@ namespace Livraria.View
 
         private void tsmiLivroGeneroListar_Click(object sender, EventArgs e)
         {
-            new FormConsultarGenero().ShowDialog(this);
+            new FormConsultarGenero(funcionario).ShowDialog(this);
         }
 
         private void tsmiEditorasConsultar_Click(object sender, EventArgs e)
         {
-            new FormConsultarEditoras().ShowDialog(this);
+            new FormConsultarEditoras(funcionario).ShowDialog(this);
         }
 
         private void tsmiAutoresCadastrar_Click(object sender, EventArgs e)
@@ -153,7 +152,17 @@ namespace Livraria.View
 
         private void tsmiAutoresConsultar_Click(object sender, EventArgs e)
         {
-            new FormConsultarAutores().ShowDialog(this);
+            new FormConsultarAutores(funcionario).ShowDialog(this);
+        }
+
+        private void tsmiVendasConsultar_Click(object sender, EventArgs e)
+        {
+            new FormConsultarVenda(funcionario).ShowDialog(this);
+        }
+
+        private void tileConsultarVendas_Click(object sender, EventArgs e)
+        {
+            new FormConsultarVenda(funcionario).ShowDialog(this);
         }
 
     }

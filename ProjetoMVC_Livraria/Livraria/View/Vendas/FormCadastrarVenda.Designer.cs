@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblFuncionario = new MetroFramework.Controls.MetroLabel();
             this.lblPrecoTotal = new MetroFramework.Controls.MetroLabel();
             this.txtPrecoTotal = new MetroFramework.Controls.MetroTextBox();
@@ -57,7 +58,7 @@
             // 
             this.lblFuncionario.AutoSize = true;
             this.lblFuncionario.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblFuncionario.Location = new System.Drawing.Point(56, 340);
+            this.lblFuncionario.Location = new System.Drawing.Point(33, 256);
             this.lblFuncionario.Name = "lblFuncionario";
             this.lblFuncionario.Size = new System.Drawing.Size(105, 25);
             this.lblFuncionario.TabIndex = 0;
@@ -67,7 +68,7 @@
             // 
             this.lblPrecoTotal.AutoSize = true;
             this.lblPrecoTotal.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblPrecoTotal.Location = new System.Drawing.Point(56, 295);
+            this.lblPrecoTotal.Location = new System.Drawing.Point(276, 301);
             this.lblPrecoTotal.Name = "lblPrecoTotal";
             this.lblPrecoTotal.Size = new System.Drawing.Size(97, 25);
             this.lblPrecoTotal.TabIndex = 2;
@@ -90,7 +91,7 @@
             this.txtPrecoTotal.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtPrecoTotal.Lines = new string[] {
         "R$0,00"};
-            this.txtPrecoTotal.Location = new System.Drawing.Point(180, 296);
+            this.txtPrecoTotal.Location = new System.Drawing.Point(379, 304);
             this.txtPrecoTotal.MaxLength = 32767;
             this.txtPrecoTotal.Name = "txtPrecoTotal";
             this.txtPrecoTotal.PasswordChar = '\0';
@@ -111,7 +112,7 @@
             // 
             this.lblTotalLivros.AutoSize = true;
             this.lblTotalLivros.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblTotalLivros.Location = new System.Drawing.Point(56, 250);
+            this.lblTotalLivros.Location = new System.Drawing.Point(33, 302);
             this.lblTotalLivros.Name = "lblTotalLivros";
             this.lblTotalLivros.Size = new System.Drawing.Size(118, 25);
             this.lblTotalLivros.TabIndex = 4;
@@ -134,7 +135,7 @@
             this.txtTotalLivros.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtTotalLivros.Lines = new string[] {
         "0"};
-            this.txtTotalLivros.Location = new System.Drawing.Point(180, 251);
+            this.txtTotalLivros.Location = new System.Drawing.Point(157, 303);
             this.txtTotalLivros.MaxLength = 32767;
             this.txtTotalLivros.Name = "txtTotalLivros";
             this.txtTotalLivros.PasswordChar = '\0';
@@ -156,13 +157,13 @@
             this.dgvLivros.AllowUserToAddRows = false;
             this.dgvLivros.AllowUserToDeleteRows = false;
             this.dgvLivros.BackgroundColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLivros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLivros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvLivros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLivros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdLivro,
@@ -172,14 +173,14 @@
             this.Quantidade});
             this.dgvLivros.Location = new System.Drawing.Point(22, 63);
             this.dgvLivros.Name = "dgvLivros";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLivros.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLivros.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvLivros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLivros.Size = new System.Drawing.Size(693, 150);
             this.dgvLivros.TabIndex = 6;
@@ -204,6 +205,9 @@
             // 
             // Preco
             // 
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Preco.DefaultCellStyle = dataGridViewCellStyle5;
             this.Preco.HeaderText = "Preço";
             this.Preco.Name = "Preco";
             this.Preco.ReadOnly = true;
@@ -224,9 +228,9 @@
             // btnRegistrar
             // 
             this.btnRegistrar.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnRegistrar.Location = new System.Drawing.Point(608, 380);
+            this.btnRegistrar.Location = new System.Drawing.Point(621, 301);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(106, 28);
+            this.btnRegistrar.Size = new System.Drawing.Size(94, 28);
             this.btnRegistrar.TabIndex = 8;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseSelectable = true;
@@ -235,9 +239,9 @@
             // btnCancelar
             // 
             this.btnCancelar.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnCancelar.Location = new System.Drawing.Point(467, 380);
+            this.btnCancelar.Location = new System.Drawing.Point(500, 301);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(106, 28);
+            this.btnCancelar.Size = new System.Drawing.Size(94, 28);
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseSelectable = true;
@@ -282,7 +286,7 @@
             // 
             // 
             this.txtFuncionario.CustomButton.Image = null;
-            this.txtFuncionario.CustomButton.Location = new System.Drawing.Point(234, 1);
+            this.txtFuncionario.CustomButton.Location = new System.Drawing.Point(294, 1);
             this.txtFuncionario.CustomButton.Name = "";
             this.txtFuncionario.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtFuncionario.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -292,7 +296,7 @@
             this.txtFuncionario.CustomButton.Visible = false;
             this.txtFuncionario.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtFuncionario.Lines = new string[0];
-            this.txtFuncionario.Location = new System.Drawing.Point(180, 341);
+            this.txtFuncionario.Location = new System.Drawing.Point(157, 257);
             this.txtFuncionario.MaxLength = 32767;
             this.txtFuncionario.Name = "txtFuncionario";
             this.txtFuncionario.PasswordChar = '\0';
@@ -302,7 +306,7 @@
             this.txtFuncionario.SelectionLength = 0;
             this.txtFuncionario.SelectionStart = 0;
             this.txtFuncionario.ShortcutsEnabled = true;
-            this.txtFuncionario.Size = new System.Drawing.Size(256, 23);
+            this.txtFuncionario.Size = new System.Drawing.Size(316, 23);
             this.txtFuncionario.TabIndex = 39;
             this.txtFuncionario.UseSelectable = true;
             this.txtFuncionario.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -323,7 +327,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 431);
+            this.ClientSize = new System.Drawing.Size(737, 357);
             this.Controls.Add(this.picLogoInicial);
             this.Controls.Add(this.txtFuncionario);
             this.Controls.Add(this.picAtencao);
@@ -361,12 +365,12 @@
         private MetroFramework.Controls.MetroButton btnSelecionarLivros;
         private System.Windows.Forms.PictureBox picAtencao;
         private MetroFramework.Controls.MetroLabel lblDica;
+        private MetroFramework.Controls.MetroTextBox txtFuncionario;
+        private System.Windows.Forms.PictureBox picLogoInicial;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdLivro;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeLivro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Preco;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estoque;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
-        private MetroFramework.Controls.MetroTextBox txtFuncionario;
-        private System.Windows.Forms.PictureBox picLogoInicial;
     }
 }

@@ -154,6 +154,11 @@
     <Compile Include="Model\Venda.cs">
       <DependentUpon>ModeloDadosLivraria.tt</DependentUpon>
     </Compile>
+    <Compile Include="VendaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VendaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\Autores\FormCadastrarAutor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,11 +282,23 @@
       <DependentUpon>FormSelecionarAutores.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Livros\Genero1.cs" />
+    <Compile Include="View\Vendas\FormAtualizarVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Vendas\FormAtualizarVenda.Designer.cs">
+      <DependentUpon>FormAtualizarVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Vendas\FormCadastrarVenda.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Vendas\FormCadastrarVenda.Designer.cs">
       <DependentUpon>FormCadastrarVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Vendas\FormConsultarVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Vendas\FormConsultarVenda.Designer.cs">
+      <DependentUpon>FormConsultarVenda.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Vendas\FormSelecionarLivros.cs">
       <SubType>Form</SubType>
@@ -359,8 +376,14 @@
     <EmbeddedResource Include="View\Livros\FormSelecionarAutores.resx">
       <DependentUpon>FormSelecionarAutores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Vendas\FormAtualizarVenda.resx">
+      <DependentUpon>FormAtualizarVenda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Vendas\FormCadastrarVenda.resx">
       <DependentUpon>FormCadastrarVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Vendas\FormConsultarVenda.resx">
+      <DependentUpon>FormConsultarVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Vendas\FormSelecionarLivros.resx">
       <DependentUpon>FormSelecionarLivros.cs</DependentUpon>
@@ -491,6 +514,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="VendaDataSet.xsc">
+      <DependentUpon>VendaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VendaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VendaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VendaDataSet.xss">
+      <DependentUpon>VendaDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

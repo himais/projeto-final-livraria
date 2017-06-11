@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvLivros = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,11 +46,13 @@
             this.picLogoInicial = new System.Windows.Forms.PictureBox();
             this.picAtencao = new System.Windows.Forms.PictureBox();
             this.lblDica = new MetroFramework.Controls.MetroLabel();
+            this.livroBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.livroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.livrariaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtencao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.livroBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvLivros
@@ -68,6 +71,7 @@
             this.Estoque});
             this.dgvLivros.Location = new System.Drawing.Point(23, 72);
             this.dgvLivros.Name = "dgvLivros";
+            this.dgvLivros.ReadOnly = true;
             this.dgvLivros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLivros.Size = new System.Drawing.Size(982, 323);
             this.dgvLivros.TabIndex = 0;
@@ -116,6 +120,9 @@
             // 
             // Preço
             // 
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Preço.DefaultCellStyle = dataGridViewCellStyle1;
             this.Preço.HeaderText = "Preço";
             this.Preço.Name = "Preço";
             this.Preço.ReadOnly = true;
@@ -186,6 +193,10 @@
             this.lblDica.UseCustomForeColor = true;
             this.lblDica.UseStyleColors = true;
             // 
+            // livroBindingSource1
+            // 
+            this.livroBindingSource1.DataMember = "Livro";
+            // 
             // FormConsultarLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,6 +207,7 @@
             this.Controls.Add(this.picLogoInicial);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.dgvLivros);
+            this.MaximizeBox = false;
             this.Name = "FormConsultarLivro";
             this.Resizable = false;
             this.Text = "        Consultar Livro";
@@ -204,6 +216,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.livrariaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtencao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.livroBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,6 +228,10 @@
         private livrariaDataSet livrariaDataSet;
         private System.Windows.Forms.BindingSource livroBindingSource;
         private livrariaDataSetTableAdapters.LivroTableAdapter livroTableAdapter;
+        private MetroFramework.Controls.MetroButton btnVoltar;
+        private System.Windows.Forms.PictureBox picLogoInicial;
+        private System.Windows.Forms.PictureBox picAtencao;
+        private MetroFramework.Controls.MetroLabel lblDica;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
@@ -223,9 +240,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
         private System.Windows.Forms.DataGridViewTextBoxColumn Preço;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estoque;
-        private MetroFramework.Controls.MetroButton btnVoltar;
-        private System.Windows.Forms.PictureBox picLogoInicial;
-        private System.Windows.Forms.PictureBox picAtencao;
-        private MetroFramework.Controls.MetroLabel lblDica;
+        private System.Windows.Forms.BindingSource livroBindingSource1;
+
     }
 }

@@ -11,6 +11,7 @@ namespace Livraria.Model
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Livro
     {
@@ -21,6 +22,8 @@ namespace Livraria.Model
         }
     
         public int IdLivro { get; set; }
+       
+        
         public int IdGenero { get; set; }
         public string NomeLivro { get; set; }
         public int Ano { get; set; }

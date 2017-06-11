@@ -30,25 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvGeneros = new System.Windows.Forms.DataGridView();
+            this.idGeneroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeGeneroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.generoDataSet = new Livraria.generoDataSet();
             this.livrariaDataSet1 = new Livraria.livrariaDataSet1();
             this.generoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.generoTableAdapter = new Livraria.livrariaDataSet1TableAdapters.GeneroTableAdapter();
-            this.idGeneroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeGeneroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.picLogoInicial = new System.Windows.Forms.PictureBox();
             this.picAtencao = new System.Windows.Forms.PictureBox();
             this.lblDica = new MetroFramework.Controls.MetroLabel();
             this.btnVoltar = new MetroFramework.Controls.MetroButton();
-            this.generoDataSet = new Livraria.generoDataSet();
-            this.generoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.generoTableAdapter1 = new Livraria.generoDataSetTableAdapters.GeneroTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.generoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.livrariaDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtencao)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.generoDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvGeneros
@@ -72,20 +72,6 @@
             this.dgvGeneros.MouseEnter += new System.EventHandler(this.dgvGeneros_MouseEnter);
             this.dgvGeneros.MouseLeave += new System.EventHandler(this.dgvGeneros_MouseLeave);
             // 
-            // livrariaDataSet1
-            // 
-            this.livrariaDataSet1.DataSetName = "livrariaDataSet1";
-            this.livrariaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // generoBindingSource
-            // 
-            this.generoBindingSource.DataMember = "Genero";
-            this.generoBindingSource.DataSource = this.livrariaDataSet1;
-            // 
-            // generoTableAdapter
-            // 
-            this.generoTableAdapter.ClearBeforeFill = true;
-            // 
             // idGeneroDataGridViewTextBoxColumn
             // 
             this.idGeneroDataGridViewTextBoxColumn.DataPropertyName = "IdGenero";
@@ -100,6 +86,30 @@
             this.nomeGeneroDataGridViewTextBoxColumn.Name = "nomeGeneroDataGridViewTextBoxColumn";
             this.nomeGeneroDataGridViewTextBoxColumn.ReadOnly = true;
             this.nomeGeneroDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // generoBindingSource1
+            // 
+            this.generoBindingSource1.DataMember = "Genero";
+            this.generoBindingSource1.DataSource = this.generoDataSet;
+            // 
+            // generoDataSet
+            // 
+            this.generoDataSet.DataSetName = "generoDataSet";
+            this.generoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // livrariaDataSet1
+            // 
+            this.livrariaDataSet1.DataSetName = "livrariaDataSet1";
+            this.livrariaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // generoBindingSource
+            // 
+            this.generoBindingSource.DataMember = "Genero";
+            this.generoBindingSource.DataSource = this.livrariaDataSet1;
+            // 
+            // generoTableAdapter
+            // 
+            this.generoTableAdapter.ClearBeforeFill = true;
             // 
             // picLogoInicial
             // 
@@ -145,16 +155,6 @@
             this.btnVoltar.UseSelectable = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // generoDataSet
-            // 
-            this.generoDataSet.DataSetName = "generoDataSet";
-            this.generoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // generoBindingSource1
-            // 
-            this.generoBindingSource1.DataMember = "Genero";
-            this.generoBindingSource1.DataSource = this.generoDataSet;
-            // 
             // generoTableAdapter1
             // 
             this.generoTableAdapter1.ClearBeforeFill = true;
@@ -169,17 +169,18 @@
             this.Controls.Add(this.lblDica);
             this.Controls.Add(this.picLogoInicial);
             this.Controls.Add(this.dgvGeneros);
+            this.MaximizeBox = false;
             this.Name = "FormConsultarGenero";
             this.Resizable = false;
             this.Text = "        Consultar Gêneros";
             this.Load += new System.EventHandler(this.FormConsultarGenero_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.generoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.livrariaDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtencao)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.generoDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

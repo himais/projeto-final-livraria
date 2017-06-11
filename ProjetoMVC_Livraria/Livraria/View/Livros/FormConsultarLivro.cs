@@ -15,13 +15,23 @@ namespace Livraria.View.Livros
 {
     public partial class FormConsultarLivro : MetroForm
     {
-        public FormConsultarLivro()
+        Funcionario funcionario;
+        public FormConsultarLivro(Funcionario f)
         {
             InitializeComponent();
+            this.funcionario = f;
+
             this.FormBorderStyle = FormBorderStyle.None;
             this.Icon = Properties.Resources.icone;
             this.lblDica.Visible = false;
             this.picAtencao.Visible = false;
+
+            if (!funcionario.Administrador)
+            {
+                this.lblDica.Enabled = false;
+                this.picAtencao.Enabled = false;
+            }
+
             CarregarLivros();
         }
 
@@ -51,23 +61,33 @@ namespace Livraria.View.Livros
 
         private void dgvLivros_MouseEnter(object sender, EventArgs e)
         {
-            this.lblDica.Visible = true;
-            this.picAtencao.Visible = true;
+            if (funcionario.Administrador)
+            {
+                this.lblDica.Visible = true;
+                this.picAtencao.Visible = true;
+            }
+            
         }
 
         private void dgvLivros_MouseLeave(object sender, EventArgs e)
         {
-            this.lblDica.Visible = false;
-            this.picAtencao.Visible = false;
+            if (funcionario.Administrador)
+            {
+                this.lblDica.Visible = false;
+                this.picAtencao.Visible = false;
+            }
         }
 
         private void dgvLivros_DoubleClick(object sender, EventArgs e)
         {
-            int idLivro = (int)dgvLivros.SelectedRows[0].Cells[0].Value;
-            new FormEditarLivro(idLivro).ShowDialog(this);
-            //apaga e preenche a lista novamente, assim que sair do formeditar
-            dgvLivros.Rows.Clear();
-            CarregarLivros();
+            if (funcionario.Administrador)
+            {
+                int idLivro = (int)dgvLivros.SelectedRows[0].Cells[0].Value;
+                new FormEditarLivro(idLivro).ShowDialog(this);
+                //apaga e preenche a lista novamente, assim que sair do formeditar
+                dgvLivros.Rows.Clear();
+                CarregarLivros();
+            }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

@@ -106,6 +106,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.bntCadastrar);
             this.Controls.Add(this.groupBoxCadastrarGenero);
+            this.MaximizeBox = false;
             this.Name = "FormCadastrarAutor";
             this.Resizable = false;
             this.Text = "       Cadastrar Autor";

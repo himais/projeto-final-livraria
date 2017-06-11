@@ -170,7 +170,9 @@
             this.Controls.Add(this.lblDica);
             this.Controls.Add(this.picLogoInicial);
             this.Controls.Add(this.dgvAutores);
+            this.MaximizeBox = false;
             this.Name = "FormConsultarAutores";
+            this.Resizable = false;
             this.Text = "       Consultar Autores";
             this.Load += new System.EventHandler(this.FormConsultarAutores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).EndInit();

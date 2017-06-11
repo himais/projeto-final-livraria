@@ -207,6 +207,7 @@
             this.Controls.Add(this.picAtencao);
             this.Controls.Add(this.lblDica);
             this.Controls.Add(this.picLogoInicial);
+            this.MaximizeBox = false;
             this.Name = "FormConsultarEditoras";
             this.Resizable = false;
             this.Text = "        Consultar Editoras";

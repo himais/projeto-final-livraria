@@ -109,7 +109,6 @@ D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\bin\
 D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\bin\Debug\Livraria.pdb
 D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\bin\Debug\EntityFramework.dll
 D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\bin\Debug\EntityFramework.xml
-D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.csprojResolveAssemblyReference.cache
 D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Autores.FormCadastrarAutor.resources
 D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Autores.FormConsultarAutores.resources
 D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Autores.FormEditarAutor.resources
@@ -136,3 +135,6 @@ D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\
 D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.csproj.GenerateResource.Cache
 D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.exe
 D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.pdb
+D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Vendas.FormConsultarVenda.resources
+D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.csprojResolveAssemblyReference.cache
+D:\Faculdade\QuintoSemestre2017\C#LP1\livraria\ProjetoMVC_Livraria\Livraria\obj\Debug\Livraria.View.Vendas.FormAtualizarVenda.resources

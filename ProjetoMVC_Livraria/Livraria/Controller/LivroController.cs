@@ -66,7 +66,7 @@ namespace Livraria.Controller
             {
                 try
                 {
-                    //recupera o genero no banco de dados, e atualiza seus dados
+                    //recupera o livro no banco de dados, e atualiza seus dados
                     Livro original = context.Livro.Find(livro.IdLivro);
                     original.NomeLivro = livro.NomeLivro;
                     original.IdEditora = livro.IdEditora;
@@ -159,6 +159,26 @@ namespace Livraria.Controller
             }
 
             return autores;
+        }
+
+        public void AtualizarEstoque(int idLivro, int quantidade, bool diminuir)
+        {
+            Livro livro = context.Livro.Find(idLivro);
+
+            //se o diminuir for true, então ira retirar quantidade vendida do estoque
+            //se for false, irá retornar essa quantidade ao estoque
+            if (diminuir)
+            {
+                livro.QuantidadeEstoque -= quantidade;
+            }
+            else
+            {
+                livro.QuantidadeEstoque += quantidade;
+            }
+            
+            context.Entry(livro).State = EntityState.Modified;
+
+            context.SaveChanges();
         }
     }
 }

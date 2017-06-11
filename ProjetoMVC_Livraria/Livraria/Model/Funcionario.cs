@@ -11,6 +11,7 @@ namespace Livraria.Model
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Funcionario
     {
@@ -20,8 +21,14 @@ namespace Livraria.Model
         }
     
         public int IdFuncionario { get; set; }
+
+        [Required(ErrorMessage = "Insira o nome do funcionario!", AllowEmptyStrings = false)]
         public string NomeFuncionario { get; set; }
+
+        [Required(ErrorMessage = "Informe o nome do usuário!", AllowEmptyStrings = false)]
         public string Login { get; set; }
+
+        [Required(ErrorMessage = "Insira a senha do usuário!", AllowEmptyStrings = false)]
         public string Senha { get; set; }
         public bool Administrador { get; set; }
     

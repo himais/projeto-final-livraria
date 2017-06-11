@@ -30,12 +30,12 @@
         {
             this.picLogoInicial = new System.Windows.Forms.PictureBox();
             this.groupBoxCadastrarGenero = new System.Windows.Forms.GroupBox();
+            this.lblNome = new MetroFramework.Controls.MetroLabel();
             this.lblId = new MetroFramework.Controls.MetroLabel();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.btnCancelar = new MetroFramework.Controls.MetroButton();
             this.bntAtualizar = new MetroFramework.Controls.MetroButton();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblNome = new MetroFramework.Controls.MetroLabel();
             this.btnExcluir = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoInicial)).BeginInit();
             this.groupBoxCadastrarGenero.SuspendLayout();
@@ -64,6 +64,16 @@
             this.groupBoxCadastrarGenero.TabIndex = 43;
             this.groupBoxCadastrarGenero.TabStop = false;
             // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblNome.Location = new System.Drawing.Point(17, 64);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(63, 25);
+            this.lblNome.TabIndex = 24;
+            this.lblNome.Text = "Nome:";
+            // 
             // lblId
             // 
             this.lblId.AutoSize = true;
@@ -73,6 +83,14 @@
             this.lblId.Size = new System.Drawing.Size(71, 25);
             this.lblId.TabIndex = 24;
             this.lblId.Text = "Código:";
+            // 
+            // txtNome
+            // 
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(86, 65);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(283, 24);
+            this.txtNome.TabIndex = 23;
             // 
             // txtId
             // 
@@ -103,24 +121,6 @@
             this.bntAtualizar.UseSelectable = true;
             this.bntAtualizar.Click += new System.EventHandler(this.bntAtualizar_Click);
             // 
-            // txtNome
-            // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(86, 65);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(283, 24);
-            this.txtNome.TabIndex = 23;
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblNome.Location = new System.Drawing.Point(17, 64);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(63, 25);
-            this.lblNome.TabIndex = 24;
-            this.lblNome.Text = "Nome:";
-            // 
             // btnExcluir
             // 
             this.btnExcluir.Location = new System.Drawing.Point(22, 174);
@@ -141,6 +141,7 @@
             this.Controls.Add(this.groupBoxCadastrarGenero);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.bntAtualizar);
+            this.MaximizeBox = false;
             this.Name = "FormEditarAutor";
             this.Resizable = false;
             this.Text = "       Editar Autor";

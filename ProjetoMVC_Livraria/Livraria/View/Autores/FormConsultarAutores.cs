@@ -14,11 +14,21 @@ namespace Livraria.View.Autores
 {
     public partial class FormConsultarAutores : MetroForm
     {
-        public FormConsultarAutores()
+        Funcionario funcionario;
+
+        public FormConsultarAutores(Funcionario f)
         {
             InitializeComponent();
-            this.lblDica.Visible = false;
-            this.picAtencao.Visible = false;
+            lblDica.Visible = false;
+            picAtencao.Visible = false;
+
+            funcionario = f;
+
+            if (!funcionario.Administrador)
+            {
+                lblDica.Enabled = false;
+                picAtencao.Enabled = false;
+            }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -35,33 +45,43 @@ namespace Livraria.View.Autores
 
         private void dgvAutores_DoubleClick(object sender, EventArgs e)
         {
-            Autor autor = new Autor();
-            //Recuperando os dados dos campos para passar pro próximo formulário, via objeto Funcionario
-            int id = Convert.ToInt32(dgvAutores.SelectedRows[0].Cells[0].Value.ToString());
-            string nome = dgvAutores.SelectedRows[0].Cells[1].Value.ToString();
+            if (funcionario.Administrador)
+            {
+                Autor autor = new Autor();
+                //Recuperando os dados dos campos para passar pro próximo formulário, via objeto Funcionario
+                int id = Convert.ToInt32(dgvAutores.SelectedRows[0].Cells[0].Value.ToString());
+                string nome = dgvAutores.SelectedRows[0].Cells[1].Value.ToString();
 
-            autor.IdAutor = id;
-            autor.NomeAutor = nome;
+                autor.IdAutor = id;
+                autor.NomeAutor = nome;
 
-            new FormEditarAutor(autor).ShowDialog(this);
-            //atualizar a lista, assim que sair do form editar
-            this.autorTableAdapter1.Fill(this.autorDataSet.Autor);
+                new FormEditarAutor(autor).ShowDialog(this);
+                //atualizar a lista, assim que sair do form editar
+                this.autorTableAdapter1.Fill(this.autorDataSet.Autor);
+            }
         }
 
         private void dgvAutores_MouseEnter(object sender, EventArgs e)
         {
-            this.lblDica.Visible = true;
-            this.picAtencao.Visible = true;
+            if (funcionario.Administrador)
+            {
+                lblDica.Visible = true;
+                picAtencao.Visible = true;
+            }
         }
 
         private void dgvAutores_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
+            
         }
 
         private void dgvAutores_MouseLeave(object sender, EventArgs e)
         {
-            this.lblDica.Visible = false;
-            this.picAtencao.Visible = false;
+            if (funcionario.Administrador)
+            {
+                lblDica.Visible = false;
+                picAtencao.Visible = false;
+            }
         }
     }
 }
