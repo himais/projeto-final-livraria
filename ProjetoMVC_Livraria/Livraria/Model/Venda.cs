@@ -11,6 +11,7 @@ namespace Livraria.Model
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Venda
     {
@@ -20,9 +21,17 @@ namespace Livraria.Model
         }
     
         public int IdVenda { get; set; }
+
+        [Required(ErrorMessage = "Insira a data da venda!")]
         public System.DateTime DataVenda { get; set; }
+
+        [Required(ErrorMessage="Selecione livros para realizar a venda!")]
         public decimal PrecoTotal { get; set; }
+
+        [Required(ErrorMessage = "Selecione livros para realizar a venda!")]
         public int TotalLivros { get; set; }
+
+        [Required(ErrorMessage = "Selecione o funcionário deste venda!")]
         public int IdFuncionario { get; set; }
     
         public virtual Funcionario Funcionario { get; set; }

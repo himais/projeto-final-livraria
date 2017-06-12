@@ -164,5 +164,16 @@ namespace Livraria.View.Livros
         {
             this.Close();
         }
+
+        private void txtPreco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            //se não for um digito, backspace ou delete
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

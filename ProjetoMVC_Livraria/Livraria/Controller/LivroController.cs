@@ -22,6 +22,19 @@ namespace Livraria.Controller
             {
                 if (erros.Count() == 0)
                 {
+                    if (livro.IdEditora == -1)
+                    {
+                        MetroFramework.MetroMessageBox.Show(FormCadastrarLivro.ActiveForm, "Selecione a editora para este livro!", "Erro!",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
+                        return false;
+                    }
+                    else if (livro.IdGenero == -1)
+                    {
+                        MetroFramework.MetroMessageBox.Show(FormCadastrarLivro.ActiveForm, "Selecione o gênero deste livro!", "Erro!",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
+                        return false;
+                    }
+                    
                     context.Livro.Add(livro);
                     context.SaveChanges();
                     

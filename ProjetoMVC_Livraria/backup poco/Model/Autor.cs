@@ -17,7 +17,7 @@ namespace Livraria.Model
     {
         public Autor()
         {
-            this.Livro = new HashSet<Livro>();
+            this.AutorLivro = new HashSet<AutorLivro>();
         }
     
         public int IdAutor { get; set; }
@@ -25,6 +25,6 @@ namespace Livraria.Model
         [Required(ErrorMessage = "Insira o nome do autor!", AllowEmptyStrings = false)]
         public string NomeAutor { get; set; }
     
-        public virtual ICollection<Livro> Livro { get; set; }
+        public virtual ICollection<AutorLivro> AutorLivro { get; set; }
     }
 }

@@ -42,7 +42,7 @@ namespace Livraria.Controller
 
                         livroController.AtualizarEstoque(itemVenda.IdLivro, itemVenda.Quantidade, true);
                     }
-
+                    
                     context.SaveChanges();
                     return true;
                 }

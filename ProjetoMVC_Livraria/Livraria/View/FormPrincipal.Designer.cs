@@ -69,7 +69,7 @@
             // 
             // menuStripPrincipal
             // 
-            this.menuStripPrincipal.BackColor = System.Drawing.Color.White;
+            this.menuStripPrincipal.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.menuStripPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiArquivo,
             this.tsmiVendas,
@@ -258,6 +258,7 @@
             // tileVendas
             // 
             this.tileVendas.ActiveControl = null;
+            this.tileVendas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(137)))), ((int)(((byte)(239)))));
             this.tileVendas.Location = new System.Drawing.Point(372, 127);
             this.tileVendas.Name = "tileVendas";
             this.tileVendas.Size = new System.Drawing.Size(198, 192);
@@ -350,7 +351,7 @@
             this.tileConsultarVendas.TabIndex = 19;
             this.tileConsultarVendas.Text = "Consultar Vendas";
             this.tileConsultarVendas.UseSelectable = true;
-            this.tileConsultarVendas.Click += new System.EventHandler(this.tileConsultarVendas_Click);
+            this.tileConsultarVendas.Click += new System.EventHandler(this.tileOutros_Click);
             // 
             // FormPrincipal
             // 

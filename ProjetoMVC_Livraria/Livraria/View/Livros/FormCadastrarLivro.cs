@@ -40,7 +40,7 @@ namespace Livraria.View.Livros
             livro.Ano = (int)nudAno.Value;
             livro.Descricao = txtDescricao.Text.Trim();
             livro.Preco = decimal.Parse(txtPreco.Text);
-            livro.Isbn = txtISBN.Text;
+            livro.Isbn = txtISBN.Text.Trim();
             livro.QuantidadeEstoque = (int)nudQuantidade.Value;
             livro.Paginas = (int)nudPaginas.Value;
 
@@ -55,12 +55,22 @@ namespace Livraria.View.Livros
 
             List<Autor> autores = new List<Autor>();
 
-            foreach (var item in lstAutores.Items)
+            if (lstAutores.Items.Count > 0)
             {
-                int idAutor = ((KeyValuePair<int, string>)item).Key;
-                Autor autor = new Autor();
-                autor.IdAutor = idAutor;
-                autores.Add(autor);
+                foreach (var item in lstAutores.Items)
+                {
+                    int idAutor = ((KeyValuePair<int, string>)item).Key;
+                    Autor autor = new Autor();
+                    autor.IdAutor = idAutor;
+                    autores.Add(autor);
+                }
+
+            }
+            else
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Selecione pelo menos um autor para este livro!", "Erro!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
+                return;
             }
 
             LivroController livroController = new LivroController();
@@ -122,6 +132,18 @@ namespace Livraria.View.Livros
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtPreco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            //se não for um digito, backspace ou delete
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+
         }
     }
 }

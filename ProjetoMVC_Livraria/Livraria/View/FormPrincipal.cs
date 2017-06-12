@@ -160,7 +160,7 @@ namespace Livraria.View
             new FormConsultarVenda(funcionario).ShowDialog(this);
         }
 
-        private void tileConsultarVendas_Click(object sender, EventArgs e)
+        private void tileOutros_Click(object sender, EventArgs e)
         {
             new FormConsultarVenda(funcionario).ShowDialog(this);
         }

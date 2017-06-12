@@ -22,16 +22,33 @@ namespace Livraria.Model
         }
     
         public int IdLivro { get; set; }
-       
-        
+
+        [Required(ErrorMessage="Selecione um gênero para o livro!")]
         public int IdGenero { get; set; }
+
+        [Required(ErrorMessage = "Insira o nome do livro!", AllowEmptyStrings = false)]
         public string NomeLivro { get; set; }
+
+        [Required]
         public int Ano { get; set; }
+
+        [Required(ErrorMessage = "Insira uma descrição para o livro!", AllowEmptyStrings = false)]
         public string Descricao { get; set; }
+
+        [Required(ErrorMessage = "Insira o número de páginas do livro!", AllowEmptyStrings = false)]
         public int Paginas { get; set; }
+
+        [Required(ErrorMessage = "Selecione uma editora para o livro!")]
         public int IdEditora { get; set; }
+
+        [Required(ErrorMessage = "Insira o ISBN do livro!", AllowEmptyStrings = false)]
+        [StringLength(13, MinimumLength = 13, ErrorMessage = "O ISBN deve ter 13 caracteres!")]
         public string Isbn { get; set; }
+
+        [Required(ErrorMessage = "Insira um preço para o livro!")]
         public decimal Preco { get; set; }
+
+        [Required]
         public int QuantidadeEstoque { get; set; }
     
         public virtual Genero Genero { get; set; }

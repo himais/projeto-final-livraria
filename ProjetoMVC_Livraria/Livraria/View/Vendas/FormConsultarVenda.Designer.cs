@@ -58,7 +58,6 @@
             this.dgvVendas.AllowUserToAddRows = false;
             this.dgvVendas.AllowUserToDeleteRows = false;
             this.dgvVendas.AutoGenerateColumns = false;
-            this.dgvVendas.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dgvVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVendas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idVendaDataGridViewTextBoxColumn,

@@ -34,7 +34,8 @@ namespace Livraria.Model
 
         [Required(ErrorMessage = "Insira o e-mail da editora!", AllowEmptyStrings = false)]
         [RegularExpression(@"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
-                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$", ErrorMessage = "O e-mail inserido é inválido!")]
+                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$",
+                ErrorMessage = "O e-mail inserido é inválido!")]
         public string Email { get; set; }
     
         public virtual ICollection<Livro> Livro { get; set; }

@@ -11,21 +11,30 @@ namespace Livraria.Model
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Venda
     {
         public Venda()
         {
-            this.Item_Venda = new HashSet<Item_Venda>();
+            this.Item_Venda = new HashSet<ItemVenda>();
         }
     
         public int IdVenda { get; set; }
+
+        [Required(ErrorMessage = "Insira a data da venda!")]
         public System.DateTime DataVenda { get; set; }
+
+        [Required(ErrorMessage="Selecione livros para realizar a venda!")]
         public decimal PrecoTotal { get; set; }
+
+        [Required(ErrorMessage = "Selecione livros para realizar a venda!")]
         public int TotalLivros { get; set; }
+
+        [Required(ErrorMessage = "Selecione o funcionário deste venda!")]
         public int IdFuncionario { get; set; }
     
         public virtual Funcionario Funcionario { get; set; }
-        public virtual ICollection<Item_Venda> Item_Venda { get; set; }
+        public virtual ICollection<ItemVenda> Item_Venda { get; set; }
     }
 }
