@@ -1,0 +1,9 @@
+Por Caique Aquino Borges e Maira Satiko Tabata
+
+Foi utilizado o framework MetroFramework para a criação dos forms.
+Os DDLs deste framework estão dentro de Livraria\bin\Debug , caso ocorra algum problema,
+basta referências elas novamente.
+
+Há dois scrips sql: livrariaSemDados.sql (o banco de dados sem nenhum dado inserido), e o 
+livrariaComDados.sql (o banco de dados com dados já inseridos, que serão utilizados na apresentação
+e podem ser usados para testes)

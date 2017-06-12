@@ -123,7 +123,7 @@ namespace Livraria.View.Livros
                 livro.Ano = (int)nudAno.Value;
                 livro.Descricao = txtDescricao.Text.Trim();
                 livro.Preco = decimal.Parse(txtPreco.Text);
-                livro.Isbn = txtISBN.Text;
+                livro.Isbn = txtISBN.Text.Trim();
                 livro.QuantidadeEstoque = (int)nudQuantidade.Value;
                 livro.Paginas = (int)nudPaginas.Value;
 
@@ -158,6 +158,16 @@ namespace Livraria.View.Livros
         {
             DialogResult result = MetroFramework.MetroMessageBox.Show(this, "Deseja mesmo excluir este livro?",
                    "Confirme!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, 100);
+
+            if (result == DialogResult.Yes)
+            {
+                if (livroController.RemoverLivro(livro.IdLivro))
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Livro excluido com sucesso!", "",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
+                    this.Close();
+                }
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

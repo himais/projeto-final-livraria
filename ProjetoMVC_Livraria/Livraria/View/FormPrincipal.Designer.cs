@@ -120,6 +120,7 @@
             this.tsmiVendasRealizar.Name = "tsmiVendasRealizar";
             this.tsmiVendasRealizar.Size = new System.Drawing.Size(160, 22);
             this.tsmiVendasRealizar.Text = "Realizar venda";
+            this.tsmiVendasRealizar.Click += new System.EventHandler(this.tsmiVendasRealizar_Click);
             // 
             // tsmiVendasConsultar
             // 
@@ -291,9 +292,9 @@
             // 
             // lblBemVindo
             // 
-            this.lblBemVindo.Location = new System.Drawing.Point(398, 97);
+            this.lblBemVindo.Location = new System.Drawing.Point(24, 97);
             this.lblBemVindo.Name = "lblBemVindo";
-            this.lblBemVindo.Size = new System.Drawing.Size(172, 23);
+            this.lblBemVindo.Size = new System.Drawing.Size(546, 23);
             this.lblBemVindo.TabIndex = 14;
             this.lblBemVindo.Text = "Seja bem-vindo(a),";
             this.lblBemVindo.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -350,6 +351,8 @@
             this.tileConsultarVendas.Size = new System.Drawing.Size(102, 89);
             this.tileConsultarVendas.TabIndex = 19;
             this.tileConsultarVendas.Text = "Consultar Vendas";
+            this.tileConsultarVendas.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tileConsultarVendas.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
             this.tileConsultarVendas.UseSelectable = true;
             this.tileConsultarVendas.Click += new System.EventHandler(this.tileOutros_Click);
             // 

@@ -22,6 +22,13 @@ namespace Livraria.Controller
             {
                 if (erros.Count() == 0)
                 {
+                    if (!ISBN13Valido(livro.Isbn))
+                    {
+                        MetroFramework.MetroMessageBox.Show(FormCadastrarLivro.ActiveForm, "O ISBN não é valido!", "Erro!",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
+                        return false;
+                    }
+
                     if (livro.IdEditora == -1)
                     {
                         MetroFramework.MetroMessageBox.Show(FormCadastrarLivro.ActiveForm, "Selecione a editora para este livro!", "Erro!",
@@ -79,6 +86,26 @@ namespace Livraria.Controller
             {
                 try
                 {
+                    if (!ISBN13Valido(livro.Isbn))
+                    {
+                        MetroFramework.MetroMessageBox.Show(FormEditarLivro.ActiveForm, "O ISBN não é valido!", "Erro!",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
+                        return false;
+                    }
+
+                    if (livro.IdEditora == -1)
+                    {
+                        MetroFramework.MetroMessageBox.Show(FormEditarLivro.ActiveForm, "Selecione a editora para este livro!", "Erro!",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
+                        return false;
+                    }
+                    else if (livro.IdGenero == -1)
+                    {
+                        MetroFramework.MetroMessageBox.Show(FormEditarLivro.ActiveForm, "Selecione o gênero deste livro!", "Erro!",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
+                        return false;
+                    }
+
                     //recupera o livro no banco de dados, e atualiza seus dados
                     Livro original = context.Livro.Find(livro.IdLivro);
                     original.NomeLivro = livro.NomeLivro;
@@ -114,7 +141,7 @@ namespace Livraria.Controller
                 }
                 catch (Exception e)
                 {
-                    MetroFramework.MetroMessageBox.Show(FormCadastrarLivro.ActiveForm, "Houve um problema ao realizar a alteração!\n"
+                    MetroFramework.MetroMessageBox.Show(FormEditarLivro.ActiveForm, "Houve um problema ao realizar a alteração!\n"
                     + e.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error, 150);
                     
                     return false;
@@ -124,7 +151,7 @@ namespace Livraria.Controller
             {
                 foreach (var erro in erros)
                 {
-                    MetroFramework.MetroMessageBox.Show(FormCadastrarLivro.ActiveForm, erro.ToString(), "", MessageBoxButtons.OK,
+                    MetroFramework.MetroMessageBox.Show(FormEditarLivro.ActiveForm, erro.ToString(), "", MessageBoxButtons.OK,
                             MessageBoxIcon.Error, 150);
                     break;
                 }
@@ -137,14 +164,21 @@ namespace Livraria.Controller
         {
             try
             {
-                Livro autor = context.Livro.Find(idLivro);
-                context.Livro.Remove(autor);
+                foreach (AutorLivro autorLivro in context.AutorLivro.Where(al => al.IdLivro == idLivro))
+                {
+                    context.AutorLivro.Remove(autorLivro);
+                }
+
+                Livro livro = context.Livro.Find(idLivro);
+                context.Livro.Remove(livro);
                 context.SaveChanges();
                 return true;
             }
             catch (Exception e)
             {
-                MessageBox.Show("Houve um problema ao excluir o livro! \n" + e.Message);
+                MetroFramework.MetroMessageBox.Show(FormEditarLivro.ActiveForm, "Houve um problema ao excluir o livro!\n"
+                    + e.Message, "", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error, 150);
                 return false;
             }
         }
@@ -192,6 +226,46 @@ namespace Livraria.Controller
             context.Entry(livro).State = EntityState.Modified;
 
             context.SaveChanges();
+        }
+
+
+        public bool ISBN13Valido(string isbn)
+        {
+            bool resultado = false;
+
+            if (!string.IsNullOrEmpty(isbn))
+            {
+                if (isbn.Contains("-"))
+                {
+                    isbn = isbn.Replace("-", "");
+                }
+                                
+                long temp;
+
+                if (isbn.Length != 13 || !long.TryParse(isbn, out temp))
+                {
+                    return false;
+                }
+                                
+                int soma = 0;
+
+                for (int i = 0; i < 12; i++)
+                {
+                    soma += int.Parse(isbn[i].ToString()) * (i % 2 == 1 ? 3 : 1);
+                }
+
+                int resto = soma % 10;
+                int digito = 10 - resto;
+
+                if (digito == 10)
+                {
+                    digito = 0;
+                }
+
+                resultado = (digito == int.Parse(isbn[12].ToString()));
+            }
+
+            return resultado;
         }
     }
 }

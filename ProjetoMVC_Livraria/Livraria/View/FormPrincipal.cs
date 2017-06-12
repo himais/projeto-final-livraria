@@ -32,7 +32,6 @@ namespace Livraria.View
 
             lblBemVindo.Text = lblBemVindo.Text + " " + funcionario.NomeFuncionario;
             lblBemVindo.TextAlign = ContentAlignment.MiddleRight;
-
         }
 
         private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
@@ -163,6 +162,11 @@ namespace Livraria.View
         private void tileOutros_Click(object sender, EventArgs e)
         {
             new FormConsultarVenda(funcionario).ShowDialog(this);
+        }
+
+        private void tsmiVendasRealizar_Click(object sender, EventArgs e)
+        {
+            new FormCadastrarVenda(funcionario).ShowDialog(this);
         }
 
     }
